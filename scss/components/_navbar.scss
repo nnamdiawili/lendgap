@@ -1,0 +1,12 @@
+
+.navbar {
+  display: flex;
+  height: 100px;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
