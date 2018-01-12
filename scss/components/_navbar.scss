@@ -1,12 +1,49 @@
 
 .navbar {
-  display: flex;
-  height: 100px;
-
   &.fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
   }
+}
+
+.navbar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.navbar .brand .logo {
+  width: 125px;
+  height: 31px;
+  fill: $color-white;
+}
+
+.navbar .nav-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: $font-family-button;
+  font-size: 1rem;
+  font-weight: 700;
+  color: $color-white;
+  text-decoration: none;
+
+  &.primary {
+    color: $color-brand-blue;
+    background-color: $color-white;
+    margin-left: 2rem;
+    padding: 0 40px;
+  }
+}
+
+.navbar .burger {
+  display: none;
 }

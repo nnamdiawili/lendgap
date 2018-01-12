@@ -1,0 +1,29 @@
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: $font-family-button;
+}
+
+.btn-green {
+  color: $color-white;
+  background-color: $color-brand-green;
+}
+
+.btn-trans {
+  color: $color-brand-blue;
+  background-color: $color-white;
+}
+
+.btn-caps {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .7rem;
+  letter-spacing: 0.075rem;
+}
+
