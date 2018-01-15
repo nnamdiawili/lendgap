@@ -13,32 +13,52 @@
   </head>
   <body>
     <!-- page content -->
-    <header class="navbar fixed trans">
+    <header class="navbar">
       <div class="content container">
-        <div class="brand">
+        <a class="brand" href="index.html">
           <svg class="logo" width=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lendgap-logo"></use></svg>
+        </a>
+        <div class="navs">
+          <input hidden type="checkbox" id="mobile-nav-toggle" class="mobile-nav-toggle">
+          <label for="mobile-nav-toggle" class="nav-burger">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+            <span class="line-3"></span>
+          </label>
+          <nav class="mobile-nav">
+            <div class="content container">
+              <a class="nav-link" href="">Become a lender</a>
+              <a class="nav-link" href="">Help</a>
+              <a class="nav-link" href="">Log in</a>
+              <a class="nav-link" href="">Create an account</a>
+            </div>
+          </nav>
+          <nav class="top-nav">
+            <a class="btn btn-trans-white" href="">Become a lender</a>
+            <a class="btn btn-trans-white" href="">Help</a>
+            <a class="btn btn-trans-white" href="">Log in</a>
+            <a class="btn btn-white cta" href="">Sign up</a>
+          </nav>
         </div>
-        <nav class="navs" >
-          <a class="nav-link" href="">Become a lender</a>
-          <a class="nav-link" href="">Help</a>
-          <a class="nav-link" href="">log in</a>
-          <a class="nav-link primary" href="">Sign up</a>
-        </nav>
-        <div class="burger"></div>
       </div>
     </header>
     <main class="page landing">
       <section class="hero section">
-        <div class="background fixed-bg"></div>
+        <div class="background fixed-bg">
+          <span class="gradient"></span>
+        </div>
         <div class="foreground">
           <div class="content container">
             <h1 class="title header-lg">Get a quick loan<br>whenever you need it.</h1>
             <p class="description">With LendGap, you can now borrow money quickly and easily.</p>
             <div class="cta">
-              <a class="btn btn-green btn-caps">Request for a loan</a>
+              <a class="btn btn-green btn-caps">Request a loan</a>
             </div>
           </div>
         </div>
+      </section>
+      <section class="how-it-works section">
+
       </section>
     </main>
     <footer class="page footer"></footer>
@@ -53,6 +73,7 @@
     </svg>
 
     <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

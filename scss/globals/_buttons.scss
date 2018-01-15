@@ -1,0 +1,77 @@
+
+.btn {
+  font-family: $font-family-button;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: $button-size-normal;
+  padding: 0 $button-size-normal;
+  border-radius: $component-border-radius;
+  box-shadow: 0 10px 60px 0 rgba($color-black, 0.15);
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+
+  &::before {
+    @include position(absolute, null 0 0 0);
+    content: '';
+    background-color: $color-black;
+    //background-image: linear-gradient(to bottom, transparent 0%, rgba($color-black, 0.15) 100%);
+    //border-radius: $component-border-radius;
+    z-index: -1;
+    height: 0;
+    opacity: 0;
+    transition: $component-hover-fx-duration;
+  }
+  &:hover::before {
+    height: 50%;
+    opacity: .05;
+  }
+  &:focus::before,
+  &:active::before {
+    height: 100%;
+    opacity: .1;
+  }
+}
+
+.btn-green {
+  color: $color-white;
+  background-color: $color-brand-green;
+}
+.btn-white {
+  color: $color-brand-blue;
+  background-color: $color-white;
+}
+.btn-trans-white {
+  color: $color-white;
+  background-color: transparent;
+  box-shadow: none;
+  transition: $component-hover-fx-duration;
+
+  &:hover {
+    background-color: rgba($color-black, .1);
+  }
+}
+
+.btn-caps {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .7rem;
+  letter-spacing: 0.075rem;
+}
+
+.btn-md {
+  height: $button-size-md;
+  padding: 0 $button-size-md;
+}
+.btn-lg {
+  height: $button-size-lg;
+  padding: 0 $button-size-lg;
+}
+
+
+

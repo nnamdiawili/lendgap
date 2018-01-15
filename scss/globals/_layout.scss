@@ -1,0 +1,8 @@
+.container {
+  @include fluid-prop(width, -30px, 1200px, $grid-breakpoint-xxs, $grid-breakpoint-xxl);
+  margin: 0 auto;
+}
+
+.fixed-bg {
+  background-attachment: fixed;
+}

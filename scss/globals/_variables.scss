@@ -11,10 +11,12 @@ $path-to-fonts: '../fonts';
 // -------------------------------------------------------------------------
 
 $color-white: #FFF;
+$color-black: #000;
 $color-brand-fuchsia: #FF2D6E;
 $color-brand-orange: #FF8B2D;
 $color-brand-green: #03BF94;
 $color-brand-blue: #113E52;
+$color-brand-ash: #FBFBFB;
 
 
 // -------------------------------------------------------------------------
@@ -33,9 +35,24 @@ $font-size-base-max: 15px;
 // Layout
 // -------------------------------------------------------------------------
 
-$grid-breakpoints-xs: 0; // Extra small screen / phone
-$grid-breakpoints-sm: 544px; // Small screen / phone
-$grid-breakpoints-md: 768px; // Medium screen / tablet
-$grid-breakpoints-lg: 992px; // Large screen / desktop
-$grid-breakpoints-xl: 1200px; // Extra large screen / wide desktop
-$grid-breakpoints-xxl: 1370px // Extra Extra large screen / wide desktop
+$grid-breakpoint-xxs: 0px; // Extra extra small screen / phone
+$grid-breakpoint-xs: 300px; // Extra small screen / phone
+$grid-breakpoint-sm: 544px; // Small screen / phone
+$grid-breakpoint-md: 768px; // Medium screen / tablet
+$grid-breakpoint-lg: 992px; // Large screen / desktop
+$grid-breakpoint-xl: 1200px; // Extra large screen / wide desktop
+$grid-breakpoint-xxl: 1370px; // Extra Extra large screen / wide desktop
+
+
+// -------------------------------------------------------------------------
+// Misc
+// -------------------------------------------------------------------------
+
+$navbar-navs-toggle-duration: .4s;
+$navbar-theme-change-duration: .4s;
+$component-hover-fx-duration: .3s;
+$component-border-radius: 5px;
+
+$button-size-normal: 40px;
+$button-size-md: 50px;
+$button-size-lg: 60px;

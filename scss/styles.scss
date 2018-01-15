@@ -1,13 +1,11 @@
 @import "globals/variables";
+@import "globals/mixins";
 @import "globals/fonts";
-
-@import "mixins/positioning";
-@import "mixins/typography";
-
 @import "globals/base";
-@import "globals/utils";
+@import "globals/headers";
+@import "globals/layout";
+@import "globals/buttons";
 
-@import "components/buttons";
 @import "components/navbar";
 
 @import "pages/landing";

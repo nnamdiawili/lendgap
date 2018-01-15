@@ -59,3 +59,40 @@
     }
   }
 }
+
+
+
+// -------------------------------------------------------------------------
+// Responsive Properties
+// -------------------------------------------------------------------------
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-prop($prop, $min-vw-value, $max-vw-value, $min-vw: $grid-breakpoint-xs, $max-vw: $grid-breakpoint-lg, $inverted: false) {
+  $min-value: $min-vw-value;
+  $max-value: $max-vw-value;
+
+  @if $inverted {
+    $min-value: $max-vw-value;
+    $max-value: $min-vw-value;
+  }
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-value);
+  $u4: unit($max-value);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      #{$prop}: $min-value;
+      @media screen and (min-width: $min-vw) {
+        #{$prop}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        #{$prop}: $max-value;
+      }
+    }
+  }
+}
