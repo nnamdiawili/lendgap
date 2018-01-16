@@ -1,4 +1,4 @@
-.hero {
+.hero.page-section {
   position: relative;
   min-height: 300px;
 }
@@ -37,9 +37,14 @@
   }
 }
 
+.hero .title {
+  animation: slide-down .6s ease-in-out;
+}
+
 .hero .description {
   margin: 1.8rem 0 0;
   padding: 0 30px;
+  animation: fade-in-staggered 1s ease-in-out;
 
   @media (min-width: $grid-breakpoint-sm) {
     padding: 0;
@@ -48,9 +53,21 @@
 
 .hero .cta {
   margin-top: 2.4rem ;
+  animation: slide-down-staggered 1.4s ease-in-out;
+}
+
+.page-section:not(.hero) .content {
+  @include fluid-prop(padding-top, 50px, 120px, $grid-breakpoint-xs);
+  @include fluid-prop(padding-bottom, 50px, 120px, $grid-breakpoint-xs);
 }
 
 .how-it-works {
-  height: 800px;
   background-color: $color-brand-ash;
+}
+
+.how-it-works .steps {
+  &.padded {
+    @include fluid-prop(padding-left, 0px, 100px, $grid-breakpoint-md);
+    @include fluid-prop(padding-right, 0px, 100px, $grid-breakpoint-md);
+  }
 }

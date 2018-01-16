@@ -1,0 +1,44 @@
+.illustrated-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $grid-breakpoint-xs) and (max-width: $grid-breakpoint-md){
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .illustration {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+
+    .icon {
+      fill: $color-brand-blue;
+    }
+  }
+  .details {
+    color: $color-brand-blue;
+    text-align: center;
+
+    @media (min-width: $grid-breakpoint-xs) and (max-width: $grid-breakpoint-md){
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      text-align: left;
+    }
+  }
+
+  .title {
+    margin-top: 10px;
+  }
+  .description {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}

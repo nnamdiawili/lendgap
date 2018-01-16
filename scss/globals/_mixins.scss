@@ -96,3 +96,23 @@
     }
   }
 }
+
+
+// -------------------------------------------------------------------------
+// Grid and Grid Items
+// -------------------------------------------------------------------------
+
+@mixin fluid-grid-item($breakpoint, $columns, $gutter) {
+  @media (min-width: $breakpoint) {
+    width: calc((100% - (#{$gutter} * (#{$columns} - 1))) / #{$columns});
+    margin-left: $gutter;
+
+    &:first-child,
+    &:nth-child(#{$columns}n+1) {
+      margin-left: 0;
+    }
+    &:nth-child(n+#{$columns + 1}) {
+      margin-top: $gutter;
+    }
+  }
+}

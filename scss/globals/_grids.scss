@@ -1,0 +1,20 @@
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  flex: 1 1 auto;
+  margin-bottom: 50px;
+
+  @each $layout in $fluid-grid-item-layouts {
+    $breakpoint: map_get($layout, 'breakpoint');
+    $columns: map_get($layout, 'columns');
+    $gutter: map_get($layout, 'gutter');
+
+    .grid.#{map_get($grid-breakpoint-aliases, $breakpoint)}-columns-#{$columns} > & {
+      @include fluid-grid-item($breakpoint, $columns, $gutter);
+    }
+  }
+}

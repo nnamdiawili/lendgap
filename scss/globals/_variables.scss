@@ -16,7 +16,8 @@ $color-brand-fuchsia: #FF2D6E;
 $color-brand-orange: #FF8B2D;
 $color-brand-green: #03BF94;
 $color-brand-blue: #113E52;
-$color-brand-ash: #FBFBFB;
+$color-brand-ash: #F4F4F4;
+$color-brand-grey: #A4A4A4;
 
 
 // -------------------------------------------------------------------------
@@ -43,6 +44,44 @@ $grid-breakpoint-lg: 992px; // Large screen / desktop
 $grid-breakpoint-xl: 1200px; // Extra large screen / wide desktop
 $grid-breakpoint-xxl: 1370px; // Extra Extra large screen / wide desktop
 
+$grid-breakpoint-aliases: (
+  $grid-breakpoint-xxs: xxs,
+  $grid-breakpoint-xs: xs,
+  $grid-breakpoint-sm: sm,
+  $grid-breakpoint-md: md,
+  $grid-breakpoint-lg: lg,
+  $grid-breakpoint-xl: xl,
+  $grid-breakpoint-xxl: xxl
+);
+
+$fluid-grid-item-layouts: (
+  (breakpoint: $grid-breakpoint-xxl, columns: 1, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xxl, columns: 2, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xxl, columns: 3, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xxl, columns: 4, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xxl, columns: 5, gutter: 50px),
+  (breakpoint: $grid-breakpoint-lg, columns: 1, gutter: 50px),
+  (breakpoint: $grid-breakpoint-lg, columns: 2, gutter: 50px),
+  (breakpoint: $grid-breakpoint-lg, columns: 3, gutter: 50px),
+  (breakpoint: $grid-breakpoint-lg, columns: 4, gutter: 50px),
+  (breakpoint: $grid-breakpoint-lg, columns: 5, gutter: 50px),
+  (breakpoint: $grid-breakpoint-md, columns: 1, gutter: 50px),
+  (breakpoint: $grid-breakpoint-md, columns: 2, gutter: 50px),
+  (breakpoint: $grid-breakpoint-md, columns: 3, gutter: 30px),
+  (breakpoint: $grid-breakpoint-md, columns: 4, gutter: 50px),
+  (breakpoint: $grid-breakpoint-md, columns: 5, gutter: 50px),
+  (breakpoint: $grid-breakpoint-sm, columns: 1, gutter: 50px),
+  (breakpoint: $grid-breakpoint-sm, columns: 2, gutter: 50px),
+  (breakpoint: $grid-breakpoint-sm, columns: 3, gutter: 20px),
+  (breakpoint: $grid-breakpoint-sm, columns: 4, gutter: 50px),
+  (breakpoint: $grid-breakpoint-sm, columns: 5, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xs, columns: 1, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xs, columns: 2, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xs, columns: 3, gutter: 20px),
+  (breakpoint: $grid-breakpoint-xs, columns: 4, gutter: 50px),
+  (breakpoint: $grid-breakpoint-xs, columns: 5, gutter: 50px),
+);
+
 
 // -------------------------------------------------------------------------
 // Misc
@@ -56,3 +95,6 @@ $component-border-radius: 5px;
 $button-size-normal: 40px;
 $button-size-md: 50px;
 $button-size-lg: 60px;
+
+$overlay-blur-radius: 5px;
+$overlay-opacity: .8;

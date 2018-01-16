@@ -3,9 +3,11 @@
 @import "globals/fonts";
 @import "globals/base";
 @import "globals/headers";
+@import "globals/animations";
 @import "globals/layout";
 @import "globals/buttons";
-
-@import "components/navbar";
+@import "globals/grids";
+@import "globals/items";
+@import "globals/navbar";
 
 @import "pages/landing";

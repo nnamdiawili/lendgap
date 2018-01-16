@@ -1,6 +1,10 @@
 .container {
-  @include fluid-prop(width, -30px, 1200px, $grid-breakpoint-xxs, $grid-breakpoint-xxl);
   margin: 0 auto;
+  @include fluid-prop(width, -30px, 1200px, $grid-breakpoint-xxs, $grid-breakpoint-xxl);
+
+  &.condensed {
+    @include fluid-prop(width, -30px, 1000px, $grid-breakpoint-xxs, $grid-breakpoint-xxl);
+  }
 }
 
 .fixed-bg {
