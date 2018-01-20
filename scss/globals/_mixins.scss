@@ -99,20 +99,41 @@
 
 
 // -------------------------------------------------------------------------
-// Grid and Grid Items
+// Button themes
 // -------------------------------------------------------------------------
 
-@mixin fluid-grid-item($breakpoint, $columns, $gutter) {
-  @media (min-width: $breakpoint) {
-    width: calc((100% - (#{$gutter} * (#{$columns} - 1))) / #{$columns});
-    margin-left: $gutter;
+@mixin set-theme-colors($theme) {
+  // theme color positions:
+  $foreground-color: 1;
+  $background-color: 2;
+  $border-color: 3;
 
-    &:first-child,
-    &:nth-child(#{$columns}n+1) {
-      margin-left: 0;
+  color: nth($theme, $foreground-color);
+  background-color: nth($theme, $background-color);
+  border-color: nth($theme, $border-color);
+
+  .icon {
+    fill: nth($theme, $foreground-color);
+  }
+}
+
+@mixin btn-color-themes($normal, $hover: null, $active: null, $focus: null) {
+  @if $normal != null {
+    @include set-theme-colors($normal);
+  }
+  @if $hover != null {
+    &:hover {
+      @include set-theme-colors($hover);
     }
-    &:nth-child(n+#{$columns + 1}) {
-      margin-top: $gutter;
+  }
+  @if $active != null {
+    &:active {
+      @include set-theme-colors($active);
+    }
+  }
+  @if $focus != null {
+    &:focus {
+      @include set-theme-colors($focus);
     }
   }
 }

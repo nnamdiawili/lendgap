@@ -1,5 +1,5 @@
 
-.navbar {
+.lgp-navbar {
   @include position(absolute, 0 0 null 0);
   z-index: 10;
   transition: $navbar-theme-change-duration;
@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     cursor: pointer;
     position: relative;
     z-index: 100;
@@ -57,6 +58,9 @@
       border-radius: 1px;
       transform-origin: center center;
       transition: $navbar-navs-toggle-duration;
+    }
+    .line-2 {
+      width: 75%;
     }
   }
 
@@ -125,11 +129,15 @@
       height: 70px;
     }
   }
-  &[class*='-theme']{
-    box-shadow: 0 10px 60px 0 rgba($color-black, 0.15);
-  }
   &.pink-theme {
-    background-color: rgba(mix($color-brand-fuchsia, $color-brand-orange, 80%), .85);
+    //background-image: linear-gradient(
+    //  to bottom right,
+    //  rgba(mix($color-brand-fuchsia, $color-black, 85%), .90) 70%,
+    //  rgba(mix($color-brand-fuchsia, $color-brand-orange, 85%), .90) 100%
+    //);
+    background-color: rgba(mix(mix($color-brand-fuchsia, $color-black, 95%), $color-brand-orange, 90%), .9);
+    //background-color: rgba($color-brand-fuchsia, .9);
+    box-shadow: 0 20px 80px 5px rgba(mix($color-brand-fuchsia, $color-black, 55%), 0.35);
   }
 
   input.mobile-nav-toggle:checked ~ & {
@@ -161,8 +169,10 @@
 
 // page overlay effects:
 input.mobile-nav-toggle:checked ~ .page {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  filter: blur($overlay-blur-radius);
+  @media (max-width: $grid-breakpoint-lg) {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur($overlay-blur-radius);
+  }
 }

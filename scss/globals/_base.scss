@@ -1,8 +1,3 @@
-
-* {
-  box-sizing: border-box;
-}
-
 html, body {
   width: 100vw;
   height: 100vh;
@@ -13,6 +8,27 @@ body {
   font-family: $font-family-base;
   font-weight: 300;
   line-height: 1.5;
-  color: $color-brand-grey;
-  background-color: #113E52;
+  color: $color-brand-grey-dark;
+}
+
+body {
+  background-color: $color-brand-blue;
+}
+
+ol, ul {
+	list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a, a:hover, a:active, a:focus {
+  color: unset;
+  text-decoration: none;
+}
+
+
+
+// bootstrap overrides:
+label {
+  margin-bottom: unset;
 }

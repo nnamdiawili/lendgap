@@ -2,12 +2,15 @@
 @import "globals/mixins";
 @import "globals/fonts";
 @import "globals/base";
-@import "globals/headers";
 @import "globals/animations";
-@import "globals/layout";
+@import "globals/utils";
+@import "globals/typography";
+@import "globals/components";
 @import "globals/buttons";
-@import "globals/grids";
+@import "globals/forms";
+@import "globals/tabs";
 @import "globals/items";
 @import "globals/navbar";
 
+@import "pages/page_base";
 @import "pages/landing";

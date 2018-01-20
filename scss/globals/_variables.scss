@@ -17,7 +17,9 @@ $color-brand-orange: #FF8B2D;
 $color-brand-green: #03BF94;
 $color-brand-blue: #113E52;
 $color-brand-ash: #F4F4F4;
-$color-brand-grey: #A4A4A4;
+$color-brand-grey-dark: #A4A4A4;
+$color-brand-grey-light: #D8D8D8;
+$color-brand-peach: #F8EDEF;
 
 
 // -------------------------------------------------------------------------
@@ -27,6 +29,7 @@ $color-brand-grey: #A4A4A4;
 $font-family-base: 'Open Sans', sans-serif;
 $font-family-header: 'Brandon Grotesque', sans-serif;
 $font-family-button: 'Brandon Grotesque', sans-serif;
+$font-family-card: 'Brandon Grotesque', sans-serif;
 
 $font-size-base-min: 12px;
 $font-size-base-max: 15px;
@@ -54,33 +57,9 @@ $grid-breakpoint-aliases: (
   $grid-breakpoint-xxl: xxl
 );
 
-$fluid-grid-item-layouts: (
-  (breakpoint: $grid-breakpoint-xxl, columns: 1, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xxl, columns: 2, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xxl, columns: 3, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xxl, columns: 4, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xxl, columns: 5, gutter: 50px),
-  (breakpoint: $grid-breakpoint-lg, columns: 1, gutter: 50px),
-  (breakpoint: $grid-breakpoint-lg, columns: 2, gutter: 50px),
-  (breakpoint: $grid-breakpoint-lg, columns: 3, gutter: 50px),
-  (breakpoint: $grid-breakpoint-lg, columns: 4, gutter: 50px),
-  (breakpoint: $grid-breakpoint-lg, columns: 5, gutter: 50px),
-  (breakpoint: $grid-breakpoint-md, columns: 1, gutter: 50px),
-  (breakpoint: $grid-breakpoint-md, columns: 2, gutter: 50px),
-  (breakpoint: $grid-breakpoint-md, columns: 3, gutter: 30px),
-  (breakpoint: $grid-breakpoint-md, columns: 4, gutter: 50px),
-  (breakpoint: $grid-breakpoint-md, columns: 5, gutter: 50px),
-  (breakpoint: $grid-breakpoint-sm, columns: 1, gutter: 50px),
-  (breakpoint: $grid-breakpoint-sm, columns: 2, gutter: 50px),
-  (breakpoint: $grid-breakpoint-sm, columns: 3, gutter: 20px),
-  (breakpoint: $grid-breakpoint-sm, columns: 4, gutter: 50px),
-  (breakpoint: $grid-breakpoint-sm, columns: 5, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xs, columns: 1, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xs, columns: 2, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xs, columns: 3, gutter: 20px),
-  (breakpoint: $grid-breakpoint-xs, columns: 4, gutter: 50px),
-  (breakpoint: $grid-breakpoint-xs, columns: 5, gutter: 50px),
-);
+$grid-gutter-min: 20px;
+$grid-gutter-max: 40px;
+$grid-columns: 12;
 
 
 // -------------------------------------------------------------------------
@@ -90,11 +69,36 @@ $fluid-grid-item-layouts: (
 $navbar-navs-toggle-duration: .4s;
 $navbar-theme-change-duration: .4s;
 $component-hover-fx-duration: .3s;
+
 $component-border-radius: 5px;
 
+$component-box-shadow: 0 10px 80px 5px rgba($color-black, 0.06);
+$button-box-shadow: 0 10px 60px 0 rgba($color-black, 0.15);
+$image-box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.15);
+
+$button-size-sm: 35px;
 $button-size-normal: 40px;
 $button-size-md: 50px;
 $button-size-lg: 60px;
+
+
+$component-icon-size-xs: 12px;
+$component-icon-size-sm: 15px;
+$component-icon-size-lg: 22px;
+
+
+$input-size-sm: $button-size-sm;
+$input-size-normal: $button-size-normal;
+$input-size-md: $button-size-md;
+$input-size-lg: $button-size-lg;
+
+$button-icon-size: $component-icon-size-sm;
+$input-icon-size: $component-icon-size-sm;
+
+$component-icon-sm: 15px;
+$component-icon-lg: 30px;
+
+$caret-size: 3px;
 
 $overlay-blur-radius: 5px;
 $overlay-opacity: .8;
