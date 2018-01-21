@@ -1,0 +1,66 @@
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+
+  input[type='text'], select, textarea {
+    appearance: none;
+    outline: none;
+    font-family: $font-family-button;
+    font-size: 1em;
+    font-weight: 300;
+    height: $button-size-normal;
+    padding: 0 ($button-size-normal / 2);
+    border: 1px solid $color-brand-grey-light;
+    border-radius: $component-border-radius;
+    background-color: $color-white;
+    color: $color-brand-blue;
+  }
+
+  .select-wrapper {
+    position: relative;
+
+    &::after {
+      content: '';
+      width: $caret-size;
+      height: $caret-size;
+      border: $caret-size solid $color-brand-blue;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      box-sizing: border-box;
+      @include position(absolute, 50% ($caret-size * 6) null null);
+      transform-origin: center center;
+      transform: translateY(-75%) rotate(45deg);
+      pointer-events: none;
+    }
+    select {
+      padding: 0 $button-size-normal 0 ($button-size-normal / 2);
+    }
+  }
+
+  // states
+
+  &.inline {
+    flex-direction: row;
+    align-items: center;
+
+    //> :not(:first-child) {
+    //  margin-left: 15px;
+    //}
+  }
+  &.input-sm {
+    font-size: .8rem;
+
+    input[type='text'], select {
+      height: $input-size-sm;
+    }
+  }
+  &.input-lg {
+    input[type='text'], select {
+      height: $input-size-lg;
+    }
+  }
+
+
+}

@@ -1,0 +1,64 @@
+// -------------------------------------------------------------------------
+// Container component
+// -------------------------------------------------------------------------
+
+.lgp-container {
+  margin: 0 auto;
+  @include fluid-prop(width, -30px, 1200px, $grid-breakpoint-xxs, $grid-breakpoint-xxl);
+}
+
+
+// -------------------------------------------------------------------------
+// Grid component (for homogeneous items)
+// -------------------------------------------------------------------------
+
+.lgp-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &.with-gutter {
+    @include fluid-prop(margin, -($grid-gutter-min / 2), -($grid-gutter-max / 2));
+  }
+}
+.lgp-grid > .grid-item {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.lgp-grid.with-gutter > .grid-item {
+  @include fluid-prop(padding, ($grid-gutter-min / 2), ($grid-gutter-max / 2));
+}
+@each $breakpoint in map-keys($grid-breakpoint-aliases) {
+  @media (min-width: $breakpoint) {
+    @for $columns from 1 through $grid-columns {
+      .lgp-grid.#{map_get($grid-breakpoint-aliases, $breakpoint)}-columns-#{$columns} > .grid-item {
+          max-width: calc(100% / #{$columns});
+      }
+    }
+  }
+}
+
+.profile-photo {
+  position: relative;
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &.shadow {
+    box-shadow: $image-box-shadow;
+  }
+
+  .photo, .avatar {
+    @include position(absolute, 0 0 null null);
+    width: 100%;
+    height: 100%;
+  }
+  .photo {
+    background-size: cover;
+    background-position: center center;
+  }
+  .avatar {
+    fill: $color-brand-grey-light;
+  }
+}

@@ -1,0 +1,138 @@
+// -------------------------------------------------------------------------
+// Hero section
+// -------------------------------------------------------------------------
+
+.hero {
+  .background {
+    background-image: url('#{$path-to-images}/hero.png');
+  }
+  .gradient {
+    @include position(absolute, 50% 0 0 50%);
+    background-image: radial-gradient( ellipse at center,
+                    rgba($color-brand-fuchsia,.5) 0%,
+                    rgba($color-brand-fuchsia,.9) 50%,
+                    rgba($color-brand-orange,.95) 100%);
+    width: 200vw;
+    height: 200vh;
+    transform: translate(-50%, -50%);
+  }
+  .content {
+    @include fluid-prop(padding-top, 120px, 320px);
+    @include fluid-prop(padding-bottom, 50px, 130px);
+    text-shadow: 0 0 30px rgba($color-black, 0.1);
+    text-align: center;
+
+    @media (min-width: $grid-breakpoint-md) {
+      text-align: left;
+    }
+  }
+  .title {
+    animation: slide-down .6s ease-in-out;
+  }
+  .description {
+    animation: fade-in-staggered 1s ease-in-out;
+    padding: 0 30px;
+
+    @media (min-width: $grid-breakpoint-sm) {
+      padding: 0;
+    }
+  }
+  .cta {
+    animation: slide-down-staggered 1.4s ease-in-out;
+  }
+}
+
+
+
+
+// -------------------------------------------------------------------------
+// How it works section
+// -------------------------------------------------------------------------
+
+.how-it-works.page-section {
+  background-color: $color-brand-ash;
+}
+
+
+// -------------------------------------------------------------------------
+// Marketplace section
+// -------------------------------------------------------------------------
+
+.marketplace.page-section {
+  background-color: $color-white;
+}
+.marketplace .description {
+  margin-top: 2.5rem;
+  max-width: 500px;
+}
+.marketplace .lgp-tabs {
+  width: 100%;
+  margin: 5rem 0;
+  @include fluid-prop(margin-top, 40px, 80px, $grid-breakpoint-md);
+
+  .tab-panel {
+    @include fluid-prop(margin-top, 30px, 50px, $grid-breakpoint-md);
+  }
+}
+
+.marketplace .options-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  @include fluid-prop(margin-top, 5px, 40px, $grid-breakpoint-md);
+}
+
+
+// -------------------------------------------------------------------------
+// Pro-signup section
+// -------------------------------------------------------------------------
+
+.pro-signup {
+  .background {
+    background-image: url('#{$path-to-images}/business.jpg');
+  }
+  .gradient {
+    background-image: linear-gradient(to right,
+                    rgba($color-brand-green,.5) 0%,
+                    rgba($color-brand-green,.9) 50%,
+                    rgba($color-brand-green,.95) 100%);
+  }
+  .content {
+    @include fluid-prop(padding-top, 50px, 70px);
+    @include fluid-prop(padding-bottom, 50px, 70px);
+  }
+}
+
+
+// -------------------------------------------------------------------------
+// Benefits section
+// -------------------------------------------------------------------------
+
+.benefits.page-section {
+  background-color: $color-brand-ash;
+
+  .steps {
+    width: 100%;
+    margin-top: 5rem;
+    @include fluid-prop(margin-top, 40px, 80px, $grid-breakpoint-md);
+  }
+  .illustrated-item {
+    margin-bottom: 30px;
+  }
+  .illustrated-item .illustration {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: $color-brand-grey-light;
+    margin: 10px 0;
+
+    .icon {
+      fill: $color-brand-fuchsia;
+    }
+  }
+  .illustrated-item .title {
+    color: $color-brand-fuchsia;
+  }
+}
