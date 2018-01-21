@@ -3,9 +3,6 @@
 // -------------------------------------------------------------------------
 
 .hero {
-  .background {
-    background-image: url('#{$path-to-images}/hero.png');
-  }
   .gradient {
     @include position(absolute, 50% 0 0 50%);
     background-image: radial-gradient( ellipse at center,
@@ -89,9 +86,6 @@
 // -------------------------------------------------------------------------
 
 .pro-signup {
-  .background {
-    background-image: url('#{$path-to-images}/business.jpg');
-  }
   .gradient {
     background-image: linear-gradient(to right,
                     rgba($color-brand-green,.5) 0%,
