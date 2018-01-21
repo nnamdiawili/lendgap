@@ -116,6 +116,13 @@
     $hover: $color-brand-blue null null
   );
 }
+.btn-trans-alt {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-brand-grey-dark transparent null,
+    $hover: $color-brand-fuchsia null null
+  );
+}
 .btn-grey {
   @include btn-color-themes(
     $normal: $color-brand-blue $color-brand-grey-light null,

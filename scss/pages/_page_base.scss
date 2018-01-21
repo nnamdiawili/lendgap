@@ -44,3 +44,65 @@
     margin-top: 2.4rem ;
   }
 }
+
+
+// -------------------------------------------------------------------------
+// Page footer
+// -------------------------------------------------------------------------
+
+.footer {
+  background-color: $color-brand-teal;
+
+  .content {
+    @include fluid-prop(padding-top, 60px, 80px);
+    @include fluid-prop(padding-bottom, 60px, 80px);
+
+    @media (min-width: $grid-breakpoint-sm) and (max-width: $grid-breakpoint-md) {
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      justify-content: space-between !important;
+    }
+  }
+
+  .brand {
+    position: relative;
+    transform: translateY(3px);
+    margin-bottom: 30px;
+
+    @media (min-width: $grid-breakpoint-sm) and (max-width: $grid-breakpoint-md) {
+      width: 100% !important;
+      margin-bottom: 40px;
+      justify-content: center !important;
+    }
+    @media (min-width: $grid-breakpoint-md) {
+      margin-bottom: 0;
+    }
+
+    .logo {
+      width: 100px;
+      height: 25px;
+
+      @media (min-width: $grid-breakpoint-md) {
+        width: 125px;
+        height: 31px;
+      }
+    }
+  }
+  .divider {
+    border-left: 1px solid $color-brand-grey-dark;
+    height: 70px;
+    opacity: .3;
+  }
+  .footer-nav {
+    @media (min-width: $grid-breakpoint-sm) and (max-width: $grid-breakpoint-md) {
+      align-items: flex-start !important;
+    }
+  }
+  .footer-link {
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
