@@ -2,7 +2,9 @@
   "name": "lendgap",
   "version": "1.0.0",
   "description": "",
-  "main": "js/script.js",
+  "engines": {
+    "node": "6.x.x"
+  },
   "local-web-server": {
     "port": 8081,
     "forbid": "*.json"
