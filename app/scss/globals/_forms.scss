@@ -3,22 +3,39 @@
   display: flex;
   flex-direction: column;
   font-size: 1rem;
+  margin-top: 1.5rem;
 
-  input[type='text'], select, textarea {
+  label {
+    color: $color-brand-blue;
+    font-family: $font-family-input;
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  input, select, textarea {
     appearance: none;
     outline: none;
-    font-family: $font-family-button;
+    font-family: $font-family-input;
     font-size: 1em;
     font-weight: 300;
-    height: $button-size-normal;
-    padding: 0 ($button-size-normal / 2);
+    height: $input-size-normal;
+    padding: 0 ($input-size-normal / 3);
     border: 1px solid $color-brand-grey-light;
     border-radius: $component-border-radius;
     background-color: $color-white;
     color: $color-brand-blue;
+    opacity: .5;
+    transition: $component-hover-fx-duration;
+
+    &:focus {
+      opacity: 1;
+    }
   }
 
-  .select-wrapper {
+  .input-wrapper {
     position: relative;
 
     &::after {
@@ -29,38 +46,50 @@
       border-left-color: transparent;
       border-top-color: transparent;
       box-sizing: border-box;
-      @include position(absolute, 50% ($caret-size * 6) null null);
       transform-origin: center center;
       transform: translateY(-75%) rotate(45deg);
       pointer-events: none;
+      @include position(absolute, 50% ($caret-size * 6) null null);
     }
     select {
-      padding: 0 $button-size-normal 0 ($button-size-normal / 2);
+      padding: 0 $input-size-normal 0 ($input-size-normal / 2);
     }
   }
 
-  // states
+  // layout
 
   &.inline {
     flex-direction: row;
     align-items: center;
 
-    //> :not(:first-child) {
-    //  margin-left: 15px;
-    //}
-  }
-  &.input-sm {
-    font-size: .8rem;
-
-    input[type='text'], select {
-      height: $input-size-sm;
-    }
-  }
-  &.input-lg {
-    input[type='text'], select {
-      height: $input-size-lg;
+    label {
+      margin-bottom: 0;
     }
   }
 
+  // sizes
 
+  $input-size-map: (
+    sm: ($input-size-sm, .8rem),
+    md: ($input-size-md, 1rem),
+    lg: ($input-size-lg, 1rem)
+  );
+  @each $size-name, $size-values in $input-size-map {
+    $input-size: nth($size-values, 1);
+    $font-size: nth($size-values, 2);
+    &.input-#{$size-name} {
+      input, select {
+        height: $input-size;
+        padding: 0 ($input-size / 3);
+        font-size: $font-size;
+      }
+      textarea {
+        height: $input-size * $form-textarea-default-rows;
+        font-size: $font-size;
+      }
+      .input-wrapper select {
+        padding: 0 $input-size 0 ($input-size / 3);
+      }
+    }
+  }
 }

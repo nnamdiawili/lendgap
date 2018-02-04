@@ -1,4 +1,19 @@
 // -------------------------------------------------------------------------
+// Page and footer layout
+// -------------------------------------------------------------------------
+body {
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  flex: 1 1 auto;
+  background-color: $color-brand-ash;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+// -------------------------------------------------------------------------
 // Page sections
 // -------------------------------------------------------------------------
 
@@ -26,7 +41,9 @@
   .background {
     @include position(absolute, 0 0 0 0);
     overflow: hidden;
-    z-index: -1;
+  }
+  .foreground {
+    position: relative;
   }
   .gradient {
     width: 100%;
@@ -89,9 +106,7 @@
     }
   }
   .divider {
-    border-left: 1px solid $color-brand-grey-dark;
     height: 70px;
-    opacity: .3;
   }
   .footer-nav {
     @media (min-width: $grid-breakpoint-sm) and (max-width: $grid-breakpoint-md) {

@@ -78,6 +78,10 @@
   align-items: center;
   padding: 15px 0;
   @include fluid-prop(margin-top, 5px, 40px, $grid-breakpoint-md);
+
+  .input-field label {
+    margin-right: 15px;
+  }
 }
 
 

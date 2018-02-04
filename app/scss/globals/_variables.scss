@@ -21,6 +21,8 @@ $color-brand-grey-dark: #A4A4A4;
 $color-brand-grey-light: #D8D8D8;
 $color-brand-peach: #F8EDEF;
 $color-brand-teal: #152C35;
+$color-facebook: #335A9E;
+$color-google: #F03B2C;
 
 
 // -------------------------------------------------------------------------
@@ -30,6 +32,7 @@ $color-brand-teal: #152C35;
 $font-family-base: 'Open Sans', sans-serif;
 $font-family-header: 'Brandon Grotesque', sans-serif;
 $font-family-button: 'Brandon Grotesque', sans-serif;
+$font-family-input: 'Brandon Grotesque', sans-serif;
 $font-family-card: 'Brandon Grotesque', sans-serif;
 
 $font-size-base-min: 12px;
@@ -92,6 +95,8 @@ $input-size-sm: $button-size-sm;
 $input-size-normal: $button-size-normal;
 $input-size-md: $button-size-md;
 $input-size-lg: $button-size-lg;
+
+$form-textarea-default-rows: 3;
 
 $button-icon-size: $component-icon-size-sm;
 $input-icon-size: $component-icon-size-sm;

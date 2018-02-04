@@ -39,6 +39,11 @@
   }
 }
 
+
+// -------------------------------------------------------------------------
+// Profile photos
+// -------------------------------------------------------------------------
+
 .profile-photo {
   position: relative;
   border: 1px solid $color-white;
@@ -60,5 +65,84 @@
   }
   .avatar {
     fill: $color-brand-grey-light;
+    background-color: rgba($color-white, .5);
   }
 }
+
+
+// -------------------------------------------------------------------------
+// Password strength widget
+// -------------------------------------------------------------------------
+
+.password-strength {
+  margin-top: 10px;
+
+  .caption {
+    margin-right: 10px;
+  }
+  .widget {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    margin-bottom: 1px;
+
+    .track, .indicator {
+      @include position(absolute, 0);
+      height: 2px;
+    }
+    .track {
+      width: 100%;
+      background-color: $color-brand-grey-light;
+    }
+    .indicator {
+      background-color: $color-brand-fuchsia;
+    }
+  }
+
+}
+
+
+// -------------------------------------------------------------------------
+// Password strength widget
+// -------------------------------------------------------------------------
+
+.divider {
+    display: flex !important;
+    align-items: center;
+
+    &::before, &::after {
+      flex: 1 1 auto;
+      content: ' ';
+      display: block;
+    }
+    .caption {
+      flex: 0 0 auto;
+    }
+
+    &.vertical {
+      flex-direction: column;
+      height: 100%;
+
+      &::before, &::after {
+        border-left: 1px solid rgba($color-brand-grey-dark, .3);
+      }
+      .caption {
+        font-family: $font-family-button;
+        font-size: .7rem;
+        font-weight: 500;
+        letter-spacing: 0.075rem;
+        text-transform: uppercase;
+        margin: 10px 0;
+      }
+    }
+    &.horizontal {
+      width: 100%;
+      &::before, &::after {
+        border-top: 1px solid rgba($color-brand-grey-dark, .3);
+      }
+      .caption {
+        margin: 0 10px;
+      }
+    }
+  }
+

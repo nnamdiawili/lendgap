@@ -107,6 +107,11 @@
     height: $button-size-normal;
     @include fluid-prop(width, 30px, 40px);
     @include fluid-prop(height,  30px, 40px);
+
+    .avatar {
+      fill: $color-white;
+      background-color: transparent;
+    }
   }
   .rating {
     display: flex;

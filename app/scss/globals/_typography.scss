@@ -19,6 +19,12 @@
 }
 
 .header-md {
+  @include fluid-prop(font-size, 22px, 36px);
+  @include fluid-prop(letter-spacing, -0.5px, -1px);
+  font-weight: 500;
+}
+
+.header-sm {
   @include fluid-prop(font-size, 20px, 30px);
   @include fluid-prop(letter-spacing, -0.5px, -1px);
   font-weight: 700;
@@ -29,6 +35,13 @@
 
   @media (min-width: $grid-breakpoint-sm) {
     font-size: .8rem;
+  }
+}
+.text-micro {
+  font-size: .6em;
+
+  @media (min-width: $grid-breakpoint-sm) {
+    font-size: .6rem;
   }
 }
 
@@ -46,4 +59,17 @@
   font-size: .7em;
   font-weight: 900;
   margin-right: .18em;
+}
+
+
+a.text-link {
+  color: $color-brand-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-brand-fuchsia;
+  }
+  &:active, &:visited {
+    color: $color-brand-orange;
+  }
 }

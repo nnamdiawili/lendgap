@@ -21,7 +21,7 @@
   .icon {
     width: $button-icon-size;
     height: $button-icon-size;
-    transition: $component-hover-fx-duration
+    transition: $component-hover-fx-duration;
   }
   > :not(:first-child) {
     margin-left: $button-icon-size;
@@ -129,9 +129,18 @@
     $hover: $color-brand-fuchsia null null
   );
 }
-
-
-
+.btn-facebook {
+  @include btn-color-themes(
+    $normal: $color-white $color-facebook null,
+    $hover: $color-white $color-facebook null null
+  );
+}
+.btn-google {
+  @include btn-color-themes(
+    $normal: $color-white $color-google null,
+    $hover: $color-white $color-google null null
+  );
+}
 
 .btn-tab {
   transition: $component-hover-fx-duration;
@@ -159,7 +168,6 @@
     @include btn-color-themes($normal: $color-white $color-brand-fuchsia null);
   }
 }
-
 .btn-toggle {
   padding: 0 ($button-size-normal / 2);
   @include btn-color-themes($normal: $color-brand-grey-dark transparent null);
