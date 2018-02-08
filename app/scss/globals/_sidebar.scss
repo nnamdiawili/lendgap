@@ -1,0 +1,30 @@
+
+.sidebar-container {
+  position: relative;
+  transition: padding $component-fx-duration;
+
+  > .sidebar {
+    @include position(fixed, 0 null 0 0);
+    width: $sidebar-size;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-brand-blue;
+    transition: height $navbar-theme-change-duration;
+    
+    .header {
+      background-color: $color-brand-teal;
+      height: $nav-header-height;
+      flex: 0 0 auto;
+    }
+    .brand .logo {
+      width: 100px;
+      height: 25px;
+      transform: translateY(3px);
+    }
+    .navs {
+      flex: 1 1 auto;
+      overflow: auto;
+    }
+  }
+
+}

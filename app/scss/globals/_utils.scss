@@ -15,3 +15,13 @@
 .preamble {
   margin-right: .5em;
 }
+
+.flipped-h {
+  transform-origin: center center;
+  transform: scaleX(-1);
+}
+
+.flipped-v {
+  transform-origin: center center;
+  transform: scaleY(-1);
+}

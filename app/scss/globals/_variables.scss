@@ -65,6 +65,9 @@ $grid-gutter-min: 20px;
 $grid-gutter-max: 40px;
 $grid-columns: 12;
 
+$nav-header-height: 80px;
+$sidebar-size: 215px;
+
 
 // -------------------------------------------------------------------------
 // Misc
@@ -73,6 +76,7 @@ $grid-columns: 12;
 $navbar-navs-toggle-duration: .4s;
 $navbar-theme-change-duration: .4s;
 $component-hover-fx-duration: .3s;
+$component-fx-duration: .3s;
 
 $component-border-radius: 5px;
 
@@ -84,17 +88,21 @@ $button-size-sm: 35px;
 $button-size-normal: 40px;
 $button-size-md: 50px;
 $button-size-lg: 60px;
+$button-size-xl: 70px;
 
 
 $component-icon-size-xs: 12px;
 $component-icon-size-sm: 15px;
+$component-icon-size-md: 18px;
 $component-icon-size-lg: 22px;
+$component-icon-size-xl: 30px;
 
 
 $input-size-sm: $button-size-sm;
 $input-size-normal: $button-size-normal;
 $input-size-md: $button-size-md;
 $input-size-lg: $button-size-lg;
+$input-size-xl: $button-size-xl;
 
 $form-textarea-default-rows: 3;
 

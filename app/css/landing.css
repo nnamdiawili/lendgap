@@ -157,6 +157,18 @@ label {
 .preamble {
   margin-right: .5em; }
 
+.flipped-h {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+
+.flipped-v {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1); }
+
 .header-xl,
 .header-lg,
 .header-md,
@@ -794,6 +806,37 @@ a.text-link {
       fill: #113E52; }
   .btn-toggle:last-child {
     margin-right: -20px; }
+
+.btn-sidebar {
+  border-radius: 0;
+  height: 60px;
+  width: 100%;
+  padding: 0 0 0 30px;
+  margin: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #D8D8D8;
+  background-color: transparent; }
+  .btn-sidebar .icon {
+    fill: #D8D8D8; }
+  .btn-sidebar:hover {
+    color: #D8D8D8;
+    background-color: #152C35; }
+    .btn-sidebar:hover .icon {
+      fill: #D8D8D8; }
+  .btn-sidebar .icon {
+    fill: #FF2D6E;
+    width: 18px;
+    height: 18px; }
+  .btn-sidebar > :not(:first-child) {
+    margin-left: 22px; }
+  .btn-sidebar.active, .active > .btn-sidebar {
+    pointer-events: none;
+    color: #FFF;
+    background-color: #FF2D6E; }
+    .btn-sidebar.active .icon, .active > .btn-sidebar .icon {
+      fill: #FFF; }
 
 .input-field {
   display: -webkit-box;
@@ -1554,38 +1597,3 @@ body {
       fill: #FF2D6E; }
   .benefits.page-section .illustrated-item .title {
     color: #FF2D6E; }
-
-.auth.page-section .content {
-  width: -30px; }
-  @media screen and (min-width: 0px) {
-    .auth.page-section .content {
-      width: calc(-30px + 1230 * ((100vw - 0px) / 1370)); } }
-  @media screen and (min-width: 1370px) {
-    .auth.page-section .content {
-      width: 1200px; } }
-
-.auth.page-section .header .title {
-  color: #FF2D6E; }
-
-.auth.page-section .header .description {
-  margin-top: 1rem; }
-
-.auth.page-section .terms-and-conditions {
-  margin-top: 2rem; }
-
-.auth.page-section .cta .btn:not(:first-of-type) {
-  margin-top: 15px; }
-
-@media (min-width: 768px) {
-  .auth.page-section .cta .btn {
-    max-width: 250px; } }
-
-.auth.page-section .redirect-link {
-  color: #113E52;
-  margin-top: 30px; }
-
-.auth.page-section .divider.vertical {
-  height: 300px; }
-
-.auth.page-section .divider.horizontal {
-  margin: 15px 0; }

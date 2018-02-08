@@ -181,5 +181,33 @@
   }
 }
 
+.btn-sidebar {
+  border-radius: 0;
+  height: $button-size-lg;
+  width: 100%;
+  padding: 0 0 0 $button-size-lg / 2;
+  margin: 0;
+  justify-content: flex-start;
+
+  @include btn-color-themes(
+    $normal: $color-brand-grey-light transparent null,
+    $hover: $color-brand-grey-light $color-brand-teal null null
+  );
+
+  .icon {
+    fill: $color-brand-fuchsia;
+    width: $component-icon-size-md;
+    height: $component-icon-size-md;
+  }
+  > :not(:first-child) {
+    margin-left: $component-icon-size-lg;
+  }
+
+  &.active, .active > & {
+    pointer-events: none;
+    @include btn-color-themes($color-white $color-brand-fuchsia null);
+  }
+}
+
 
 
