@@ -1,0 +1,62 @@
+// -------------------------------------------------------------------------
+// Collapsible banner section
+// -------------------------------------------------------------------------
+
+.banner.page-section {
+  min-height: unset;
+  
+  .gradient {
+    background-image: linear-gradient(to right,
+                    rgba($color-brand-nude, .95) 0%,
+                    rgba($color-brand-nude, .5) 100%);
+  }
+  .content {
+    @include fluid-prop(padding-top, 30px, 50px);
+    @include fluid-prop(padding-bottom, 30px, 50px);
+    color: $color-brand-blue;
+    text-shadow: 0 0 30px rgba($color-black, 0.1);
+  }
+  .description {
+    margin: 1.2rem 0 0;
+  }
+  .cta {
+    margin-top: 1.5rem ;
+  }
+  .close {
+    @include position(absolute, 10px 10px null null);
+  }
+}
+
+
+// -------------------------------------------------------------------------
+// Marketplace section
+// -------------------------------------------------------------------------
+
+.marketplace.page-section {
+  background-color: $color-white;
+
+}
+.marketplace.page-section .content {
+  padding-top: 0;
+}
+.marketplace .lgp-tabs {
+  width: 100%;
+  margin: 5rem 0;
+  @include fluid-prop(margin-top, 15px, 27px, $grid-breakpoint-md);
+
+  .tab-panel {
+    @include fluid-prop(margin-top, 10px, 17px, $grid-breakpoint-md);
+  }
+}
+
+.marketplace .options-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  @include fluid-prop(margin-top, 5px, 10px, $grid-breakpoint-md);
+
+  .input-field label {
+    margin-right: 15px;
+  }
+}

@@ -3,7 +3,7 @@
   var hero = document.querySelector('.hero');
   var heroTitle = hero.querySelector('.hero .title');
   var heroGradient = document.querySelector('.hero .gradient');
-  var navbar = document.querySelector('.lgp-navbar');
+  var navbar = document.querySelector('.lgp-hero-navbar');
 
   var scrollTriggerOffset = 100, // offset to trigger scroll effects before the scroll position is reached.
       heroTitleScrollOffset;

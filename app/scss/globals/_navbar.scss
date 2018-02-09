@@ -1,5 +1,5 @@
 
-.lgp-navbar {
+.lgp-hero-navbar {
   @include position(absolute, 0 0 null 0);
   z-index: 10;
   transition: $navbar-theme-change-duration;
@@ -32,36 +32,6 @@
   .navs {
     display: flex;
     align-items: center;
-  }
-
-  .nav-burger {
-    width: 50px;
-    height: 50px;
-    padding: 17px 15px;
-    margin-right: -15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    cursor: pointer;
-    position: relative;
-    z-index: 100;
-
-    @media (min-width: $grid-breakpoint-lg) {
-      display: none;
-    }
-
-    *[class^="line-"] {
-      width: 100%;
-      height: 2px;
-      background-color: $color-white;
-      border-radius: 1px;
-      transform-origin: center center;
-      transition: $navbar-navs-toggle-duration;
-    }
-    .line-2 {
-      width: 75%;
-    }
   }
 
   .mobile-nav {
@@ -119,6 +89,17 @@
     }
   }
 
+  .nav-burger {
+    margin-right: -15px;
+    position: relative;
+    z-index: 100;
+
+    @media (min-width: $grid-breakpoint-lg) {
+      display: none;
+    }
+  }
+
+
   // states
 
   &.fixed {
@@ -130,13 +111,7 @@
     }
   }
   &.pink-theme {
-    //background-image: linear-gradient(
-    //  to bottom right,
-    //  rgba(mix($color-brand-fuchsia, $color-black, 85%), .90) 70%,
-    //  rgba(mix($color-brand-fuchsia, $color-brand-orange, 85%), .90) 100%
-    //);
     background-color: rgba(mix(mix($color-brand-fuchsia, $color-black, 95%), $color-brand-orange, 90%), .9);
-    //background-color: rgba($color-brand-fuchsia, .9);
     box-shadow: 0 20px 80px 5px rgba(mix($color-brand-fuchsia, $color-black, 55%), 0.35);
   }
 
@@ -174,5 +149,42 @@ input.mobile-nav-toggle:checked ~ .page {
     height: 100%;
     overflow: hidden;
     filter: blur($overlay-blur-radius);
+  }
+}
+
+
+
+
+.lgp-dashboard-navbar {
+  @include position(fixed, 0 0 null 0);
+  background-color: rgba($color-white, .98);
+  box-shadow: 0 20px 80px 5px rgba($color-black, 0.05);
+  z-index: 10;
+
+  > .content {
+    height: $nav-header-height;
+  }
+  .nav-burger {
+    margin: 0 15px 0 -15px;
+    * {
+      background-color: $color-brand-grey-dark;
+    }
+  }
+
+  .brand .logo {
+    width: 100px;
+    height: 25px;
+    transform: translateY(3px);
+
+    @media (min-width: $grid-breakpoint-sm) {
+      width: 125px;
+      height: 31px;
+    }
+  }
+
+  .navs, .nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 }

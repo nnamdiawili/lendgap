@@ -1,39 +1,39 @@
 // -------------------------------------------------------------------------
-// Authentication section (Sign-up, Sign-in, etc)
+// Page layout
 // -------------------------------------------------------------------------
 
+.page {
+  // overflow: auto;
+  padding-top: $nav-header-height;
+}
 
-.auth.page-section {
-  .content {
-    @include fluid-prop(width, -30px, 1200px, $grid-breakpoint-xxs, $grid-breakpoint-xxl);
-  }
-  .header .title {
-    color: $color-brand-fuchsia;
-  }
-  .header .description {
-    margin-top: 1rem;
-  }
-  .terms-and-conditions {
-    margin-top: 2rem;
-  }
-  .cta .btn {
+.notifications {
+  position: relative;
 
-    &:not(:first-of-type) {
-      margin-top: 15px;
-    }
+  &.active::after {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border: 2px solid $color-white;
+    border-radius: 50%;
+    background-color: $color-brand-fuchsia;
+    @include position(absolute, 50% null null 50%);
+    transform: translateY(-10px);
+  }
+}
 
-    @media (min-width: $grid-breakpoint-md) {
-      max-width: 250px;
-    }
+.nav-item.dropdown {
+  .dropdown-toggle {
+    height: 100%;
+    padding: 0;
+    font-weight: 300;
   }
-  .redirect-link {
-    color: $color-brand-blue;
-    margin-top: 30px;
+  .dropdown-toggle .caption {
+    margin: 0 5px 0 10px;
   }
-  .divider.vertical  {
-    height: 250px;
-  }
-  .divider.horizontal  {
-    margin: 15px 0;
+  .profile-photo {
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
   }
 }

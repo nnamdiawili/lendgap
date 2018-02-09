@@ -14,6 +14,7 @@ $color-white: #FFF;
 $color-black: #000;
 $color-brand-fuchsia: #FF2D6E;
 $color-brand-orange: #FF8B2D;
+$color-brand-nude: #F8F4F3;
 $color-brand-green: #03BF94;
 $color-brand-blue: #113E52;
 $color-brand-ash: #F4F4F4;
@@ -66,7 +67,9 @@ $grid-gutter-max: 40px;
 $grid-columns: 12;
 
 $nav-header-height: 80px;
+
 $sidebar-size: 215px;
+$sidebar-collapse-breakpoint: $grid-breakpoint-md;
 
 
 // -------------------------------------------------------------------------

@@ -7,8 +7,12 @@
 @import "globals/components";
 @import "globals/buttons";
 @import "globals/forms";
+@import "globals/tabs";
+@import "globals/items";
+@import "globals/navbar";
 @import "globals/sidebar";
 
 @import "pages/page_base";
+@import "pages/dashboard_base";
 
-@import "pages/auth";
+@import "pages/livemarket";

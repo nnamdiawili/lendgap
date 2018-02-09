@@ -1,15 +1,17 @@
 
 .sidebar-container {
   position: relative;
+  padding-left: 0;
   transition: padding $component-fx-duration;
 
   > .sidebar {
     @include position(fixed, 0 null 0 0);
     width: $sidebar-size;
+    transform: translateX(-$sidebar-size);
     display: flex;
     flex-direction: column;
     background-color: $color-brand-blue;
-    transition: height $navbar-theme-change-duration;
+    transition: duration;
     
     .header {
       background-color: $color-brand-teal;
@@ -24,6 +26,24 @@
     .navs {
       flex: 1 1 auto;
       overflow: auto;
+    }
+  }
+
+  .lgp-container {
+    margin: 0 auto;
+    $collapse-width: $sidebar-collapse-breakpoint - 80px;
+    @include fluid-prop(width, -30px, $collapse-width, $grid-breakpoint-xxs, $sidebar-collapse-breakpoint, $limit-max: true);
+    @include fluid-prop(width, ($collapse-width - $sidebar-size), (1200px - $sidebar-size), $sidebar-collapse-breakpoint, $grid-breakpoint-xxl, $limit-min: true);
+  }
+
+  @media screen and (min-width: $sidebar-collapse-breakpoint) {
+    padding-left: $sidebar-size;
+    
+    > .sidebar {
+      transform: translateX(0);
+    }
+    .lgp-dashboard-navbar {
+      margin-left: $sidebar-size;
     }
   }
 

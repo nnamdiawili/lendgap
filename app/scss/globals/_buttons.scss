@@ -26,6 +26,11 @@
   > :not(:first-child) {
     margin-left: $button-icon-size;
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 
@@ -33,13 +38,13 @@
 // Button styles / effects:
 // -------------------------------------------------------------------------
 
-.btn-caps {
+.btn.btn-caps {
   text-transform: uppercase;
   font-weight: 500;
   font-size: .7rem;
   letter-spacing: 0.075rem;
 }
-.btn-chrome {
+.btn.btn-chrome {
   &::before {
     @include position(absolute, null 0 0 0);
     content: '';
@@ -59,7 +64,7 @@
     opacity: .1;
   }
 }
-.btn-shadow {
+.btn.btn-shadow {
   &, &:focus {
     box-shadow: $button-box-shadow;
   }
@@ -69,15 +74,15 @@
 // Button sizes
 // -------------------------------------------------------------------------
 
-.btn-sm {
+.btn.btn-sm {
   height: $button-size-sm;
   padding: 0 $button-size-sm;
 }
-.btn-md {
+.btn.btn-md {
   height: $button-size-md;
   padding: 0 $button-size-md;
 }
-.btn-lg {
+.btn.btn-lg {
   height: $button-size-lg;
   padding: 0 $button-size-lg;
 }
@@ -91,58 +96,66 @@
 // theme-name: foreground-color background-color border-color
 // WHERE: theme-name can be either $normal, $hover, $active or $focus.
 
-.btn-green {
+.btn.btn-green {
   @include btn-color-themes(
     $normal: $color-white $color-brand-green null,
     $hover: $color-white null null
   );
 }
-.btn-fuchsia {
+.btn.btn-fuchsia {
   @include btn-color-themes(
     $normal: $color-white $color-brand-fuchsia null,
     $hover: $color-white null null
   );
 }
-.btn-white {
+.btn.btn-white {
   @include btn-color-themes(
     $normal: $color-brand-blue $color-white null,
     $hover: $color-brand-fuchsia null null
   );
 }
-.btn-trans-white {
+.btn.btn-trans-white {
   transition: $component-hover-fx-duration;
   @include btn-color-themes(
     $normal: $color-white transparent null,
     $hover: $color-brand-blue null null
   );
 }
-.btn-trans-alt {
+.btn.btn-trans-alt {
   transition: $component-hover-fx-duration;
   @include btn-color-themes(
     $normal: $color-brand-grey-dark transparent null,
     $hover: $color-brand-fuchsia null null
   );
 }
-.btn-grey {
+.btn.btn-grey {
   @include btn-color-themes(
     $normal: $color-brand-blue $color-brand-grey-light null,
     $hover: $color-brand-fuchsia null null
   );
 }
-.btn-facebook {
+.btn.btn-facebook {
   @include btn-color-themes(
     $normal: $color-white $color-facebook null,
     $hover: $color-white $color-facebook null null
   );
 }
-.btn-google {
+.btn.btn-google {
   @include btn-color-themes(
     $normal: $color-white $color-google null,
     $hover: $color-white $color-google null null
   );
 }
 
-.btn-tab {
+.btn.btn-icon {
+  padding: $button-size-normal / 2;
+
+  .icon {
+    width: $component-icon-size-md;
+    height: $component-icon-size-md;
+  }
+}
+.btn.btn-tab {
   transition: $component-hover-fx-duration;
   border-radius: 0;
   margin: 0;
@@ -168,7 +181,7 @@
     @include btn-color-themes($normal: $color-white $color-brand-fuchsia null);
   }
 }
-.btn-toggle {
+.btn.btn-toggle {
   padding: 0 ($button-size-normal / 2);
   @include btn-color-themes($normal: $color-brand-grey-dark transparent null);
 
@@ -181,7 +194,7 @@
   }
 }
 
-.btn-sidebar {
+.btn.btn-sidebar {
   border-radius: 0;
   height: $button-size-lg;
   width: 100%;
