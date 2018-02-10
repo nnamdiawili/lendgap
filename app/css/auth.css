@@ -203,11 +203,12 @@ label {
   margin-right: .18em; }
 
 a.text-link {
+  font-family: "Brandon Grotesque", sans-serif;
   color: #113E52;
   text-decoration: none; }
   a.text-link:hover {
     color: #FF2D6E; }
-  a.text-link:active, a.text-link:visited {
+  a.text-link:active, a.text-link:focus {
     color: #FF8B2D; }
 
 .lgp-container {
@@ -581,7 +582,7 @@ a.text-link {
   z-index: 1;
   cursor: pointer;
   transition: 0.3s; }
-  .btn .icon {
+  .btn > .icon {
     width: 15px;
     height: 15px;
     transition: 0.3s; }
@@ -684,6 +685,17 @@ a.text-link {
     .btn.btn-trans-alt:hover .icon {
       fill: #FF2D6E; }
 
+.btn.btn-trans-grey {
+  transition: 0.3s;
+  color: #D8D8D8;
+  background-color: transparent; }
+  .btn.btn-trans-grey .icon {
+    fill: #D8D8D8; }
+  .btn.btn-trans-grey:hover {
+    color: #FF2D6E; }
+    .btn.btn-trans-grey:hover .icon {
+      fill: #FF2D6E; }
+
 .btn.btn-grey {
   color: #113E52;
   background-color: #D8D8D8; }
@@ -718,7 +730,7 @@ a.text-link {
 
 .btn.btn-icon {
   padding: 20px; }
-  .btn.btn-icon .icon {
+  .btn.btn-icon > .icon {
     width: 18px;
     height: 18px; }
 
@@ -793,7 +805,7 @@ a.text-link {
     background-color: #152C35; }
     .btn.btn-sidebar:hover .icon {
       fill: #D8D8D8; }
-  .btn.btn-sidebar .icon {
+  .btn.btn-sidebar > .icon {
     fill: #FF2D6E;
     width: 18px;
     height: 18px; }
@@ -900,26 +912,17 @@ a.text-link {
   .input-field.input-lg .input-wrapper select {
     padding: 0 60px 0 20px; }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
 .page {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  min-height: 80vh;
   background-color: #F4F4F4;
   position: relative; }
-
-.footer {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+  @media (max-width: 992px) {
+    input.mobile-nav-toggle:checked ~ .page {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      -webkit-filter: blur(5px);
+              filter: blur(5px); } }
 
 .page-section {
   overflow-x: hidden; }

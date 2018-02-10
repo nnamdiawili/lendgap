@@ -18,7 +18,7 @@
   cursor: pointer;
   transition: $component-hover-fx-duration;
 
-  .icon {
+  > .icon {
     width: $button-icon-size;
     height: $button-icon-size;
     transition: $component-hover-fx-duration;
@@ -128,6 +128,13 @@
     $hover: $color-brand-fuchsia null null
   );
 }
+.btn.btn-trans-grey {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-brand-grey-light transparent null,
+    $hover: $color-brand-fuchsia null null
+  );
+}
 .btn.btn-grey {
   @include btn-color-themes(
     $normal: $color-brand-blue $color-brand-grey-light null,
@@ -150,7 +157,7 @@
 .btn.btn-icon {
   padding: $button-size-normal / 2;
 
-  .icon {
+  > .icon {
     width: $component-icon-size-md;
     height: $component-icon-size-md;
   }
@@ -207,7 +214,7 @@
     $hover: $color-brand-grey-light $color-brand-teal null null
   );
 
-  .icon {
+  > .icon {
     fill: $color-brand-fuchsia;
     width: $component-icon-size-md;
     height: $component-icon-size-md;

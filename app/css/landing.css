@@ -279,11 +279,12 @@ label {
   margin-right: .18em; }
 
 a.text-link {
+  font-family: "Brandon Grotesque", sans-serif;
   color: #113E52;
   text-decoration: none; }
   a.text-link:hover {
     color: #FF2D6E; }
-  a.text-link:active, a.text-link:visited {
+  a.text-link:active, a.text-link:focus {
     color: #FF8B2D; }
 
 .lgp-container {
@@ -657,7 +658,7 @@ a.text-link {
   z-index: 1;
   cursor: pointer;
   transition: 0.3s; }
-  .btn .icon {
+  .btn > .icon {
     width: 15px;
     height: 15px;
     transition: 0.3s; }
@@ -760,6 +761,17 @@ a.text-link {
     .btn.btn-trans-alt:hover .icon {
       fill: #FF2D6E; }
 
+.btn.btn-trans-grey {
+  transition: 0.3s;
+  color: #D8D8D8;
+  background-color: transparent; }
+  .btn.btn-trans-grey .icon {
+    fill: #D8D8D8; }
+  .btn.btn-trans-grey:hover {
+    color: #FF2D6E; }
+    .btn.btn-trans-grey:hover .icon {
+      fill: #FF2D6E; }
+
 .btn.btn-grey {
   color: #113E52;
   background-color: #D8D8D8; }
@@ -794,7 +806,7 @@ a.text-link {
 
 .btn.btn-icon {
   padding: 20px; }
-  .btn.btn-icon .icon {
+  .btn.btn-icon > .icon {
     width: 18px;
     height: 18px; }
 
@@ -869,7 +881,7 @@ a.text-link {
     background-color: #152C35; }
     .btn.btn-sidebar:hover .icon {
       fill: #D8D8D8; }
-  .btn.btn-sidebar .icon {
+  .btn.btn-sidebar > .icon {
     fill: #FF2D6E;
     width: 18px;
     height: 18px; }
@@ -1157,7 +1169,7 @@ a.text-link {
   .loan-card:active {
     border-color: rgba(255, 45, 110, 0.5); }
 
-.lgp-hero-navbar {
+.hero-navbar {
   position: absolute;
   top: 0;
   right: 0;
@@ -1166,7 +1178,7 @@ a.text-link {
   transition: 0.4s;
   -webkit-animation: slide-down 1s ease-in-out;
           animation: slide-down 1s ease-in-out; }
-  .lgp-hero-navbar > .content {
+  .hero-navbar > .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1178,7 +1190,7 @@ a.text-link {
             align-items: center;
     height: 100px;
     transition: height 0.4s; }
-  .lgp-hero-navbar .brand .logo {
+  .hero-navbar .brand .logo {
     width: 100px;
     height: 25px;
     fill: #FFF;
@@ -1187,17 +1199,17 @@ a.text-link {
     -webkit-transform: translateY(3px);
             transform: translateY(3px); }
     @media (min-width: 768px) {
-      .lgp-hero-navbar .brand .logo {
+      .hero-navbar .brand .logo {
         width: 125px;
         height: 31px; } }
-  .lgp-hero-navbar .navs {
+  .hero-navbar .navs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .lgp-hero-navbar .mobile-nav {
+  .hero-navbar .mobile-nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -1216,9 +1228,9 @@ a.text-link {
     overflow: auto;
     pointer-events: none; }
     @media (min-width: 992px) {
-      .lgp-hero-navbar .mobile-nav {
+      .hero-navbar .mobile-nav {
         display: none; } }
-    .lgp-hero-navbar .mobile-nav::before {
+    .hero-navbar .mobile-nav::before {
       position: absolute;
       top: 0;
       right: 0;
@@ -1228,7 +1240,7 @@ a.text-link {
       background-color: #113E52;
       opacity: 0;
       transition: 0.4s; }
-    .lgp-hero-navbar .mobile-nav > .content {
+    .hero-navbar .mobile-nav > .content {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1240,7 +1252,7 @@ a.text-link {
           -ms-flex-align: stretch;
               align-items: stretch;
       padding: 100px 0 50px; }
-    .lgp-hero-navbar .mobile-nav .nav-link {
+    .hero-navbar .mobile-nav .nav-link {
       font-family: "Brandon Grotesque", sans-serif;
       font-size: 1.5rem;
       font-weight: 300;
@@ -1251,130 +1263,81 @@ a.text-link {
               transform: translateY(-100%);
       opacity: 0;
       transition: 0.4s; }
-      .lgp-hero-navbar .mobile-nav .nav-link {
+      .hero-navbar .mobile-nav .nav-link {
         font-size: 18px; }
         @media screen and (min-width: 300px) {
-          .lgp-hero-navbar .mobile-nav .nav-link {
+          .hero-navbar .mobile-nav .nav-link {
             font-size: calc(18px + 6 * ((100vw - 300px) / 692)); } }
         @media screen and (min-width: 992px) {
-          .lgp-hero-navbar .mobile-nav .nav-link {
+          .hero-navbar .mobile-nav .nav-link {
             font-size: 24px; } }
-      .lgp-hero-navbar .mobile-nav .nav-link {
+      .hero-navbar .mobile-nav .nav-link {
         padding-top: 20px; }
         @media screen and (min-width: 300px) {
-          .lgp-hero-navbar .mobile-nav .nav-link {
+          .hero-navbar .mobile-nav .nav-link {
             padding-top: calc(20px + 12 * ((100vw - 300px) / 692)); } }
         @media screen and (min-width: 992px) {
-          .lgp-hero-navbar .mobile-nav .nav-link {
+          .hero-navbar .mobile-nav .nav-link {
             padding-top: 32px; } }
       @media (min-width: 768px) {
-        .lgp-hero-navbar .mobile-nav .nav-link {
+        .hero-navbar .mobile-nav .nav-link {
           text-align: left; } }
-  .lgp-hero-navbar .top-nav {
+  .hero-navbar .top-nav {
     display: none; }
     @media (min-width: 992px) {
-      .lgp-hero-navbar .top-nav {
+      .hero-navbar .top-nav {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
-    .lgp-hero-navbar .top-nav .cta {
+    .hero-navbar .top-nav .cta {
       margin-left: 2rem; }
-  .lgp-hero-navbar .nav-burger {
+  .hero-navbar .nav-burger {
     margin-right: -15px;
     position: relative;
     z-index: 100; }
     @media (min-width: 992px) {
-      .lgp-hero-navbar .nav-burger {
+      .hero-navbar .nav-burger {
         display: none; } }
-  .lgp-hero-navbar.fixed {
+  .hero-navbar.fixed {
     position: fixed;
     top: 0;
     right: 0;
     left: 0; }
-  .lgp-hero-navbar.condensed > .content {
+  .hero-navbar.condensed > .content {
     height: 70px; }
-  .lgp-hero-navbar.pink-theme {
+  .hero-navbar.pink-theme {
     background-color: rgba(243, 53, 99, 0.9);
     box-shadow: 0 20px 80px 5px rgba(140, 25, 61, 0.35); }
-  input.mobile-nav-toggle:checked ~ .lgp-hero-navbar .nav-burger .line-1 {
+  input.mobile-nav-toggle:checked ~ .hero-navbar .nav-burger .line-1 {
     -webkit-transform: translateY(7px) rotate(45deg) scaleX(1.2);
             transform: translateY(7px) rotate(45deg) scaleX(1.2); }
-  input.mobile-nav-toggle:checked ~ .lgp-hero-navbar .nav-burger .line-2 {
+  input.mobile-nav-toggle:checked ~ .hero-navbar .nav-burger .line-2 {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     opacity: 0; }
-  input.mobile-nav-toggle:checked ~ .lgp-hero-navbar .nav-burger .line-3 {
+  input.mobile-nav-toggle:checked ~ .hero-navbar .nav-burger .line-3 {
     -webkit-transform: translateY(-7px) rotate(-45deg) scaleX(1.2);
             transform: translateY(-7px) rotate(-45deg) scaleX(1.2); }
-  input.mobile-nav-toggle:checked ~ .lgp-hero-navbar .mobile-nav {
+  input.mobile-nav-toggle:checked ~ .hero-navbar .mobile-nav {
     pointer-events: auto; }
-    input.mobile-nav-toggle:checked ~ .lgp-hero-navbar .mobile-nav::before {
+    input.mobile-nav-toggle:checked ~ .hero-navbar .mobile-nav::before {
       opacity: 0.8; }
-    input.mobile-nav-toggle:checked ~ .lgp-hero-navbar .mobile-nav .nav-link {
+    input.mobile-nav-toggle:checked ~ .hero-navbar .mobile-nav .nav-link {
       -webkit-transform: translateY(0);
               transform: translateY(0);
       opacity: 1; }
 
-@media (max-width: 992px) {
-  input.mobile-nav-toggle:checked ~ .page {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    -webkit-filter: blur(5px);
-            filter: blur(5px); } }
-
-.lgp-dashboard-navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 20px 80px 5px rgba(0, 0, 0, 0.05);
-  z-index: 10; }
-  .lgp-dashboard-navbar > .content {
-    height: 80px; }
-  .lgp-dashboard-navbar .nav-burger {
-    margin: 0 15px 0 -15px; }
-    .lgp-dashboard-navbar .nav-burger * {
-      background-color: #A4A4A4; }
-  .lgp-dashboard-navbar .brand .logo {
-    width: 100px;
-    height: 25px;
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px); }
-    @media (min-width: 544px) {
-      .lgp-dashboard-navbar .brand .logo {
-        width: 125px;
-        height: 31px; } }
-  .lgp-dashboard-navbar .navs, .lgp-dashboard-navbar .nav-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%; }
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
 .page {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  min-height: 80vh;
   background-color: #F4F4F4;
   position: relative; }
-
-.footer {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+  @media (max-width: 992px) {
+    input.mobile-nav-toggle:checked ~ .page {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      -webkit-filter: blur(5px);
+              filter: blur(5px); } }
 
 .page-section {
   overflow-x: hidden; }

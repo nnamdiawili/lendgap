@@ -63,13 +63,14 @@
 
 
 a.text-link {
+  font-family: $font-family-button;
   color: $color-brand-blue;
   text-decoration: none;
 
   &:hover {
     color: $color-brand-fuchsia;
   }
-  &:active, &:visited {
+  &:active, &:focus {
     color: $color-brand-orange;
   }
 }

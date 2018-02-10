@@ -2,7 +2,7 @@
 .sidebar-container {
   position: relative;
   padding-left: 0;
-  transition: padding $component-fx-duration;
+  transition: $component-fx-duration;
 
   > .sidebar {
     @include position(fixed, 0 null 0 0);
@@ -11,7 +11,8 @@
     display: flex;
     flex-direction: column;
     background-color: $color-brand-blue;
-    transition: duration;
+    z-index: 5;
+    transition: $component-fx-duration;
     
     .header {
       background-color: $color-brand-teal;
@@ -21,12 +22,17 @@
     .brand .logo {
       width: 100px;
       height: 25px;
-      transform: translateY(3px);
+      transform: translateY(5px);
     }
     .navs {
       flex: 1 1 auto;
       overflow: auto;
     }
+  }
+
+  > .sidebar-pusher {
+    transition: $component-fx-duration;
+    position: relative;
   }
 
   .lgp-container {
@@ -42,8 +48,42 @@
     > .sidebar {
       transform: translateX(0);
     }
-    .lgp-dashboard-navbar {
+    .lgp-navbar {
       margin-left: $sidebar-size;
+    }
+  }
+
+  &.sidebar-opened {
+    @media screen and (max-width: $sidebar-collapse-breakpoint) {
+      overflow: hidden;
+
+      > .sidebar {
+        transform: translateX(0);
+      }
+      > .sidebar-pusher {
+        transform: translateX($sidebar-size);
+        filter: blur($overlay-blur-radius);
+        
+        &::before {
+          @include position(absolute, 0 0 0 0);
+          content: '';
+          background-color: $color-brand-blue;
+          opacity: $overlay-opacity;
+          z-index: 20;
+        }
+      }
+      .nav-burger {
+        .line-1 {
+          transform: translateY(7px) rotate(45deg) scaleX(1.2);
+        }
+        .line-2 {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+        .line-3 {
+          transform: translateY(-7px) rotate(-45deg) scaleX(1.2);
+        }
+      }
     }
   }
 

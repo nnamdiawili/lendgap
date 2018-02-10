@@ -1,5 +1,5 @@
 
-.lgp-hero-navbar {
+.hero-navbar {
   @include position(absolute, 0 0 null 0);
   z-index: 10;
   transition: $navbar-theme-change-duration;
@@ -139,52 +139,5 @@
         opacity: 1;
       }
     }
-  }
-}
-
-// page overlay effects:
-input.mobile-nav-toggle:checked ~ .page {
-  @media (max-width: $grid-breakpoint-lg) {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    filter: blur($overlay-blur-radius);
-  }
-}
-
-
-
-
-.lgp-dashboard-navbar {
-  @include position(fixed, 0 0 null 0);
-  background-color: rgba($color-white, .98);
-  box-shadow: 0 20px 80px 5px rgba($color-black, 0.05);
-  z-index: 10;
-
-  > .content {
-    height: $nav-header-height;
-  }
-  .nav-burger {
-    margin: 0 15px 0 -15px;
-    * {
-      background-color: $color-brand-grey-dark;
-    }
-  }
-
-  .brand .logo {
-    width: 100px;
-    height: 25px;
-    transform: translateY(3px);
-
-    @media (min-width: $grid-breakpoint-sm) {
-      width: 125px;
-      height: 31px;
-    }
-  }
-
-  .navs, .nav-item {
-    display: flex;
-    align-items: center;
-    height: 100%;
   }
 }
