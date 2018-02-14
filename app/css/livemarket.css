@@ -577,6 +577,7 @@ a.text-link {
 .bookmark-toggle {
   display: block;
   cursor: pointer;
+  pointer-events: auto;
   padding: 20px; }
   .bookmark-toggle .icon-wrapper {
     position: relative; }
@@ -1071,9 +1072,25 @@ a.text-link {
     position: relative;
     width: 100%; }
   .loan-card .title {
-    margin-bottom: .5em; }
+    margin-bottom: 1rem; }
   .loan-card .detail {
-    margin-top: .2em; }
+    margin-top: .1rem; }
+    .loan-card .detail.separate {
+      margin-top: 20px; }
+      @media screen and (min-width: 300px) {
+        .loan-card .detail.separate {
+          margin-top: calc(20px + 15 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .loan-card .detail.separate {
+          margin-top: 35px; } }
+    .loan-card .detail.separate-more {
+      margin-top: 35px; }
+      @media screen and (min-width: 300px) {
+        .loan-card .detail.separate-more {
+          margin-top: calc(35px + 35 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .loan-card .detail.separate-more {
+          margin-top: 70px; } }
   .loan-card .bookmark-toggle {
     margin-top: -20px;
     margin-right: -20px;

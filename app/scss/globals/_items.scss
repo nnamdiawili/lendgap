@@ -72,10 +72,17 @@
     width: 100%;
   }
   .title {
-    margin-bottom: .5em;
+    margin-bottom: 1rem;
   }
   .detail {
-      margin-top: .2em;
+      margin-top: .1rem;
+
+    &.separate {
+      @include fluid-prop(margin-top, 20px, 35px);
+    }
+    &.separate-more {
+      @include fluid-prop(margin-top, 35px, 70px);
+    }
   }
   .bookmark-toggle {
     margin-top: -($button-size-normal / 2);

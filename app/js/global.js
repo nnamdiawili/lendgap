@@ -1,10 +1,15 @@
 (function (window, document) {
 
-  var bookmarksToggleInput = document.querySelector('#bookmarks-toggle-input');
-  var sidebarToggles = document.querySelectorAll('#bookmarks-toggle-input');
-
-
-  function handleMarketPlaceBookmarksToggle() {
+  function handleLoanBookmarkToggle() {
+    var loanBookmarkToggles = document.querySelectorAll('.loan-card .bookmark-toggle, .loan-modal .bookmark-toggle');
+    Array.prototype.forEach.call(loanBookmarkToggles, function (bookmarkToggle) {
+      bookmarkToggle.addEventListener('click', function (e) {
+        e.currentTarget.closest('.loan-card, .loan-modal').classList.toggle('bookmark');
+      });
+    });
+  }
+  function handleMarketPlaceBookmarksFilter() {
+    var bookmarksToggleInput = document.querySelector('#bookmarks-toggle-input');
     bookmarksToggleInput.addEventListener('change', function () {
       var nonBookmarks = document.querySelectorAll('.marketplace .loan-card:not(.bookmark)');
       Array.prototype.forEach.call(nonBookmarks, function (nonBookmark) {
@@ -24,13 +29,15 @@
       e.currentTarget.closest('.sidebar-container').classList.remove('sidebar-opened');
       e.currentTarget.removeEventListener('click', closeSidebar);
     }
+
     var sidebarToggles = document.querySelectorAll('.sidebar-toggle');
     Array.prototype.forEach.call(sidebarToggles, function (sidebarToggle) {
       sidebarToggle.addEventListener('click', openSidebar);
     });
   }
 
-  handleMarketPlaceBookmarksToggle();
+  handleMarketPlaceBookmarksFilter();
+  handleLoanBookmarkToggle();
   handleSidebarToggling();
 
 })(window, document);

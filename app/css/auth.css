@@ -577,6 +577,7 @@ a.text-link {
 .bookmark-toggle {
   display: block;
   cursor: pointer;
+  pointer-events: auto;
   padding: 20px; }
   .bookmark-toggle .icon-wrapper {
     position: relative; }

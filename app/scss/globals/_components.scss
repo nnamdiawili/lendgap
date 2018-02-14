@@ -192,6 +192,7 @@
 .bookmark-toggle {
   display: block;
   cursor: pointer;
+  pointer-events: auto;
   padding: ($button-size-normal / 2);
 
   .icon-wrapper {
