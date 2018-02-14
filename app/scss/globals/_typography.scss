@@ -15,7 +15,7 @@
 
 .header-lg {
   @include fluid-prop(font-size, 24px, 50px);
-  @include fluid-prop(letter-spacing, -0.5px, -1.6px);
+  @include fluid-prop(letter-spacing, -0.5px, -1.8px);
 }
 
 .header-md {
@@ -28,6 +28,11 @@
   @include fluid-prop(font-size, 20px, 30px);
   @include fluid-prop(letter-spacing, -0.5px, -1px);
   font-weight: 700;
+}
+
+.header-xs {
+  @include fluid-prop(font-size, 18px, 20px);
+  font-weight: 300;
 }
 
 .text-small {

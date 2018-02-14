@@ -62,7 +62,7 @@
       }
       > .sidebar-pusher {
         transform: translateX($sidebar-size);
-        filter: blur($overlay-blur-radius);
+        // filter: blur($overlay-blur-radius);
         
         &::before {
           @include position(absolute, 0 0 0 0);

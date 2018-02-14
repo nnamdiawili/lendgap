@@ -183,3 +183,33 @@
     align-self: flex-end;
   }
 }
+
+
+// -------------------------------------------------------------------------
+// Bookmark Toggle
+// -------------------------------------------------------------------------
+
+.bookmark-toggle {
+  display: block;
+  cursor: pointer;
+  padding: ($button-size-normal / 2);
+
+  .icon-wrapper {
+    position: relative;
+    @include fluid-prop(width, $component-icon-size-sm, $component-icon-size-lg);
+    @include fluid-prop(height, $component-icon-size-sm, $component-icon-size-lg);
+  }
+  .icon {
+    width: 100%;
+    height: 100%;
+    fill: $color-brand-blue;
+    @include position(absolute, 0 null null 0);
+  }
+  .filler {
+    opacity: 0;
+    transition: $component-hover-fx-duration;
+  }
+  .bookmark & .filler {
+    opacity: 1;
+  }
+}

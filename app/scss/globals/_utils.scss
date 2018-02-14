@@ -3,9 +3,13 @@
 }
 .bg-cover {
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .bg-center {
   background-position: center center;
+}
+.bg-center-right {
+  background-position: center right;
 }
 
 .hidden {

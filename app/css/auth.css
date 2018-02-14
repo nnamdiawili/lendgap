@@ -66,14 +66,21 @@ a, a:hover, a:active, a:focus {
 label {
   margin-bottom: unset; }
 
+.close {
+  opacity: 1; }
+
 .bg-fixed {
   background-attachment: fixed; }
 
 .bg-cover {
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .bg-center {
   background-position: center center; }
+
+.bg-center-right {
+  background-position: center right; }
 
 .hidden {
   display: none; }
@@ -133,10 +140,10 @@ label {
   letter-spacing: -0.5px; }
   @media screen and (min-width: 300px) {
     .header-lg {
-      letter-spacing: calc(-0.5px + -1.1 * ((100vw - 300px) / 692)); } }
+      letter-spacing: calc(-0.5px + -1.3 * ((100vw - 300px) / 692)); } }
   @media screen and (min-width: 992px) {
     .header-lg {
-      letter-spacing: -1.6px; } }
+      letter-spacing: -1.8px; } }
 
 .header-md {
   font-weight: 500; }
@@ -175,6 +182,17 @@ label {
     @media screen and (min-width: 992px) {
       .header-sm {
         letter-spacing: -1px; } }
+
+.header-xs {
+  font-weight: 300; }
+  .header-xs {
+    font-size: 18px; }
+    @media screen and (min-width: 300px) {
+      .header-xs {
+        font-size: calc(18px + 2 * ((100vw - 300px) / 692)); } }
+    @media screen and (min-width: 992px) {
+      .header-xs {
+        font-size: 20px; } }
 
 .text-small {
   font-size: 1em; }
@@ -556,6 +574,41 @@ a.text-link {
     -ms-flex-item-align: end;
         align-self: flex-end; }
 
+.bookmark-toggle {
+  display: block;
+  cursor: pointer;
+  padding: 20px; }
+  .bookmark-toggle .icon-wrapper {
+    position: relative; }
+    .bookmark-toggle .icon-wrapper {
+      width: 15px; }
+      @media screen and (min-width: 300px) {
+        .bookmark-toggle .icon-wrapper {
+          width: calc(15px + 7 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .bookmark-toggle .icon-wrapper {
+          width: 22px; } }
+    .bookmark-toggle .icon-wrapper {
+      height: 15px; }
+      @media screen and (min-width: 300px) {
+        .bookmark-toggle .icon-wrapper {
+          height: calc(15px + 7 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .bookmark-toggle .icon-wrapper {
+          height: 22px; } }
+  .bookmark-toggle .icon {
+    width: 100%;
+    height: 100%;
+    fill: #113E52;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .bookmark-toggle .filler {
+    opacity: 0;
+    transition: 0.3s; }
+  .bookmark .bookmark-toggle .filler {
+    opacity: 1; }
+
 .btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -694,6 +747,29 @@ a.text-link {
   .btn.btn-trans-grey:hover {
     color: #FF2D6E; }
     .btn.btn-trans-grey:hover .icon {
+      fill: #FF2D6E; }
+
+.btn.btn-trans-blue {
+  transition: 0.3s;
+  color: #113E52;
+  background-color: transparent; }
+  .btn.btn-trans-blue .icon {
+    fill: #113E52; }
+  .btn.btn-trans-blue:hover {
+    color: #FF2D6E; }
+    .btn.btn-trans-blue:hover .icon {
+      fill: #FF2D6E; }
+
+.btn.btn-trans-border-fuchsia {
+  transition: 0.3s;
+  color: #FF2D6E;
+  background-color: transparent;
+  border-color: #FF2D6E; }
+  .btn.btn-trans-border-fuchsia .icon {
+    fill: #FF2D6E; }
+  .btn.btn-trans-border-fuchsia:hover {
+    color: #FF2D6E; }
+    .btn.btn-trans-border-fuchsia:hover .icon {
       fill: #FF2D6E; }
 
 .btn.btn-grey {

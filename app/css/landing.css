@@ -66,6 +66,9 @@ a, a:hover, a:active, a:focus {
 label {
   margin-bottom: unset; }
 
+.close {
+  opacity: 1; }
+
 @-webkit-keyframes slide-down {
   0% {
     -webkit-transform: translateY(-30%);
@@ -146,10 +149,14 @@ label {
   background-attachment: fixed; }
 
 .bg-cover {
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .bg-center {
   background-position: center center; }
+
+.bg-center-right {
+  background-position: center right; }
 
 .hidden {
   display: none; }
@@ -209,10 +216,10 @@ label {
   letter-spacing: -0.5px; }
   @media screen and (min-width: 300px) {
     .header-lg {
-      letter-spacing: calc(-0.5px + -1.1 * ((100vw - 300px) / 692)); } }
+      letter-spacing: calc(-0.5px + -1.3 * ((100vw - 300px) / 692)); } }
   @media screen and (min-width: 992px) {
     .header-lg {
-      letter-spacing: -1.6px; } }
+      letter-spacing: -1.8px; } }
 
 .header-md {
   font-weight: 500; }
@@ -251,6 +258,17 @@ label {
     @media screen and (min-width: 992px) {
       .header-sm {
         letter-spacing: -1px; } }
+
+.header-xs {
+  font-weight: 300; }
+  .header-xs {
+    font-size: 18px; }
+    @media screen and (min-width: 300px) {
+      .header-xs {
+        font-size: calc(18px + 2 * ((100vw - 300px) / 692)); } }
+    @media screen and (min-width: 992px) {
+      .header-xs {
+        font-size: 20px; } }
 
 .text-small {
   font-size: 1em; }
@@ -632,6 +650,41 @@ a.text-link {
     -ms-flex-item-align: end;
         align-self: flex-end; }
 
+.bookmark-toggle {
+  display: block;
+  cursor: pointer;
+  padding: 20px; }
+  .bookmark-toggle .icon-wrapper {
+    position: relative; }
+    .bookmark-toggle .icon-wrapper {
+      width: 15px; }
+      @media screen and (min-width: 300px) {
+        .bookmark-toggle .icon-wrapper {
+          width: calc(15px + 7 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .bookmark-toggle .icon-wrapper {
+          width: 22px; } }
+    .bookmark-toggle .icon-wrapper {
+      height: 15px; }
+      @media screen and (min-width: 300px) {
+        .bookmark-toggle .icon-wrapper {
+          height: calc(15px + 7 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .bookmark-toggle .icon-wrapper {
+          height: 22px; } }
+  .bookmark-toggle .icon {
+    width: 100%;
+    height: 100%;
+    fill: #113E52;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .bookmark-toggle .filler {
+    opacity: 0;
+    transition: 0.3s; }
+  .bookmark .bookmark-toggle .filler {
+    opacity: 1; }
+
 .btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -770,6 +823,29 @@ a.text-link {
   .btn.btn-trans-grey:hover {
     color: #FF2D6E; }
     .btn.btn-trans-grey:hover .icon {
+      fill: #FF2D6E; }
+
+.btn.btn-trans-blue {
+  transition: 0.3s;
+  color: #113E52;
+  background-color: transparent; }
+  .btn.btn-trans-blue .icon {
+    fill: #113E52; }
+  .btn.btn-trans-blue:hover {
+    color: #FF2D6E; }
+    .btn.btn-trans-blue:hover .icon {
+      fill: #FF2D6E; }
+
+.btn.btn-trans-border-fuchsia {
+  transition: 0.3s;
+  color: #FF2D6E;
+  background-color: transparent;
+  border-color: #FF2D6E; }
+  .btn.btn-trans-border-fuchsia .icon {
+    fill: #FF2D6E; }
+  .btn.btn-trans-border-fuchsia:hover {
+    color: #FF2D6E; }
+    .btn.btn-trans-border-fuchsia:hover .icon {
       fill: #FF2D6E; }
 
 .btn.btn-grey {
@@ -1047,10 +1123,13 @@ a.text-link {
   border-radius: 5px;
   border: 1px solid white;
   box-shadow: 0 20px 100px 4px rgba(0, 0, 0, 0.08);
+  outline: none;
   overflow: hidden;
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em;
   transition: 0.3s; }
+  .loan-card :focus {
+    outline: none; }
   .loan-card .card-section {
     padding: 20px; }
     @media screen and (min-width: 300px) {
@@ -1072,44 +1151,11 @@ a.text-link {
   .loan-card .detail {
     margin-top: .2em; }
   .loan-card .bookmark-toggle {
-    display: block;
-    cursor: pointer;
-    padding: 20px;
     margin-top: -20px;
     margin-right: -20px;
     position: absolute;
     top: 0;
     right: 0; }
-    .loan-card .bookmark-toggle .icon-wrapper {
-      position: relative; }
-      .loan-card .bookmark-toggle .icon-wrapper {
-        width: 15px; }
-        @media screen and (min-width: 300px) {
-          .loan-card .bookmark-toggle .icon-wrapper {
-            width: calc(15px + 7 * ((100vw - 300px) / 692)); } }
-        @media screen and (min-width: 992px) {
-          .loan-card .bookmark-toggle .icon-wrapper {
-            width: 22px; } }
-      .loan-card .bookmark-toggle .icon-wrapper {
-        height: 15px; }
-        @media screen and (min-width: 300px) {
-          .loan-card .bookmark-toggle .icon-wrapper {
-            height: calc(15px + 7 * ((100vw - 300px) / 692)); } }
-        @media screen and (min-width: 992px) {
-          .loan-card .bookmark-toggle .icon-wrapper {
-            height: 22px; } }
-    .loan-card .bookmark-toggle .icon {
-      width: 100%;
-      height: 100%;
-      fill: #113E52;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    .loan-card .bookmark-toggle .filler {
-      opacity: 0;
-      transition: 0.3s; }
-  .loan-card.bookmark .bookmark-toggle .filler {
-    opacity: 1; }
   .loan-card .profile-name {
     margin-left: 15px; }
   .loan-card .profile-photo {
@@ -1327,6 +1373,30 @@ a.text-link {
               transform: translateY(0);
       opacity: 1; }
 
+.lgp-modal .modal-dialog {
+  position: relative;
+  pointer-events: auto; }
+
+.lgp-modal .modal-close, .lgp-modal .modal-options {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.lgp-modal .modal-content {
+  min-height: 200px;
+  border-radius: 5px;
+  overflow: hidden; }
+
+@media (min-width: 768px) {
+  .lgp-modal .modal-dialog {
+    max-width: 750px;
+    margin: 3rem auto; } }
+
+.lgp-modal ~ .modal-backdrop {
+  background-color: #113E52; }
+  .lgp-modal ~ .modal-backdrop.show {
+    opacity: 0.8; }
+
 .page {
   min-height: 80vh;
   background-color: #F4F4F4;
@@ -1459,6 +1529,109 @@ a.text-link {
             justify-content: flex-start;
     padding-left: 0;
     padding-right: 0; }
+
+#loan-modal {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 1em; }
+  #loan-modal .bookmark-toggle .icon-wrapper {
+    position: relative;
+    width: 22px;
+    height: 22px; }
+  #loan-modal .details {
+    background-color: #FFF; }
+  #loan-modal .actions {
+    background-color: #F4F4F4; }
+  #loan-modal .content-section {
+    height: 100%; }
+    #loan-modal .content-section {
+      padding: 30px; }
+      @media screen and (min-width: 300px) {
+        #loan-modal .content-section {
+          padding: calc(30px + 40 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        #loan-modal .content-section {
+          padding: 70px; } }
+  #loan-modal .details {
+    position: relative;
+    width: 100%; }
+  #loan-modal .section-header {
+    margin-bottom: 1.8rem; }
+  #loan-modal .title {
+    color: #113E52;
+    margin-bottom: .2rem; }
+  #loan-modal .detail {
+    margin-top: .1rem; }
+    #loan-modal .detail.separate {
+      margin-top: 20px; }
+      @media screen and (min-width: 300px) {
+        #loan-modal .detail.separate {
+          margin-top: calc(20px + 15 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        #loan-modal .detail.separate {
+          margin-top: 35px; } }
+    #loan-modal .detail.separate-more {
+      margin-top: 35px; }
+      @media screen and (min-width: 300px) {
+        #loan-modal .detail.separate-more {
+          margin-top: calc(35px + 35 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        #loan-modal .detail.separate-more {
+          margin-top: 70px; } }
+  #loan-modal .profile-name {
+    margin-left: 15px;
+    color: #113E52; }
+  #loan-modal .profile-photo {
+    width: 40px;
+    height: 40px; }
+    #loan-modal .profile-photo {
+      width: 30px; }
+      @media screen and (min-width: 300px) {
+        #loan-modal .profile-photo {
+          width: calc(30px + 10 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        #loan-modal .profile-photo {
+          width: 40px; } }
+    #loan-modal .profile-photo {
+      height: 30px; }
+      @media screen and (min-width: 300px) {
+        #loan-modal .profile-photo {
+          height: calc(30px + 10 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        #loan-modal .profile-photo {
+          height: 40px; } }
+    #loan-modal .profile-photo .avatar {
+      fill: #FFF;
+      background-color: transparent; }
+  #loan-modal .rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #loan-modal .rating .icon {
+      fill: #D8D8D8;
+      width: 12px;
+      height: 12px; }
+      #loan-modal .rating .icon:not(:first-child) {
+        margin-left: 2px; }
+        @media screen and (min-width: 768px) {
+          #loan-modal .rating .icon:not(:first-child) {
+            margin-left: calc(2px + 3 * ((100vw - 768px) / 224)); } }
+        @media screen and (min-width: 992px) {
+          #loan-modal .rating .icon:not(:first-child) {
+            margin-left: 5px; } }
+    #loan-modal .rating.stars-1 .icon:nth-child(-n + 1) {
+      fill: #113E52; }
+    #loan-modal .rating.stars-2 .icon:nth-child(-n + 2) {
+      fill: #113E52; }
+    #loan-modal .rating.stars-3 .icon:nth-child(-n + 3) {
+      fill: #113E52; }
+    #loan-modal .rating.stars-4 .icon:nth-child(-n + 4) {
+      fill: #113E52; }
+    #loan-modal .rating.stars-5 .icon:nth-child(-n + 5) {
+      fill: #113E52; }
+  #loan-modal .ctas {
+    margin-top: 30px; }
+    #loan-modal .ctas .btn {
+      margin-top: 10px; }
 
 .hero .gradient {
   position: absolute;

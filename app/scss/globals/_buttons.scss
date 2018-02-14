@@ -135,6 +135,20 @@
     $hover: $color-brand-fuchsia null null
   );
 }
+.btn.btn-trans-blue {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-brand-blue transparent null,
+    $hover: $color-brand-fuchsia null null
+  );
+}
+.btn.btn-trans-border-fuchsia {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-brand-fuchsia transparent $color-brand-fuchsia,
+    $hover: $color-brand-fuchsia null null
+  );
+}
 .btn.btn-grey {
   @include btn-color-themes(
     $normal: $color-brand-blue $color-brand-grey-light null,
