@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
-    <link rel="stylesheet" type="text/css" href="css/borrow1.css"/>
+    <link rel="stylesheet" type="text/css" href="css/lend2.css"/>
 </head>
 <body class="sidebar-container fixed-md">
     <!-- header navbar -->
@@ -67,13 +67,13 @@
                     <span class="caption">Marketplace</span>
                 </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="btn btn-sidebar" href="borrow1.html">
                     <svg class="icon"><use xlink:href="#arrow"></use></svg>
                     <span class="caption">Borrow</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="btn btn-sidebar" href="lend1.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow"></use></svg>
                     <span class="caption">Lend</span>
@@ -95,14 +95,86 @@
     </aside>
 
     <!-- page content -->
-    <main class="borrow1 page sidebar-pusher d-flex flex-column flexer">
-        <!-- borrow-start section -->
-        <section class="borrow-start page-section flexed d-flex flex-column align-items-center justify-content-center">
-            <svg class="icon"><use xlink:href="#money"/></svg>
-            <div class="cta">
-                <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="borrow2.html">Request for loan</a>
+    <main class="lend2 page sidebar-pusher d-flex flex-column flexer">
+        <!-- lend-form section -->
+        <section class="lend-form page-section">
+            <div class="content lgp-container">
+                <form class="lgp-form row">
+                    <div class="offset-sm-2 col-sm-8 offset-md-1 col-md-8 offset-lg-1 col-lg-8">
+                        <h2 class="header header-md">New Loan Offer</h2>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-field input-md">
+                                    <label for="amount-input">Amount<span class="extra">(How much do you want to lend?)</span></label>
+                                    <input type="text" name="amount" id="amount-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <div class="input-field input-md">
+                                    <label for="amount-input">Duration/Tenure<span class="extra">(For how long?)</span></label>
+                                    <input type="text" name="amount" id="amount-input">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-5">
+                                <div class="input-field input-md">
+                                    <label for="duration-type-select">&nbsp;</label>
+                                    <div class="input-wrapper">
+                                        <select id="duration-type-select" name="duration-type">
+                                            <option value="" selected>Month(s)</option>
+                                            <option value="" >Day(s)</option>
+                                            <option value="" >Year(s)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field input-md">
+                                    <label for="start-date-input">Start Date</label>
+                                    <input type="date" name="start-date" id="start-date-input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field input-md">
+                                    <label for="interest-input">Interest Rate<span class="extra">(%)</span></label>
+                                    <input type="text" name="interest" id="interest-input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field input-md">
+                                    <label for="repayment-input">Repayment<span class="extra">(Payback Amount)</span></label>
+                                    <input type="text" name="repayment" id="repayment-input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field input-md">
+                                    <label for="repayment-type-input">Repayment Type<span class="extra">(Payback Frequency)</span></label>
+                                    <div class="input-wrapper">
+                                        <select id="repayment-type-select" name="repayment-type">
+                                            <option value="" selected>Monthly Installment</option>
+                                            <option value="">Weekly</option>
+                                            <option value="">Custom</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-field input-md">
+                                    <label for="purpose-input">Purpose<span class="extra">(Why do you need this loan?)</span></label>
+                                    <textarea name="purpose" id="purpose-input"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="info text-small">
+                            When you submit a loan request, LendGap uploads it to the Marketplace where potential Lenders can view and assess, and choose to accept the request. The higher your rating, the more likely and quickly your request will be accepted. Ensure you stick to the terms of this request. Funding on LendGap is simple and clear, with no hidden fees.
+                        </p>
+                        <div class="cta">
+                            <!-- <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-50" href="lend3.html">Submit</button> -->
+                            <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-50" href="lend3.html">Submit</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="caption">You have <span class="text-accent">3 Unused Loan Requests</span> remaining.</p>
         </section>
     </main>
 

@@ -1718,7 +1718,7 @@ a.text-link {
   .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
     background-color: #F4F4F4; }
 
-.borrow3.page {
+.lend3.page {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1729,14 +1729,14 @@ a.text-link {
           flex-direction: column;
   background-color: #FFF; }
 
-.borrow-end {
+.lend-end {
   position: relative;
   font-family: "Brandon Grotesque", sans-serif; }
-  .borrow-end .icon {
+  .lend-end .icon {
     width: 60px;
     height: 60px;
-    fill: #1AE4B6; }
-  .borrow-end .cta {
+    fill: #1ACFE4; }
+  .lend-end .cta {
     margin-top: 20px; }
-  .borrow-end .caption {
+  .lend-end .caption {
     margin-top: 25px; }

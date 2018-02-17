@@ -74,7 +74,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-sidebar" href="lend.html">
+                <a class="btn btn-sidebar" href="lend1.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow"></use></svg>
                     <span class="caption">Lend</span>
                 </a>
@@ -129,12 +129,6 @@
                             </div>
                             <div class="col-12">
                                 <div class="input-field input-md">
-                                    <label for="start-date-input">Start Date</label>
-                                    <input type="date" name="start-date" id="start-date-input">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="input-field input-md">
                                     <label for="interest-input">Interest Rate<span class="extra">(%)</span></label>
                                     <input type="text" name="interest" id="interest-input">
                                 </div>
@@ -148,7 +142,13 @@
                             <div class="col-12">
                                 <div class="input-field input-md">
                                     <label for="repayment-type-input">Repayment Type<span class="extra">(Payback Frequency)</span></label>
-                                    <input type="text" name="repayment-type" id="repayment-type-input">
+                                    <div class="input-wrapper">
+                                        <select id="repayment-type-select" name="repayment-type">
+                                            <option value="" selected>Monthly Installment</option>
+                                            <option value="">Weekly</option>
+                                            <option value="">Custom</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
