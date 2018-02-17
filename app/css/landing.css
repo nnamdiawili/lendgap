@@ -193,6 +193,10 @@ label {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
+.disabled {
+  pointer-events: none;
+  opacity: .5; }
+
 .header-xl,
 .header-lg,
 .header-md,
