@@ -238,10 +238,15 @@
   }
 
   &.active, .active > & {
-    pointer-events: none;
+    // pointer-events: none;
     @include btn-color-themes($color-white $color-brand-fuchsia null);
   }
 }
 
 
-
+.btn.close{
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+}

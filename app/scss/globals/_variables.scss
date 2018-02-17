@@ -25,6 +25,8 @@ $color-brand-teal: #152C35;
 $color-facebook: #335A9E;
 $color-google: #F03B2C;
 
+$color-accent: $color-brand-fuchsia;
+
 
 // -------------------------------------------------------------------------
 // Typography
@@ -109,7 +111,7 @@ $input-size-md: $button-size-md;
 $input-size-lg: $button-size-lg;
 $input-size-xl: $button-size-xl;
 
-$form-textarea-default-rows: 3;
+$form-textarea-default-rows: 2;
 
 $button-icon-size: $component-icon-size-sm;
 $input-icon-size: $component-icon-size-sm;

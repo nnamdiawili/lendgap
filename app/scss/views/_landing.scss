@@ -1,4 +1,15 @@
 // -------------------------------------------------------------------------
+// Page sections
+// -------------------------------------------------------------------------
+
+.page-section:not(.image-bg-section) .content {
+  [class*='header-']{
+    color: $color-brand-blue;
+  }
+}
+
+
+// -------------------------------------------------------------------------
 // Hero section
 // -------------------------------------------------------------------------
 
@@ -36,51 +47,6 @@
   }
   .cta {
     animation: slide-down-staggered 1.4s ease-in-out;
-  }
-}
-
-
-
-
-// -------------------------------------------------------------------------
-// How it works section
-// -------------------------------------------------------------------------
-
-.how-it-works.page-section {
-  background-color: $color-brand-ash;
-}
-
-
-// -------------------------------------------------------------------------
-// Marketplace section
-// -------------------------------------------------------------------------
-
-.marketplace.page-section {
-  background-color: $color-white;
-}
-.marketplace .description {
-  margin-top: 2.5rem;
-  max-width: 500px;
-}
-.marketplace .lgp-tabs {
-  width: 100%;
-  margin: 5rem 0;
-  @include fluid-prop(margin-top, 40px, 80px, $grid-breakpoint-md);
-
-  .tab-panel {
-    @include fluid-prop(margin-top, 30px, 50px, $grid-breakpoint-md);
-  }
-}
-
-.marketplace .options-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  @include fluid-prop(margin-top, 5px, 40px, $grid-breakpoint-md);
-
-  .input-field label {
-    margin-right: 15px;
   }
 }
 

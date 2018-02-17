@@ -1,3 +1,10 @@
+.lgp-form {
+
+  .header {
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+}
 
 .input-field {
   display: flex;
@@ -13,6 +20,12 @@
     letter-spacing: 0.075rem;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    .extra {
+      display: inline-block;
+      color: $color-brand-grey-dark;
+      margin-left: 10px;
+    }
   }
 
   input, select, textarea {
@@ -52,6 +65,7 @@
       @include position(absolute, 50% ($caret-size * 6) null null);
     }
     select {
+      width: 100%;
       padding: 0 $input-size-normal 0 ($input-size-normal / 2);
     }
   }
@@ -72,7 +86,8 @@
   $input-size-map: (
     sm: ($input-size-sm, .8rem),
     md: ($input-size-md, 1rem),
-    lg: ($input-size-lg, 1rem)
+    lg: ($input-size-lg, 1rem),
+    xl: ($input-size-xl, 1.2rem)
   );
   @each $size-name, $size-values in $input-size-map {
     $input-size: nth($size-values, 1);

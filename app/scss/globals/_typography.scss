@@ -65,6 +65,12 @@
   font-weight: 900;
   margin-right: .18em;
 }
+.text-underlined {
+  text-decoration: underline !important;
+}
+.text-accent {
+  color: $color-accent !important;
+}
 
 
 a.text-link {

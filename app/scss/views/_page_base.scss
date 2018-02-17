@@ -26,10 +26,6 @@
 .page-section:not(.image-bg-section) .content {
   @include fluid-prop(padding-top, 50px, 120px, $grid-breakpoint-xs);
   @include fluid-prop(padding-bottom, 50px, 120px, $grid-breakpoint-xs);
-
-  [class*='header-']{
-    color: $color-brand-blue;
-  }
 }
 
 
@@ -62,6 +58,68 @@
   }
   .cta {
     margin-top: 2.4rem ;
+  }
+}
+
+
+// -------------------------------------------------------------------------
+// Collapsible banner section
+// -------------------------------------------------------------------------
+
+.banner-section.page-section {
+  min-height: unset;
+  
+  .gradient {
+    background-image: linear-gradient(to right,
+                    rgba($color-brand-nude, .95) 0%,
+                    rgba($color-brand-nude, .5) 100%);
+  }
+  .content {
+    @include fluid-prop(padding-top, 30px, 50px);
+    @include fluid-prop(padding-bottom, 30px, 50px);
+    color: $color-brand-blue;
+    text-shadow: 0 0 30px rgba($color-black, 0.1);
+  }
+  .description {
+    margin: 1.2rem 0 0;
+  }
+  .cta {
+    margin-top: 1.5rem ;
+  }
+  .close {
+    @include position(absolute, 0 0 null null);
+  }
+}
+
+
+
+// -------------------------------------------------------------------------
+// Collapsible prompt section
+// -------------------------------------------------------------------------
+
+.prompt.page-section {
+  position: relative;
+  background-color: $color-brand-grey-dark;
+
+  &.prompt-green {
+    background-color: $color-brand-green;
+  }
+  &.prompt-fuchsia {
+    background-color: $color-brand-fuchsia;
+  }
+  .content {
+    padding: 21px 60px 21px  0;
+  }
+  .message {
+    color: $color-white;
+    padding: 0;
+    margin: 0;
+  }
+  .close {
+    @include position(absolute, 0 0 null null);
+  }
+  .ctas {
+    margin-left: 30px;
   }
 }
 
@@ -124,3 +182,6 @@
     padding-right: 0;
   }
 }
+
+
+

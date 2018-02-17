@@ -100,6 +100,23 @@ label {
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1); }
 
+.flexer > :not(.flexed) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
+.flexer > .flexed {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+.pos-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
 .header-xl,
 .header-lg,
 .header-md,
@@ -219,6 +236,12 @@ label {
   font-size: .7em;
   font-weight: 900;
   margin-right: .18em; }
+
+.text-underlined {
+  text-decoration: underline !important; }
+
+.text-accent {
+  color: #FF2D6E !important; }
 
 a.text-link {
   font-family: "Brandon Grotesque", sans-serif;
@@ -889,11 +912,18 @@ a.text-link {
   .btn.btn-sidebar > :not(:first-child) {
     margin-left: 22px; }
   .btn.btn-sidebar.active, .active > .btn.btn-sidebar {
-    pointer-events: none;
     color: #FFF;
     background-color: #FF2D6E; }
     .btn.btn-sidebar.active .icon, .active > .btn.btn-sidebar .icon {
       fill: #FFF; }
+
+.btn.close .icon {
+  width: 15px;
+  height: 15px; }
+
+.lgp-form .header {
+  font-weight: 300;
+  margin-bottom: 50px; }
 
 .input-field {
   display: -webkit-box;
@@ -913,6 +943,10 @@ a.text-link {
     letter-spacing: 0.075rem;
     text-transform: uppercase;
     margin-bottom: 10px; }
+    .input-field label .extra {
+      display: inline-block;
+      color: #A4A4A4;
+      margin-left: 10px; }
   .input-field input, .input-field select, .input-field textarea {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -950,6 +984,7 @@ a.text-link {
       top: 50%;
       right: 18px; }
     .input-field .input-wrapper select {
+      width: 100%;
       padding: 0 40px 0 20px; }
   .input-field.inline {
     -webkit-box-orient: horizontal;
@@ -966,7 +1001,7 @@ a.text-link {
     padding: 0 11.66667px;
     font-size: 0.8rem; }
   .input-field.input-sm textarea {
-    height: 105px;
+    height: 70px;
     font-size: 0.8rem; }
   .input-field.input-sm .input-wrapper select {
     padding: 0 35px 0 11.66667px; }
@@ -975,7 +1010,7 @@ a.text-link {
     padding: 0 16.66667px;
     font-size: 1rem; }
   .input-field.input-md textarea {
-    height: 150px;
+    height: 100px;
     font-size: 1rem; }
   .input-field.input-md .input-wrapper select {
     padding: 0 50px 0 16.66667px; }
@@ -984,10 +1019,19 @@ a.text-link {
     padding: 0 20px;
     font-size: 1rem; }
   .input-field.input-lg textarea {
-    height: 180px;
+    height: 120px;
     font-size: 1rem; }
   .input-field.input-lg .input-wrapper select {
     padding: 0 60px 0 20px; }
+  .input-field.input-xl input, .input-field.input-xl select {
+    height: 70px;
+    padding: 0 23.33333px;
+    font-size: 1.2rem; }
+  .input-field.input-xl textarea {
+    height: 140px;
+    font-size: 1.2rem; }
+  .input-field.input-xl .input-wrapper select {
+    padding: 0 70px 0 23.33333px; }
 
 .lgp-tabs {
   display: -webkit-box;
@@ -1463,9 +1507,6 @@ a.text-link {
     .page-section:not(.image-bg-section) .content {
       padding-bottom: 120px; } }
 
-.page-section:not(.image-bg-section) .content [class*='header-'] {
-  color: #113E52; }
-
 .image-bg-section {
   position: relative;
   min-height: 300px; }
@@ -1493,6 +1534,58 @@ a.text-link {
     margin: 1.8rem 0 0; }
   .image-bg-section .cta {
     margin-top: 2.4rem; }
+
+.banner-section.page-section {
+  min-height: unset; }
+  .banner-section.page-section .gradient {
+    background-image: linear-gradient(to right, rgba(248, 244, 243, 0.95) 0%, rgba(248, 244, 243, 0.5) 100%); }
+  .banner-section.page-section .content {
+    color: #113E52;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1); }
+    .banner-section.page-section .content {
+      padding-top: 30px; }
+      @media screen and (min-width: 300px) {
+        .banner-section.page-section .content {
+          padding-top: calc(30px + 20 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .banner-section.page-section .content {
+          padding-top: 50px; } }
+    .banner-section.page-section .content {
+      padding-bottom: 30px; }
+      @media screen and (min-width: 300px) {
+        .banner-section.page-section .content {
+          padding-bottom: calc(30px + 20 * ((100vw - 300px) / 692)); } }
+      @media screen and (min-width: 992px) {
+        .banner-section.page-section .content {
+          padding-bottom: 50px; } }
+  .banner-section.page-section .description {
+    margin: 1.2rem 0 0; }
+  .banner-section.page-section .cta {
+    margin-top: 1.5rem; }
+  .banner-section.page-section .close {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.prompt.page-section {
+  position: relative;
+  background-color: #A4A4A4; }
+  .prompt.page-section.prompt-green {
+    background-color: #03BF94; }
+  .prompt.page-section.prompt-fuchsia {
+    background-color: #FF2D6E; }
+  .prompt.page-section .content {
+    padding: 21px 60px 21px  0; }
+  .prompt.page-section .message {
+    color: #FFF;
+    padding: 0;
+    margin: 0; }
+  .prompt.page-section .close {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .prompt.page-section .ctas {
+    margin-left: 30px; }
 
 .footer {
   background-color: #152C35; }
@@ -1649,6 +1742,55 @@ a.text-link {
   .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
     background-color: #F4F4F4; }
 
+.marketplace.page-section {
+  background-color: #FFF; }
+
+.marketplace .description {
+  margin-top: 2.5rem;
+  max-width: 500px; }
+
+.marketplace .lgp-tabs {
+  width: 100%;
+  margin: 5rem 0; }
+  .marketplace .lgp-tabs {
+    margin-top: 40px; }
+    @media screen and (min-width: 768px) {
+      .marketplace .lgp-tabs {
+        margin-top: calc(40px + 40 * ((100vw - 768px) / 224)); } }
+    @media screen and (min-width: 992px) {
+      .marketplace .lgp-tabs {
+        margin-top: 80px; } }
+  .marketplace .lgp-tabs .tab-panel {
+    margin-top: 30px; }
+    @media screen and (min-width: 768px) {
+      .marketplace .lgp-tabs .tab-panel {
+        margin-top: calc(30px + 20 * ((100vw - 768px) / 224)); } }
+    @media screen and (min-width: 992px) {
+      .marketplace .lgp-tabs .tab-panel {
+        margin-top: 50px; } }
+
+.marketplace .options-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0; }
+  .marketplace .options-bar {
+    margin-top: 5px; }
+    @media screen and (min-width: 768px) {
+      .marketplace .options-bar {
+        margin-top: calc(5px + 35 * ((100vw - 768px) / 224)); } }
+    @media screen and (min-width: 992px) {
+      .marketplace .options-bar {
+        margin-top: 40px; } }
+  .marketplace .options-bar .input-field label {
+    margin-right: 15px; }
+
 #loan-modal {
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em; }
@@ -1752,82 +1894,23 @@ a.text-link {
     #loan-modal .ctas .btn {
       margin-top: 10px; }
 
-.banner.page-section {
-  min-height: unset; }
-  .banner.page-section .gradient {
-    background-image: linear-gradient(to right, rgba(248, 244, 243, 0.95) 0%, rgba(248, 244, 243, 0.5) 100%); }
-  .banner.page-section .content {
-    color: #113E52;
-    text-shadow: 0 0 30px rgba(0, 0, 0, 0.1); }
-    .banner.page-section .content {
-      padding-top: 30px; }
-      @media screen and (min-width: 300px) {
-        .banner.page-section .content {
-          padding-top: calc(30px + 20 * ((100vw - 300px) / 692)); } }
-      @media screen and (min-width: 992px) {
-        .banner.page-section .content {
-          padding-top: 50px; } }
-    .banner.page-section .content {
-      padding-bottom: 30px; }
-      @media screen and (min-width: 300px) {
-        .banner.page-section .content {
-          padding-bottom: calc(30px + 20 * ((100vw - 300px) / 692)); } }
-      @media screen and (min-width: 992px) {
-        .banner.page-section .content {
-          padding-bottom: 50px; } }
-  .banner.page-section .description {
-    margin: 1.2rem 0 0; }
-  .banner.page-section .cta {
-    margin-top: 1.5rem; }
-  .banner.page-section .close {
-    position: absolute;
-    top: 10px;
-    right: 10px; }
-
-.marketplace.page-section {
-  background-color: #FFF; }
-
 .marketplace.page-section .content {
   padding-top: 0; }
 
 .marketplace .lgp-tabs {
-  width: 100%;
-  margin: 5rem 0; }
-  .marketplace .lgp-tabs {
-    margin-top: 15px; }
-    @media screen and (min-width: 768px) {
-      .marketplace .lgp-tabs {
-        margin-top: calc(15px + 12 * ((100vw - 768px) / 224)); } }
-    @media screen and (min-width: 992px) {
-      .marketplace .lgp-tabs {
-        margin-top: 27px; } }
-  .marketplace .lgp-tabs .tab-panel {
-    margin-top: 10px; }
-    @media screen and (min-width: 768px) {
-      .marketplace .lgp-tabs .tab-panel {
-        margin-top: calc(10px + 7 * ((100vw - 768px) / 224)); } }
-    @media screen and (min-width: 992px) {
-      .marketplace .lgp-tabs .tab-panel {
-        margin-top: 17px; } }
+  margin-top: 15px; }
+  @media screen and (min-width: 768px) {
+    .marketplace .lgp-tabs {
+      margin-top: calc(15px + 12 * ((100vw - 768px) / 224)); } }
+  @media screen and (min-width: 992px) {
+    .marketplace .lgp-tabs {
+      margin-top: 27px; } }
 
-.marketplace .options-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px 0; }
-  .marketplace .options-bar {
-    margin-top: 5px; }
-    @media screen and (min-width: 768px) {
-      .marketplace .options-bar {
-        margin-top: calc(5px + 5 * ((100vw - 768px) / 224)); } }
-    @media screen and (min-width: 992px) {
-      .marketplace .options-bar {
-        margin-top: 10px; } }
-  .marketplace .options-bar .input-field label {
-    margin-right: 15px; }
+.marketplace .lgp-tabs .tab-panel {
+  margin-top: 10px; }
+  @media screen and (min-width: 768px) {
+    .marketplace .lgp-tabs .tab-panel {
+      margin-top: calc(10px + 7 * ((100vw - 768px) / 224)); } }
+  @media screen and (min-width: 992px) {
+    .marketplace .lgp-tabs .tab-panel {
+      margin-top: 17px; } }

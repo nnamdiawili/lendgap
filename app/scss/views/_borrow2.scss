@@ -1,0 +1,27 @@
+// -------------------------------------------------------------------------
+// Page
+// -------------------------------------------------------------------------
+
+.page-section:not(.image-bg-section) .content {
+  @include fluid-prop(padding-top, 50px, 70px, $grid-breakpoint-xs);
+  @include fluid-prop(padding-bottom, 50px, 70px, $grid-breakpoint-xs);
+}
+
+// -------------------------------------------------------------------------
+// borrow-form section
+// -------------------------------------------------------------------------
+
+.borrow-form {
+  
+  .input-field {
+    margin-bottom: 20px;
+  }
+
+  .info {
+    margin: 20px 0;
+  }
+
+  .cta {
+    margin: 50px 0 0;
+  }
+}

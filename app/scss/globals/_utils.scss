@@ -29,3 +29,17 @@
   transform-origin: center center;
   transform: scaleY(-1);
 }
+
+.flexer {
+  > :not(.flexed) {
+    flex: 0 0 auto;
+  }
+  > .flexed {
+    flex: 1 1 auto;
+  }
+}
+
+.pos-center {
+  @include position(absolute, 50% null null 50%);
+  transform: translate(-50%, -50%);
+}
