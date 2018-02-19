@@ -130,7 +130,8 @@ label {
   margin: 0; }
 
 .header-xl {
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1; }
   .header-xl {
     font-size: 26px; }
     @media screen and (min-width: 300px) {
@@ -246,6 +247,12 @@ label {
 
 .text-accent {
   color: #FF2D6E !important; }
+
+.text-success {
+  color: #03BF94 !important; }
+
+.text-error {
+  color: #B80202 !important; }
 
 a.text-link {
   font-family: "Brandon Grotesque", sans-serif;
@@ -485,6 +492,11 @@ a.text-link {
   .lgp-grid.xxl-columns-12 > .grid-item {
     max-width: calc(100% / 12); } }
 
+.lgp-table {
+  display: flex-column; }
+  .lgp-table .table-item:not(:first-child) {
+    margin-top: 10px; }
+
 .profile-photo {
   position: relative;
   border: 1px solid #FFF;
@@ -636,6 +648,15 @@ a.text-link {
     transition: 0.3s; }
   .bookmark .bookmark-toggle .filler {
     opacity: 1; }
+
+.empty-placeholder {
+  font-family: "Brandon Grotesque", sans-serif; }
+  .empty-placeholder .icon {
+    width: 50px;
+    height: 50px;
+    fill: #D8D8D8; }
+  .empty-placeholder .caption, .empty-placeholder .cta {
+    margin-top: 20px; }
 
 .btn {
   -webkit-appearance: none;
@@ -1101,7 +1122,7 @@ a.text-link {
 .banner-section.page-section {
   min-height: unset; }
   .banner-section.page-section .gradient {
-    background-image: linear-gradient(to right, rgba(248, 244, 243, 0.95) 0%, rgba(248, 244, 243, 0.5) 100%); }
+    background-image: linear-gradient(to right, rgba(248, 237, 239, 0.95) 0%, rgba(248, 237, 239, 0.5) 100%); }
   .banner-section.page-section .content {
     color: #113E52;
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.1); }

@@ -36,10 +36,10 @@
 
 
 // -------------------------------------------------------------------------
-// Loan Card component
+// Loan Grid-Card component
 // -------------------------------------------------------------------------
 
-.loan-card {
+.loan-grid-card {
   position: relative;
   display: block;
   width: 100%;
@@ -64,7 +64,7 @@
     }
     &.footer {
       color: $color-brand-blue;
-      background-color: $color-brand-peach;
+      background-color: $color-brand-nude;
     }
   }
   .details {
@@ -131,5 +131,82 @@
   }
   &:active {
     border-color: rgba($color-brand-fuchsia, .5);
+  }
+}
+
+
+// -------------------------------------------------------------------------
+// Loan List-Card component
+// -------------------------------------------------------------------------
+
+.loan-list-card {
+  outline: none;
+  overflow: hidden;
+  font-family: $font-family-card;
+  font-size: 1rem;
+  color: $color-brand-grey-dark;
+  background-color: $color-white;
+  border-radius: $component-border-radius;
+  border: 1px solid rgba($color-white, 1);
+  box-shadow: 0 20px 80px 4px rgba($color-black, 0.02);
+  padding: 15px;
+  transition: $component-hover-fx-duration;
+
+  :focus {
+    outline: none;
+  }
+  .detail {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .profile-photo {
+    width: $button-size-normal;
+    height: $button-size-normal;
+    @include fluid-prop(width, 30px, 40px);
+    @include fluid-prop(height,  30px, 40px);
+
+    .avatar {
+      fill: $color-white;
+      background-color: transparent;
+    }
+  }
+  .rating {
+    display: flex;
+
+    .icon {
+      fill: $color-brand-grey-light;
+      width: $component-icon-size-xs;
+      height: $component-icon-size-xs;
+      flex: 0 0 auto;
+
+      &:not(:first-child) {
+        @include fluid-prop(margin-left, 2px, 5px, $grid-breakpoint-md);
+      }
+    }
+    @for $i from 1 through 5 {
+      &.stars-#{$i} .icon:nth-child(-n + #{$i}) {
+        fill: $color-brand-blue;
+      }
+    }
+  }
+
+  //states
+  &:hover, &:focus {
+    border: 1px solid rgba(mix($color-brand-fuchsia, $color-brand-orange, 50%), .5);
+    box-shadow: 0 10px 30px 7px rgba(mix($color-brand-fuchsia, $color-black, 30%), 0.08);
+    transform: scale(1.03);
+    z-index: 2;
+  }
+  &:active {
+    border-color: rgba($color-brand-fuchsia, .5);
+  }
+
+  .table-header &, &.table-header {
+    opacity: .7;
+    font-size: .95em;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    pointer-events: none;
   }
 }

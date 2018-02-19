@@ -11,6 +11,7 @@
   @include fluid-prop(font-size, 26px, 70px);
   @include fluid-prop(letter-spacing, -0.5px, -3.6px);
   font-weight: 700;
+  line-height: 1;
 }
 
 .header-lg {
@@ -70,6 +71,12 @@
 }
 .text-accent {
   color: $color-accent !important;
+}
+.text-success {
+  color: $color-success !important;
+}
+.text-error {
+  color: $color-error !important;
 }
 
 

@@ -25,7 +25,7 @@
     transform: translate(-50%, -50%);
   }
   .content {
-    @include fluid-prop(padding-top, 120px, 320px);
+    @include fluid-prop(padding-top, 120px, 280px);
     @include fluid-prop(padding-bottom, 50px, 130px);
     text-shadow: 0 0 30px rgba($color-black, 0.1);
     text-align: center;
@@ -40,6 +40,8 @@
   .description {
     animation: fade-in-staggered 1s ease-in-out;
     padding: 0 30px;
+    max-width: 650px;
+    font-size: 16px;
 
     @media (min-width: $grid-breakpoint-sm) {
       padding: 0;

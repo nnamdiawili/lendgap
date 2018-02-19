@@ -1,0 +1,44 @@
+// -------------------------------------------------------------------------
+// chat section
+// -------------------------------------------------------------------------
+
+.chat {
+  position: relative;
+  background-color: $color-brand-ash;
+
+  .thread {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 100px;
+    overflow: auto;
+  }
+  // .empty-placeholder {
+  //   font-family: $font-family-header;
+
+  //   .icon {
+  //     width: 50px;
+  //     height: 50px;
+  //     fill: $color-brand-grey-light;
+  //   } 
+  //   .caption {
+  //     margin-top: 20px; 
+  //   }
+  // }
+  .message-bar {
+    @include position(absolute, null 0 30px 0);
+
+    .lgp-container {
+      position: relative;
+    }
+    .icon {
+      width: 22px !important;
+      height: 22px !important;
+    }
+  }
+  .input-field {
+    margin: 0;
+  }
+  .input-field-actions {
+    @include position(absolute, null 0 null null);
+  }
+}

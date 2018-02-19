@@ -41,6 +41,19 @@
 
 
 // -------------------------------------------------------------------------
+// Table component
+// -------------------------------------------------------------------------
+
+.lgp-table {
+  display: flex-column;
+
+  .table-item:not(:first-child) {
+    margin-top:$table-spacing; 
+  }
+}
+
+
+// -------------------------------------------------------------------------
 // Profile photos
 // -------------------------------------------------------------------------
 
@@ -104,51 +117,53 @@
 
 
 // -------------------------------------------------------------------------
-// Password strength widget
+// Divider strength widget
 // -------------------------------------------------------------------------
 
 .divider {
-    display: flex !important;
-    align-items: center;
+  display: flex !important;
+  align-items: center;
 
-    &::before, &::after {
-      flex: 1 1 auto;
-      content: ' ';
-      display: block;
-    }
-    .caption {
-      flex: 0 0 auto;
-    }
-
-    &.vertical {
-      flex-direction: column;
-      height: 100%;
-
-      &::before, &::after {
-        border-left: 1px solid rgba($color-brand-grey-dark, .3);
-      }
-      .caption {
-        font-family: $font-family-button;
-        font-size: .7rem;
-        font-weight: 500;
-        letter-spacing: 0.075rem;
-        text-transform: uppercase;
-        margin: 10px 0;
-      }
-    }
-    &.horizontal {
-      width: 100%;
-      &::before, &::after {
-        border-top: 1px solid rgba($color-brand-grey-dark, .3);
-      }
-      .caption {
-        margin: 0 10px;
-      }
-    }
+  &::before, &::after {
+    flex: 1 1 auto;
+    content: ' ';
+    display: block;
+  }
+  .caption {
+    flex: 0 0 auto;
   }
 
+  &.vertical {
+    flex-direction: column;
+    height: 100%;
 
-// -------------------------------------------------------------------------
+    &::before, &::after {
+      border-left: 1px solid rgba($color-brand-grey-dark, .3);
+    }
+    .caption {
+      font-family: $font-family-button;
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: 0.075rem;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+  }
+  &.horizontal {
+    width: 100%;
+    &::before, &::after {
+      border-top: 1px solid rgba($color-brand-grey-dark, .3);
+    }
+    .caption {
+      margin: 0 10px;
+    }
+  }
+}
+
+
+
+
+  // -------------------------------------------------------------------------
 // Navbar Burger
 // -------------------------------------------------------------------------
 
@@ -212,5 +227,23 @@
   }
   .bookmark & .filler {
     opacity: 1;
+  }
+}
+
+
+// -------------------------------------------------------------------------
+// Empty Placeholder
+// -------------------------------------------------------------------------
+
+.empty-placeholder {
+  font-family: $font-family-header;
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    fill: $color-brand-grey-light;
+  } 
+  .caption, .cta {
+    margin-top: 20px; 
   }
 }

@@ -19,7 +19,7 @@
 
   @media (min-width: $sidebar-collapse-breakpoint) {
     background-color: rgba($color-white, .98);
-    box-shadow: 0 20px 80px 5px rgba($color-brand-teal, 0.1);
+    box-shadow: 0 20px 80px 5px rgba($color-brand-teal, 0.05);
   }
 
   > .content {

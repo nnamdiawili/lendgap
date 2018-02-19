@@ -22,10 +22,13 @@ $color-brand-blue-turquoise: #1ACFE4;
 $color-brand-ash: #F4F4F4;
 $color-brand-grey-dark: #A4A4A4;
 $color-brand-grey-light: #D8D8D8;
-$color-brand-peach: #F8EDEF;
+$color-brand-nude: #F8EDEF;
+$color-brand-peach: #F6EBE8;
 $color-brand-teal: #152C35;
 $color-facebook: #335A9E;
 $color-google: #F03B2C;
+$color-success: $color-brand-green;
+$color-error: #B80202;
 
 $color-accent: $color-brand-fuchsia;
 
@@ -69,6 +72,8 @@ $grid-breakpoint-aliases: (
 $grid-gutter-min: 20px;
 $grid-gutter-max: 40px;
 $grid-columns: 12;
+
+$table-spacing: 10px;
 
 $nav-header-height: 80px;
 

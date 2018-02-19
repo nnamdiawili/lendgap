@@ -1085,7 +1085,7 @@ a.text-link {
   .illustrated-item .description {
     margin-top: 20px; }
 
-.loan-card {
+.loan-grid-card {
   position: relative;
   display: block;
   width: 100%;
@@ -1097,107 +1097,107 @@ a.text-link {
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em;
   transition: 0.3s; }
-  .loan-card :focus {
+  .loan-grid-card :focus {
     outline: none; }
-  .loan-card .card-section {
+  .loan-grid-card .card-section {
     padding: 20px; }
     @media screen and (min-width: 300px) {
-      .loan-card .card-section {
+      .loan-grid-card .card-section {
         padding: calc(20px + 10 * ((100vw - 300px) / 692)); } }
     @media screen and (min-width: 992px) {
-      .loan-card .card-section {
+      .loan-grid-card .card-section {
         padding: 30px; } }
-  .loan-card .card-section.body {
+  .loan-grid-card .card-section.body {
     background-color: #FFF; }
-  .loan-card .card-section.footer {
+  .loan-grid-card .card-section.footer {
     color: #113E52;
     background-color: #F8EDEF; }
-  .loan-card .details {
+  .loan-grid-card .details {
     position: relative;
     width: 100%; }
-  .loan-card .title {
+  .loan-grid-card .title {
     margin-bottom: 1rem; }
-  .loan-card .detail {
+  .loan-grid-card .detail {
     margin-top: .1rem; }
-    .loan-card .detail.separate {
+    .loan-grid-card .detail.separate {
       margin-top: 20px; }
       @media screen and (min-width: 300px) {
-        .loan-card .detail.separate {
+        .loan-grid-card .detail.separate {
           margin-top: calc(20px + 15 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        .loan-card .detail.separate {
+        .loan-grid-card .detail.separate {
           margin-top: 35px; } }
-    .loan-card .detail.separate-more {
+    .loan-grid-card .detail.separate-more {
       margin-top: 35px; }
       @media screen and (min-width: 300px) {
-        .loan-card .detail.separate-more {
+        .loan-grid-card .detail.separate-more {
           margin-top: calc(35px + 35 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        .loan-card .detail.separate-more {
+        .loan-grid-card .detail.separate-more {
           margin-top: 70px; } }
-  .loan-card .bookmark-toggle {
+  .loan-grid-card .bookmark-toggle {
     margin-top: -20px;
     margin-right: -20px;
     position: absolute;
     top: 0;
     right: 0; }
-  .loan-card .profile-name {
+  .loan-grid-card .profile-name {
     margin-left: 15px; }
-  .loan-card .profile-photo {
+  .loan-grid-card .profile-photo {
     width: 40px;
     height: 40px; }
-    .loan-card .profile-photo {
+    .loan-grid-card .profile-photo {
       width: 30px; }
       @media screen and (min-width: 300px) {
-        .loan-card .profile-photo {
+        .loan-grid-card .profile-photo {
           width: calc(30px + 10 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        .loan-card .profile-photo {
+        .loan-grid-card .profile-photo {
           width: 40px; } }
-    .loan-card .profile-photo {
+    .loan-grid-card .profile-photo {
       height: 30px; }
       @media screen and (min-width: 300px) {
-        .loan-card .profile-photo {
+        .loan-grid-card .profile-photo {
           height: calc(30px + 10 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        .loan-card .profile-photo {
+        .loan-grid-card .profile-photo {
           height: 40px; } }
-    .loan-card .profile-photo .avatar {
+    .loan-grid-card .profile-photo .avatar {
       fill: #FFF;
       background-color: transparent; }
-  .loan-card .rating {
+  .loan-grid-card .rating {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .loan-card .rating .icon {
+    .loan-grid-card .rating .icon {
       fill: #D8D8D8;
       width: 12px;
       height: 12px; }
-      .loan-card .rating .icon:not(:first-child) {
+      .loan-grid-card .rating .icon:not(:first-child) {
         margin-left: 2px; }
         @media screen and (min-width: 768px) {
-          .loan-card .rating .icon:not(:first-child) {
+          .loan-grid-card .rating .icon:not(:first-child) {
             margin-left: calc(2px + 3 * ((100vw - 768px) / 224)); } }
         @media screen and (min-width: 992px) {
-          .loan-card .rating .icon:not(:first-child) {
+          .loan-grid-card .rating .icon:not(:first-child) {
             margin-left: 5px; } }
-    .loan-card .rating.stars-1 .icon:nth-child(-n + 1) {
+    .loan-grid-card .rating.stars-1 .icon:nth-child(-n + 1) {
       fill: #113E52; }
-    .loan-card .rating.stars-2 .icon:nth-child(-n + 2) {
+    .loan-grid-card .rating.stars-2 .icon:nth-child(-n + 2) {
       fill: #113E52; }
-    .loan-card .rating.stars-3 .icon:nth-child(-n + 3) {
+    .loan-grid-card .rating.stars-3 .icon:nth-child(-n + 3) {
       fill: #113E52; }
-    .loan-card .rating.stars-4 .icon:nth-child(-n + 4) {
+    .loan-grid-card .rating.stars-4 .icon:nth-child(-n + 4) {
       fill: #113E52; }
-    .loan-card .rating.stars-5 .icon:nth-child(-n + 5) {
+    .loan-grid-card .rating.stars-5 .icon:nth-child(-n + 5) {
       fill: #113E52; }
-  .loan-card:hover, .loan-card:focus {
+  .loan-grid-card:hover, .loan-grid-card:focus {
     border: 1px solid rgba(255, 92, 78, 0.5);
     box-shadow: 0 20px 80px 5px rgba(77, 14, 33, 0.2);
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
     z-index: 2; }
-  .loan-card:active {
+  .loan-grid-card:active {
     border-color: rgba(255, 45, 110, 0.5); }
 
 .hero-navbar {
