@@ -97,35 +97,35 @@
     <!-- page content -->
     <main class="transactions page sidebar-pusher">
         <!-- transactions section -->
-        <section class="summary dashboard-details page-section">
+        <section class="dashboard-details page-section">
             <div class="content lgp-container">
                 <div class="row d-flex align-items-center">
-                    <div class="col-md-4">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-sm-0">
                         <div class="d-flex flex-column">
                             <h2 class="section-header header-xs">Total Loans Given</h2>
                             <span class="title loan-amount header-md text-heavy">
                                 <span class="currency text-unit">N</span><span class="amount">4,000,000</span>
                             </span>
-                            <span class="detail alt separate"><span class="preamble">Total Interest:</span>N1,942,000</span>
-                            <span class="detail alt"><span class="preamble">Amount Due:</span>N417,000</span>
+                            <span class="detail alt separate"><span class="preamble">Total Interest:</span>N 1,942,000</span>
+                            <span class="detail alt"><span class="preamble">Amount Due:</span>N 417,000</span>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-5 mt-sm-0">
                         <div class="d-flex flex-column">
                             <h2 class="section-header header-xs">Total Loans Recieved</h2>
                             <span class="title loan-amount header-md text-heavy">
                                 <span class="currency text-unit">N</span><span class="amount">1,560,000</span>
                             </span>
-                            <span class="detail alt separate"><span class="preamble">Total Repayment:</span>N270,000</span>
-                            <span class="detail alt"><span class="preamble">Amount Due:</span>N138,000</span>
+                            <span class="detail alt separate"><span class="preamble">Total Repayment:</span>N 270,000</span>
+                            <span class="detail alt"><span class="preamble">Amount Due:</span>N 138,000</span>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-5 mt-lg-0">
                         <div class="d-flex flex-column">
-                            <span class="detail alt separate"><span class="preamble">Active Loan Given:</span>6</span>
+                            <span class="detail alt"><span class="preamble">Active Loan Given:</span>6</span>
                             <span class="detail alt"><span class="preamble">Active Loan Recieved:</span>3</span>
                             <span class="detail alt"><span class="preamble">Overdue Loans:</span>4</span>
-                            <span class="detail alt"><span class="preamble">All-time Profit:</span>N492,500</span>
+                            <span class="detail alt"><span class="preamble">All-time Profit:</span>N 492,500</span>
                             <span class="detail alt"><span class="preamble">Last Repayment:</span>02 Jan 2018</span>
                         </div>
                     </div>
@@ -139,150 +139,29 @@
                 <div class="lgp-tabs">
                     <!-- loans given tab -->
                     <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-requests-tab" hidden checked>
-                    <label class="tab-button btn btn-tab btn-chrome" for="marketplace-requests-tab"><span class="d-none d-sm-inline">Loans&nbsp;</span>Given</label>
+                    <label class="tab-button btn btn-tab btn-chrome" for="marketplace-requests-tab">Loans Given</label>
                     <div class="tab-panel">
                         <ul class="lgp-table">
                             <li class="table-item table-header">
-                                <div class="loan-list-card row d-flex align-items-center">
-                                    <div class="table-cell detail col-md-1">SN</div>
-                                    <div class="table-cell detail col-md-2">Borrower</div>
-                                    <div class="table-cell detail col-md-2">Rating</div>
-                                    <div class="table-cell detail col-md-2">Repayment (N)</div>
-                                    <div class="table-cell detail col-md-2">Due Date</div>
-                                    <div class="table-cell detail col-md-1">Status</div>
-                                    <div class="table-cell detail col-md-2">Amount Due (N)</div>
+                                <div class="loan-list-card">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1">SN</div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2">Borrower</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">Rating</div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">Repayment (N)</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">Due Date</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1">Status</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">Amount Due (N)</div>
+                                    </div>
                                 </div>
                             </li>
                             <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">1</div>
-                                    <div class="table-cell detail col-md-2">Sandra Oladimeji</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-4">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="table-cell detail col-md-2 text-bold">125,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1">Active</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
-                                </a>
-                            </li>
-                            <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">2</div>
-                                    <div class="table-cell detail col-md-2">Toluwani Oni</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-3">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="table-cell detail col-md-2 text-bold">135,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1 text-error">Overdue</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
-                                </a>
-                            </li>
-                            <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">3</div>
-                                    <div class="table-cell detail col-md-2">Sandra Oladimeji</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-1">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="table-cell detail col-md-2 text-bold">125,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1">Active</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
-                                </a>
-                            </li>
-                            <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">4</div>
-                                    <div class="table-cell detail col-md-2">Sandra Oladimeji</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-2">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="table-cell detail col-md-2 text-bold">125,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1">Active</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
-                                </a>
-                            </li>
-                            <li class="table-item">
-                                    <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                        <div class="table-cell detail col-md-1">5</div>
-                                        <div class="table-cell detail col-md-2">Sandra Oladimeji</div>
-                                        <div class="table-cell detail col-md-2">
-                                            <div class="lender-rating ">
+                                <a class="loan-list-card" href="loan-details.html">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1">1</div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2 text-accent-sec">Sandra Oladimeji</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">
+                                            <div class="lender-rating">
                                                 <span class="rating stars-4">
                                                     <svg class="icon">
                                                         <use  xlink:href="#star"></use>
@@ -302,118 +181,192 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="table-cell detail col-md-2 text-bold">125,000</div>
-                                        <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                        <div class="table-cell detail col-md-1">Active</div>
-                                        <div class="table-cell detail col-md-2 text-bold">50,000</div>
-                                    </a>
-                            </li>
-                            <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">6</div>
-                                    <div class="table-cell detail col-md-2">Sandra Oladimeji</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-3">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">125,000</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">07 Jan 2018</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1">Active</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">50,000</div>
                                     </div>
-                                    <div class="table-cell detail col-md-2 text-bold">125,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1">Active</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
                                 </a>
                             </li>
                             <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">7</div>
-                                    <div class="table-cell detail col-md-2">Sandra Oladimeji</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-2">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
+                                <a class="loan-list-card" href="loan-details.html">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1">2</div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2 text-accent-sec">Toluwani Oni</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">
+                                            <div class="lender-rating">
+                                                <span class="rating stars-3">
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
                                         </div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">36,000</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">15 Oct 2015</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1  text-error">Overdue</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">2,000</div>
                                     </div>
-                                    <div class="table-cell detail col-md-2 text-bold">125,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1">Active</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
                                 </a>
                             </li>
                             <li class="table-item">
-                                <a class="loan-list-card row d-flex align-items-center" href="loan-details.html">
-                                    <div class="table-cell detail col-md-1">8</div>
-                                    <div class="table-cell detail col-md-2">Toluwani Oni</div>
-                                    <div class="table-cell detail col-md-2">
-                                        <div class="lender-rating ">
-                                            <span class="rating stars-3">
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                                <svg class="icon">
-                                                    <use  xlink:href="#star"></use>
-                                                </svg>
-                                            </span>
+                                <a class="loan-list-card" href="loan-details.html">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1">3</div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2 text-accent-sec">Hauwa Maziri</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">
+                                            <div class="lender-rating">
+                                                <span class="rating stars-2">
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
                                         </div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">36,000</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">15 Oct 2015</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1  text-success">Paid</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">2,000</div>
                                     </div>
-                                    <div class="table-cell detail col-md-2 text-bold">135,000</div>
-                                    <div class="table-cell detail col-md-2">07 Jan 2018</div>
-                                    <div class="table-cell detail col-md-1 text-error">Overdue</div>
-                                    <div class="table-cell detail col-md-2 text-bold">50,000</div>
+                                </a>
+                            </li>
+                            <li class="table-item">
+                                <a class="loan-list-card" href="loan-details.html">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1">4</div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2 text-accent-sec">Sandra Oladimeji</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">
+                                            <div class="lender-rating">
+                                                <span class="rating stars-4">
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">125,000</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">07 Jan 2018</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1">Active</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">50,000</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-item">
+                                <a class="loan-list-card" href="loan-details.html">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1">5</div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2 text-accent-sec">Toluwani Oni</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">
+                                            <div class="lender-rating">
+                                                <span class="rating stars-3">
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">36,000</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">15 Oct 2015</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1  text-error">Overdue</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">2,000</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="table-item">
+                                <a class="loan-list-card" href="loan-details.html">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="table-cell detail d-none d-lg-block col-lg-1"></div>
+                                        <div class="table-cell detail col-5 col-sm-4 col-md-4 col-lg-2 text-accent-sec">Hauwa Maziri</div>
+                                        <div class="table-cell detail d-none d-lg-block col-lg-2">
+                                            <div class="lender-rating">
+                                                <span class="rating stars-2">
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                    <svg class="icon">
+                                                        <use  xlink:href="#star"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="table-cell detail col-3 col-sm-3 col-md-2">36,000</div>
+                                        <div class="table-cell detail d-none d-md-block col-md-2">15 Oct 2015</div>
+                                        <div class="table-cell detail col-4 col-sm-2 col-md-2 col-lg-1  text-success">Paid</div>
+                                        <div class="table-cell detail d-none d-sm-block col-sm-3 col-md-2">2,000</div>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <!-- loans recieved tab -->
                     <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-offers-tab" hidden>
-                    <label class="tab-button btn btn-tab btn-chrome" for="marketplace-offers-tab"><span class="d-none d-sm-inline">Loans&nbsp;</span> Recieved</label>
+                    <label class="tab-button btn btn-tab btn-chrome" for="marketplace-offers-tab">Loans Recieved</label>
                     <div class="tab-panel">
-                        <div class="empty-placeholder d-flex flex-column align-items-center">
-                            <svg class="icon"><use xlink:href="#money"/></svg>
-                            <p class="caption">You have not recieved any loans yet but you have <span class="text-accent">3 Unused Loan Requests</span> remaining.</p>
-                            <div class="cta">
-                                <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="borrow2.html">Request for a loan</a>
+                        <section class="borrow-end page-section flexed-no-shrink">
+                            <div class="lgp-prompt">
+                                <p class="caption">You have not recieved any loans yet but you have <span class="text-accent">3 Unused Loan Requests</span> remaining.</p>
+                                <div class="cta">
+                                    <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="borrow2.html">Request for a loan</a>
+                                </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                 </div>
             </div>

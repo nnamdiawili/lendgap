@@ -73,6 +73,7 @@
   }
   .title {
     margin-bottom: 1rem;
+    color: $color-brand-blue;
   }
   .detail {
       margin-top: .1rem;
@@ -140,6 +141,7 @@
 // -------------------------------------------------------------------------
 
 .loan-list-card {
+  display: block;
   outline: none;
   overflow: hidden;
   font-family: $font-family-card;
@@ -203,10 +205,13 @@
 
   .table-header &, &.table-header {
     opacity: .7;
-    font-size: .95em;
     background-color: transparent;
     border: none;
     box-shadow: none;
     pointer-events: none;
+
+    @media screen and (min-width: $grid-breakpoint-md) {
+    font-size: .95em;
+    }
   }
 }

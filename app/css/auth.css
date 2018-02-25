@@ -53,6 +53,12 @@ body {
 
 body {
   background-color: #113E52; }
+  body ::-moz-selection {
+    background-color: #113E52;
+    color: #FFF; }
+  body ::selection {
+    background-color: #113E52;
+    color: #FFF; }
 
 ol, ul {
   list-style: none;
@@ -100,15 +106,32 @@ label {
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1); }
 
-.flexer > :not(.flexed) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
-
-.flexer > .flexed {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+.flexer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .flexer.flexer-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .flexer.flexer-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .flexer > :not(.flexed), .flexer > :not(.flexed-no-shrink) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+  .flexer > .flexed {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+  .flexer > .flexed-no-shrink {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
 
 .pos-center {
   position: absolute;
@@ -247,6 +270,9 @@ label {
 
 .text-accent {
   color: #FF2D6E !important; }
+
+.text-accent-sec {
+  color: #113E52 !important; }
 
 .text-success {
   color: #03BF94 !important; }
@@ -649,14 +675,65 @@ a.text-link {
   .bookmark .bookmark-toggle .filler {
     opacity: 1; }
 
-.empty-placeholder {
-  font-family: "Brandon Grotesque", sans-serif; }
-  .empty-placeholder .icon {
-    width: 50px;
-    height: 50px;
+.lgp-alert {
+  position: relative;
+  background-color: #A4A4A4; }
+  .lgp-alert.alert-green {
+    background-color: #03BF94; }
+  .lgp-alert.alert-fuchsia {
+    background-color: #FF2D6E; }
+  .lgp-alert .content {
+    padding: 21px 60px 21px  0; }
+  .lgp-alert .message {
+    color: #FFF;
+    padding: 0;
+    margin: 0; }
+  .lgp-alert .close {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .lgp-alert .ctas {
+    margin-left: 30px; }
+
+.lgp-prompt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Brandon Grotesque", sans-serif;
+  max-width: 550px;
+  margin: 60px auto; }
+  .lgp-prompt.pos-center, .lgp-prompt.flexed {
+    margin: 0; }
+  .lgp-prompt .icon {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
     fill: #D8D8D8; }
-  .empty-placeholder .caption, .empty-placeholder .cta {
+    .lgp-prompt .icon.with-bg {
+      width: 130px;
+      height: 130px;
+      padding: 35px;
+      border-radius: 50%;
+      background-color: #F4F4F4; }
+    .lgp-prompt .icon.icon-lg {
+      width: 80px;
+      height: 80px;
+      padding: 10px; }
+  .lgp-prompt .caption, .lgp-prompt .cta {
     margin-top: 20px; }
+  .lgp-prompt .cta .btn {
+    margin: 5px 5px; }
 
 .btn {
   -webkit-appearance: none;
@@ -1150,26 +1227,6 @@ a.text-link {
     position: absolute;
     top: 0;
     right: 0; }
-
-.prompt.page-section {
-  position: relative;
-  background-color: #A4A4A4; }
-  .prompt.page-section.prompt-green {
-    background-color: #03BF94; }
-  .prompt.page-section.prompt-fuchsia {
-    background-color: #FF2D6E; }
-  .prompt.page-section .content {
-    padding: 21px 60px 21px  0; }
-  .prompt.page-section .message {
-    color: #FFF;
-    padding: 0;
-    margin: 0; }
-  .prompt.page-section .close {
-    position: absolute;
-    top: 0;
-    right: 0; }
-  .prompt.page-section .ctas {
-    margin-left: 30px; }
 
 .footer {
   background-color: #152C35; }

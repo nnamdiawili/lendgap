@@ -96,12 +96,12 @@
 
     <!-- page content -->
     <main class="loan-details page sidebar-pusher d-flex flex-column flexer">
-        <!-- prompt section -->
-        <section class="success page-section prompt prompt-green collapse show">
+        <!-- alert section -->
+        <section class="success lgp-alert alert-green collapse show">
             <div class="content lgp-container">
                 <p class="message text-small text-bold">You have successfully applied for this loan, and the lender has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
             </div>
-            <button class="close btn btn-icon btn-lg btn-trans-white" type="button" data-toggle="collapse" data-target=".success.prompt">
+            <button class="close btn btn-icon btn-lg btn-trans-white" type="button" data-toggle="collapse" data-target=".success.lgp-alert">
                 <svg class="icon"><use xlink:href="#close"/></svg>
             </button>
         </section>
@@ -109,7 +109,7 @@
         <section class="loan-details dashboard-details page-section">
             <div class="content lgp-container">
                 <div class="row d-flex align-items-center">
-                    <div class="col-md-4">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-sm-0">
                         <div class="d-flex flex-column">
                             <h2 class="section-header header-xs">Loan Details</h2>
                             <span class="title loan-amount header-lg text-heavy">
@@ -118,7 +118,7 @@
                             <span class="detail"><span class="preamble">Transaction ID:</span>053139912</span>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-3 mt-5 mt-sm-0">
                         <div class="d-flex flex-column">
                             <span class="detail"><span class="preamble">Loan Status:</span><span class="text-accent">Active</span></span>
                             <span class="detail"><span class="preamble">Interest:</span>10%</span>
@@ -127,11 +127,10 @@
                             <span class="detail"><span class="preamble">Installments:</span>NO</span>
                         </div>
                     </div>
-                    <div class="col-md-1">
-                            <div class="d-none d-md-block"><span class="divider vertical"></span></div>
-                            <div class="d-md-none"><span class="divider horizontal"></span></div>
+                    <div class="d-none d-lg-block col-lg-1">
+                        <div class="d-none d-lg-block"><span class="divider vertical"></span></div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-5 mt-lg-0">
                         <div class="detail d-flex align-items-center">
                             <div class="profile-photo flex-none">
                                 <svg class="avatar icon">
@@ -141,7 +140,7 @@
                             </div>
                             <div class="profile-details d-flex flex-column">
                                 <span class="section-header">Lender</span>
-                                <h2 class="profile-name header-xs">Bimpe Oladimeji</span>
+                                <h2 class="profile-name header-xs">Bimpe Oladimeji</h2>
                                 <div class="lender-rating ">
                                     <!--<span class="preamble">Lender Rating:</span>-->
                                     <span class="rating stars-3">
@@ -169,9 +168,9 @@
             </div>
         </section>
         <!-- chat section -->
-        <section class="chat page-section d-flex flexed">
-            <div class="thread flexed">
-                <div class="empty-placeholder pos-center d-flex flex-column align-items-center">
+        <section class="chat page-section flexed-no-shrink flexer">
+            <div class="thread flexed-no-shrink">
+                <div class="lgp-prompt pos-center">
                     <svg class="icon"><use xlink:href="#chat"/></svg>
                     <p class="caption">Start a conversation with Bimpe</p>
                 </div>
@@ -186,9 +185,9 @@
                         <input type="text" name="message" placeholder="Type your message...">
                     </div>
                     <div class="input-field-actions">
-                        <button class="emoji btn btn-icon btn-lg btn-trans-alt">
+                        <!-- <button class="emoji btn btn-icon btn-lg btn-trans-alt">
                             <svg class="icon"><use xlink:href="#smiley"/></svg>
-                        </button>
+                        </button> -->
                         <button class="send btn btn-icon btn-lg btn-trans-alt">
                             <svg class="icon"><use xlink:href="#send"/></svg>
                         </button>
@@ -196,15 +195,15 @@
                 </div>
             </div>
         </section>
-        <!-- cta prompt section -->
-        <section class="cta-footer page-section prompt prompt-fuchsia collapse show">
+        <!-- cta alert section -->
+        <!-- <section class="cta-footer page-section alert alert-fuchsia collapse show">
             <div class="content lgp-container d-flex justify-content-end align-items-center">
                 <p class="message text-small text-bold">Have you received the loan?</p>
                 <div class="ctas">
                     <button class="cta btn btn-green btn-sm btn-caps btn-chrome btn-shadow" data-toggle="collapse" data-target=".cta-footer.prompt">Yes</button>
                 </div>
             </div>
-        </section>
+        </section> -->
         
     </main>
 

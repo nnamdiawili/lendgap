@@ -3,7 +3,16 @@
 // -------------------------------------------------------------------------
 
 .loan-details.page {
-  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.interested.page-section {
+  position: relative;
+  background-color: $color-white;
+
+  .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }

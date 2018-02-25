@@ -92,38 +92,6 @@
 }
 
 
-
-// -------------------------------------------------------------------------
-// Collapsible prompt section
-// -------------------------------------------------------------------------
-
-.prompt.page-section {
-  position: relative;
-  background-color: $color-brand-grey-dark;
-
-  &.prompt-green {
-    background-color: $color-brand-green;
-  }
-  &.prompt-fuchsia {
-    background-color: $color-brand-fuchsia;
-  }
-  .content {
-    padding: 21px 60px 21px  0;
-  }
-  .message {
-    color: $color-white;
-    padding: 0;
-    margin: 0;
-  }
-  .close {
-    @include position(absolute, 0 0 null null);
-  }
-  .ctas {
-    margin-left: 30px;
-  }
-}
-
-
 // -------------------------------------------------------------------------
 // Page footer
 // -------------------------------------------------------------------------

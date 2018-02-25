@@ -10,22 +10,11 @@
 }
 
 // -------------------------------------------------------------------------
-// borrow-start section
+// borrow-end section
 // -------------------------------------------------------------------------
 
 .borrow-end {
-  position: relative;
-  font-family: $font-family-header;
-
   .icon {
-    width: 60px;
-    height: 60px;
     fill: $color-brand-green-mint;
-  }
-  .cta {
-    margin-top: 20px;
-  }
-  .caption {
-    margin-top: 25px; 
   }
 }

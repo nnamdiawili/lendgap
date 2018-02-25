@@ -31,11 +31,22 @@
 }
 
 .flexer {
-  > :not(.flexed) {
+  display: flex;
+
+  &.flexer-row {
+    flex-direction: row;
+  }
+  &.flexer-column {
+    flex-direction: column;
+  }
+  > :not(.flexed), > :not(.flexed-no-shrink) {
     flex: 0 0 auto;
   }
   > .flexed {
     flex: 1 1 auto;
+  }
+  > .flexed-no-shrink {
+    flex: 1 0 auto;
   }
 }
 

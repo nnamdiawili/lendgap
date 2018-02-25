@@ -13,6 +13,11 @@ body {
 
 body {
   background-color: $color-brand-blue;
+
+  ::selection {
+    background-color: $color-brand-blue;
+    color: $color-white;
+  }
 }
 
 ol, ul {

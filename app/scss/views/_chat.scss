@@ -9,21 +9,16 @@
   .thread {
     position: relative;
     width: 100%;
+    min-height: 280px;
     padding: 40px 0 100px;
     overflow: auto;
   }
-  // .empty-placeholder {
-  //   font-family: $font-family-header;
-
-  //   .icon {
-  //     width: 50px;
-  //     height: 50px;
-  //     fill: $color-brand-grey-light;
-  //   } 
-  //   .caption {
-  //     margin-top: 20px; 
-  //   }
-  // }
+  .empty-placeholder {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .message-bar {
     @include position(absolute, null 0 30px 0);
 
@@ -40,5 +35,8 @@
   }
   .input-field-actions {
     @include position(absolute, null 0 null null);
+  }
+  .btn.attach {
+    margin-left: -25px;
   }
 }
