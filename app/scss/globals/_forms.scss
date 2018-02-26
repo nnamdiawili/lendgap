@@ -1,26 +1,43 @@
 .lgp-form {
 
-  .header {
-    font-weight: 300;
-    margin-bottom: 50px;
+  .form-group {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
   }
-}
 
-.input-field {
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  margin-top: 1.5rem;
+  .form-control {
+    appearance: none;
+    outline: none;
+    font-family: $font-family-input;
+    font-size: 1em;
+    font-weight: 300;
+    height: $form-control-size-normal;
+    padding: 0 ($form-control-size-normal / 3);
+    border: 1px solid $color-brand-grey-light;
+    border-radius: $component-border-radius;
+    background-color: $color-white;
+    color: $color-brand-blue;
+    opacity: .5;
+    transition: $component-hover-fx-duration;
+  
+    &:focus {
+      opacity: 1;
+      box-shadow: none;
+    }
+  }
 
   label {
     color: $color-brand-blue;
     font-family: $font-family-input;
-    font-size: .7rem;
-    font-weight: 500;
-    letter-spacing: 0.075rem;
-    text-transform: uppercase;
     margin-bottom: 10px;
 
+    &.form-label-caps {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: 0.075rem;
+      text-transform: uppercase;
+    }
+  
     .extra {
       display: inline-block;
       color: $color-brand-grey-dark;
@@ -28,29 +45,9 @@
     }
   }
 
-  input, select, textarea {
-    appearance: none;
-    outline: none;
-    font-family: $font-family-input;
-    font-size: 1em;
-    font-weight: 300;
-    height: $input-size-normal;
-    padding: 0 ($input-size-normal / 3);
-    border: 1px solid $color-brand-grey-light;
-    border-radius: $component-border-radius;
-    background-color: $color-white;
-    color: $color-brand-blue;
-    opacity: .5;
-    transition: $component-hover-fx-duration;
-
-    &:focus {
-      opacity: 1;
-    }
-  }
-
-  .input-wrapper {
+  .select-wrapper {
     position: relative;
-
+  
     &::after {
       content: '';
       width: $caret-size;
@@ -66,45 +63,44 @@
     }
     select {
       width: 100%;
-      padding: 0 $input-size-normal 0 ($input-size-normal / 2);
+      padding: 0 $form-control-size-normal 0 ($form-control-size-normal / 2);
     }
   }
 
-  // layout
-
-  &.inline {
-    flex-direction: row;
-    align-items: center;
-
-    label {
-      margin-bottom: 0;
-    }
+  .form-header {
+    font-weight: 300;
+    margin-bottom: 4rem;
   }
+  
 
-  // sizes
-
-  $input-size-map: (
-    sm: ($input-size-sm, .8rem),
-    md: ($input-size-md, 1rem),
-    lg: ($input-size-lg, 1rem),
-    xl: ($input-size-xl, 1.2rem)
+  // form control sizing
+  
+  $form-control-size-map: (
+    sm: ($form-control-size-sm, .8rem),
+    md: ($form-control-size-md, 1rem),
+    lg: ($form-control-size-lg, 1rem),
+    xl: ($form-control-size-xl, 1.2rem)
   );
-  @each $size-name, $size-values in $input-size-map {
-    $input-size: nth($size-values, 1);
+  @each $size-name, $size-values in $form-control-size-map {
+    $form-control-size: nth($size-values, 1);
     $font-size: nth($size-values, 2);
-    &.input-#{$size-name} {
-      input, select {
-        height: $input-size;
-        padding: 0 ($input-size / 3);
-        font-size: $font-size;
-      }
-      textarea {
-        height: $input-size * $form-textarea-default-rows;
-        font-size: $font-size;
-      }
-      .input-wrapper select {
-        padding: 0 $input-size 0 ($input-size / 3);
-      }
+    
+    .form-control.form-control-#{$size-name} {
+      height: $form-control-size;
+      padding: 0 ($form-control-size / 3);
+      font-size: $font-size;
+    }
+    select.form-control.form-control-#{$size-name} {
+      height: $form-control-size;
+      padding: 0 $form-control-size 0 ($form-control-size / 3);
+      font-size: $font-size;
+    }
+    textarea.form-control.form-control-#{$size-name} {
+      height: unset;
+      padding: ($form-control-size / 3);
+      font-size: $font-size;
     }
   }
+
+
 }

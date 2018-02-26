@@ -121,22 +121,24 @@
                 Lenders are always available to offer you the best loan options.</p>
             <div class="lgp-tabs">
                 <!-- non tab/panel content -->
-                <div class="options-bar">
-                    <div class="input-field inline input-sm">
-                        <label for="loan-amount-range-select" class="d-none d-sm-inline">Sort by Amount:</label>
-                        <div class="input-wrapper">
-                            <select id="loan-amount-range-select" name="loan-amount-range">
-                                <option value="" selected>Show All</option>
-                                <option value="N5,000 - N100,000">N5,000 - N100,000</option>
-                                <option value="N100,000 - N300,000">N100,000 - N300,000</option>
-                                <option value="N300,000 - N500,000">N300,000 - N500,000</option>
-                                <option value="N500,000 - N1,000,000">N500,000 - N1,000,000</option>
-                            </select>
+                <form class="options-bar lgp-form">
+                    <div class="form-group form-row">
+                        <label for="loan-amount-range-select" class="form-label-caps mr-3 col-auto col-form-label d-none d-sm-inline">Sort by Amount:</label>
+                        <div class="col-auto">
+                            <div class="select-wrapper">
+                                <select class="form-control form-control-sm" id="loan-amount-range-select" name="loan-amount-range">
+                                    <option value="" selected>Show All</option>
+                                    <option value="N5,000 - N100,000">N5,000 - N100,000</option>
+                                    <option value="N100,000 - N300,000">N100,000 - N300,000</option>
+                                    <option value="N300,000 - N500,000">N300,000 - N500,000</option>
+                                    <option value="N500,000 - N1,000,000">N500,000 - N1,000,000</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="bookmarks-toggle">
                         <input type="checkbox" id="bookmarks-toggle-input" class="toggle-input hidden"
-                       hidden>
+                    hidden>
                         <label for="bookmarks-toggle-input" class="btn btn-toggle btn-sm">
                             <span class="caption d-none d-sm-inline">Bookmarked</span>
                             <svg class="icon" width="18px" height="23px">
@@ -144,7 +146,7 @@
                             </svg>
                         </label>
                     </div>
-                </div>
+                </form>
                 <!-- marketplace requests tab -->
                 <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-requests-tab" hidden>
                 <label class="tab-button btn btn-tab btn-chrome" for="marketplace-requests-tab"><span class="d-none d-sm-inline">Loan&nbsp;</span>Requests</label>

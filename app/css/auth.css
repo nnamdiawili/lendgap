@@ -1023,117 +1023,129 @@ a.text-link {
   width: 15px;
   height: 15px; }
 
-.lgp-form .header {
-  font-weight: 300;
-  margin-bottom: 50px; }
-
-.input-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.lgp-form .form-group {
   font-size: 1rem;
-  margin-top: 1.5rem; }
-  .input-field label {
-    color: #113E52;
-    font-family: "Brandon Grotesque", sans-serif;
+  margin-bottom: 2.5rem; }
+
+.lgp-form .form-control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  height: 40px;
+  padding: 0 13.33333px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  background-color: #FFF;
+  color: #113E52;
+  opacity: .5;
+  transition: 0.3s; }
+  .lgp-form .form-control:focus {
+    opacity: 1;
+    box-shadow: none; }
+
+.lgp-form label {
+  color: #113E52;
+  font-family: "Brandon Grotesque", sans-serif;
+  margin-bottom: 10px; }
+  .lgp-form label.form-label-caps {
     font-size: .7rem;
     font-weight: 500;
     letter-spacing: 0.075rem;
-    text-transform: uppercase;
-    margin-bottom: 10px; }
-    .input-field label .extra {
-      display: inline-block;
-      color: #A4A4A4;
-      margin-left: 10px; }
-  .input-field input, .input-field select, .input-field textarea {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    outline: none;
-    font-family: "Brandon Grotesque", sans-serif;
-    font-size: 1em;
-    font-weight: 300;
-    height: 40px;
-    padding: 0 13.33333px;
-    border: 1px solid #D8D8D8;
-    border-radius: 5px;
-    background-color: #FFF;
-    color: #113E52;
-    opacity: .5;
-    transition: 0.3s; }
-    .input-field input:focus, .input-field select:focus, .input-field textarea:focus {
-      opacity: 1; }
-  .input-field .input-wrapper {
-    position: relative; }
-    .input-field .input-wrapper::after {
-      content: '';
-      width: 3px;
-      height: 3px;
-      border: 3px solid #113E52;
-      border-left-color: transparent;
-      border-top-color: transparent;
-      box-sizing: border-box;
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-transform: translateY(-75%) rotate(45deg);
-              transform: translateY(-75%) rotate(45deg);
-      pointer-events: none;
-      position: absolute;
-      top: 50%;
-      right: 18px; }
-    .input-field .input-wrapper select {
-      width: 100%;
-      padding: 0 40px 0 20px; }
-  .input-field.inline {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .input-field.inline label {
-      margin-bottom: 0; }
-  .input-field.input-sm input, .input-field.input-sm select {
-    height: 35px;
-    padding: 0 11.66667px;
-    font-size: 0.8rem; }
-  .input-field.input-sm textarea {
-    height: 70px;
-    font-size: 0.8rem; }
-  .input-field.input-sm .input-wrapper select {
-    padding: 0 35px 0 11.66667px; }
-  .input-field.input-md input, .input-field.input-md select {
-    height: 50px;
-    padding: 0 16.66667px;
-    font-size: 1rem; }
-  .input-field.input-md textarea {
-    height: 100px;
-    font-size: 1rem; }
-  .input-field.input-md .input-wrapper select {
-    padding: 0 50px 0 16.66667px; }
-  .input-field.input-lg input, .input-field.input-lg select {
-    height: 60px;
-    padding: 0 20px;
-    font-size: 1rem; }
-  .input-field.input-lg textarea {
-    height: 120px;
-    font-size: 1rem; }
-  .input-field.input-lg .input-wrapper select {
-    padding: 0 60px 0 20px; }
-  .input-field.input-xl input, .input-field.input-xl select {
-    height: 70px;
-    padding: 0 23.33333px;
-    font-size: 1.2rem; }
-  .input-field.input-xl textarea {
-    height: 140px;
-    font-size: 1.2rem; }
-  .input-field.input-xl .input-wrapper select {
-    padding: 0 70px 0 23.33333px; }
+    text-transform: uppercase; }
+  .lgp-form label .extra {
+    display: inline-block;
+    color: #A4A4A4;
+    margin-left: 10px; }
+
+.lgp-form .select-wrapper {
+  position: relative; }
+  .lgp-form .select-wrapper::after {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border: 3px solid #113E52;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    box-sizing: border-box;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: translateY(-75%) rotate(45deg);
+            transform: translateY(-75%) rotate(45deg);
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 18px; }
+  .lgp-form .select-wrapper select {
+    width: 100%;
+    padding: 0 40px 0 20px; }
+
+.lgp-form .form-header {
+  font-weight: 300;
+  margin-bottom: 4rem; }
+
+.lgp-form .form-control.form-control-sm {
+  height: 35px;
+  padding: 0 11.66667px;
+  font-size: 0.8rem; }
+
+.lgp-form select.form-control.form-control-sm {
+  height: 35px;
+  padding: 0 35px 0 11.66667px;
+  font-size: 0.8rem; }
+
+.lgp-form textarea.form-control.form-control-sm {
+  height: unset;
+  padding: 11.66667px;
+  font-size: 0.8rem; }
+
+.lgp-form .form-control.form-control-md {
+  height: 50px;
+  padding: 0 16.66667px;
+  font-size: 1rem; }
+
+.lgp-form select.form-control.form-control-md {
+  height: 50px;
+  padding: 0 50px 0 16.66667px;
+  font-size: 1rem; }
+
+.lgp-form textarea.form-control.form-control-md {
+  height: unset;
+  padding: 16.66667px;
+  font-size: 1rem; }
+
+.lgp-form .form-control.form-control-lg {
+  height: 60px;
+  padding: 0 20px;
+  font-size: 1rem; }
+
+.lgp-form select.form-control.form-control-lg {
+  height: 60px;
+  padding: 0 60px 0 20px;
+  font-size: 1rem; }
+
+.lgp-form textarea.form-control.form-control-lg {
+  height: unset;
+  padding: 20px;
+  font-size: 1rem; }
+
+.lgp-form .form-control.form-control-xl {
+  height: 70px;
+  padding: 0 23.33333px;
+  font-size: 1.2rem; }
+
+.lgp-form select.form-control.form-control-xl {
+  height: 70px;
+  padding: 0 70px 0 23.33333px;
+  font-size: 1.2rem; }
+
+.lgp-form textarea.form-control.form-control-xl {
+  height: unset;
+  padding: 23.33333px;
+  font-size: 1.2rem; }
 
 .page {
   min-height: 80vh;
@@ -1331,3 +1343,6 @@ a.text-link {
 
 .auth.page-section .divider.horizontal {
   margin: 15px 0; }
+
+.auth.page-section .lgp-form .form-group {
+  margin-bottom: 1.5rem; }
