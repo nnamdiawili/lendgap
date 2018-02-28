@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
-    <link rel="stylesheet" type="text/css" href="css/loan_details.css"/>
+    <link rel="stylesheet" type="text/css" href="css/account.css"/>
 </head>
 <body class="sidebar-container fixed-md">
     <!-- header navbar -->
@@ -61,7 +61,7 @@
             </a>
         </div>
         <ul class="navs d-flex flex-column align-items-stretch">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="btn btn-sidebar" href="livemarket.html">
                     <svg class="icon"><use xlink:href="#mart"></use></svg>
                     <span class="caption">Marketplace</span>
@@ -85,7 +85,7 @@
                     <span class="caption">Transactions</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="btn btn-sidebar" href="account.html">
                     <svg class="icon"><use xlink:href="#account"></use></svg>
                     <span class="caption">Account</span>
@@ -95,116 +95,221 @@
     </aside>
 
     <!-- page content -->
-    <main class="loan-details page sidebar-pusher d-flex flex-column flexer">
-        <!-- alert section -->
-        <section class="success lgp-alert alert-green collapse show">
-            <div class="content lgp-container">
-                <p class="message text-small text-bold">You have successfully applied for this loan, and the lender has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
-            </div>
-            <button class="close btn btn-icon btn-lg btn-trans-white" type="button" data-toggle="collapse" data-target=".success.lgp-alert">
-                <svg class="icon"><use xlink:href="#close"/></svg>
-            </button>
-        </section>
-        <!-- loan-details section -->
-        <section class="loan-details dashboard-details page-section">
-            <div class="content lgp-container">
-                <div class="row d-flex align-items-center">
-                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-sm-0">
-                        <div class="d-flex flex-column">
-                            <h2 class="section-header header-xs">Loan Details</h2>
-                            <span class="title loan-amount header-lg text-heavy">
-                                <span class="currency text-unit">N</span><span class="amount">630,000</span>
-                            </span>
-                            <span class="detail"><span class="preamble">Transaction ID:</span>053139912</span>
-                        </div>
-                    </div>
-                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-3 mt-5 mt-sm-0">
-                        <div class="d-flex flex-column">
-                            <span class="detail"><span class="preamble">Loan Status:</span><span class="text-accent">Active</span></span>
-                            <span class="detail"><span class="preamble">Interest:</span>10%</span>
-                            <span class="detail"><span class="preamble">Repayment:</span>N660,000</span>
-                            <span class="detail"><span class="preamble">Loan Tenure:</span>18 Months</span>
-                            <span class="detail"><span class="preamble">Installments:</span>NO</span>
-                        </div>
-                    </div>
-                    <div class="d-none d-lg-block col-lg-1">
-                        <div class="d-none d-lg-block"><span class="divider vertical"></span></div>
-                    </div>
-                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-lg-4 mt-5 mt-lg-0">
-                        <div class="detail d-flex align-items-center">
-                            <div class="profile-photo flex-none">
-                                <svg class="avatar icon">
-                                    <use  xlink:href="#avatar"></use>
-                                </svg>
-                                <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-3.jpg')"></div>
+    <main class="account page sidebar-pusher d-flex flex-column flexer">
+        <!-- manage-account section -->
+        <section class="manage-account page-section">
+            <div class="content lgp-container d-flex flex-column align-items-center">
+                <div class="lgp-tabs">
+                    <!-- profile -->
+                    <input class="tab-input hidden" type="radio" name="manage-account-tabs" id="profile-tab" hidden checked>
+                    <label class="tab-button btn btn-tab btn-chrome" for="profile-tab">Profile</label>
+                    <div class="tab-panel">
+                        <form class="profile-form lgp-form-alt form-row">
+                            <div class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-10 offset-lg-0 col-lg-12 offset-xl-1 col-xl-10">
+                                <section class="row profile-info">
+                                    <div class="col-12"><h2 class="form-header header-md">Profile Information</h2></div> 
+                                    <div class="offset-lg-1 col-lg-7 order-lg-1">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label-caps" for="full-name-input">Full Name</label>
+                                                    <input type="text" class="form-control form-control-lg" name="amount" id="full-name-input" value="Jumoke Oladunni Coker" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label-caps" for="email-input">Email</label>
+                                                    <input type="text" class="form-control form-control-lg" name="amount" id="email-input" value="jo.coker@gmail.com" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label-caps" for="dob-input">Date of Birth</label>
+                                                    <input type="text" class="form-control form-control-lg" name="amount" id="dob-input" value="September 17, 1993" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label-caps" for="gender-input">Gender</label>
+                                                    <input type="text" class="form-control form-control-lg" name="amount" id="gender-input" value="Female" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label-caps" for="phone-input">Phone</label>
+                                                    <input type="text" class="form-control form-control-lg" name="amount" id="phone-input" value="+234 811 2777 318" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label-caps" for="location-input">Location</label>
+                                                    <input type="text" class="form-control form-control-lg" name="amount" id="location-input" value="Ajah, Lagos" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-lg-none">
+                                            <span class="divider horizontal w-100  mt-3 mb-5"></span>
+                                        </div>
+                                        <div class="profile-photo">
+                                            <svg class="avatar icon">
+                                                <use  xlink:href="#avatar"></use>
+                                            </svg>
+                                            <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-3.jpg')"></div>
+                                            <button class="upload btn btn-md btn-trans-alt btn-caps">Upload Photo</button>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="divider horizontal w-100 mt-5 mb-5"></div>
+                                <section class="row employment">
+                                    <div class="col-12"><h2 class="form-header header-md pt-3">Employment</h2></div> 
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label-caps">Are you employed?</label>
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="employment-status-input-1" name="employment-status" value="1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="employment-status-input-1">Yes</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto ml-5">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="employment-status-input-2" name="employment-status" value="0" class="custom-control-input">
+                                                        <label class="custom-control-label" for="employment-status-input-2">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label-caps">Employment Type?</label>
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="employment-type-input-1" name="employment-type" value="1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="employment-type-input-1">Full-Time</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto ml-5">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="employment-type-input-2" name="employment-type" value="2" class="custom-control-input">
+                                                        <label class="custom-control-label" for="employment-type-input-2">Part-Time</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto ml-5">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="employment-type-input-3" name="employment-type" value="3" class="custom-control-input">
+                                                        <label class="custom-control-label" for="employment-type-input-3">Self-Employed</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="form-group">
+                                            <label class="form-label-caps" for="job-title-input">Job Title / Position</label>
+                                            <input type="text" class="form-control form-control-lg" name="amount" id="job-title-input" value="UI/UX Designer">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="form-group">
+                                            <label class="form-label-caps" for="organisation-name-input">Name of Company/Organisation/Self-Owned Business</label>
+                                            <input type="text" class="form-control form-control-lg" name="amount" id="organisation-name-input" value="Accenture Inc.">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="form-group">
+                                            <label class="form-label-caps" for="organisation-address-input">Address of Company/Organisation/Self-Owned Business</label>
+                                            <textarea class="form-control form-control-lg" name="amount" id="organisation-address-input" rows="3">2nd Floor, Citi Bank Building 27, Kofo Abayomi Street Victoria Island, Lagos.</textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 col-lg-9">
+                                        <div class="form-group">
+                                            <label class="form-label-caps" for="salary-range-select">Current Salary Range</label>
+                                            <div class="select-wrapper">
+                                                <select class="form-control form-control-lg" id="salary-range-select" name="salary-range">
+                                                    <option value="N100,000 - N300,000" selected>N100,000 - N300,000</option>
+                                                    <option value="N300,000 - N500,000">N300,000 - N500,000</option>
+                                                    <option value="N500,000 - N1,000,000">N500,000 - N1,000,000</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="divider horizontal w-100 mt-5 mb-5"></div>
+                                <section class="row identification">
+                                    <div class="col-12"><h2 class="form-header header-md pt-3">Identification</h2></div> 
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label-caps">Means of Identification</label>
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="id-type-input-1" name="id-type" value="1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="id-type-input-1">National ID Card</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto ml-5">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="id-type-input-2" name="id-type" value="2" class="custom-control-input">
+                                                        <label class="custom-control-label" for="id-type-input-2">Driver’s License</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto ml-5">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="id-type-input-3" name="id-type" value="3" class="custom-control-input">
+                                                        <label class="custom-control-label" for="id-type-input-3">International Passport</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="form-group">
+                                            <label class="form-label-caps" for="id-number-input">Identification Number</label>
+                                            <input type="text" class="form-control form-control-lg" name="amount" id="id-number-input" value="3178971LA">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="form-group">
+                                            <label class="form-label-caps" for="organisation-name-input">Upload Photo or Scanned Copy of ID</label>
+                                            <div class="d-flex align-items-center">
+                                                <button class="btn btn-md btn-grey-white btn-caps btn-chrome">
+                                                    <svg class="icon flipped-h"><use xlink:href="#arrow"></use></svg>
+                                                    <span class="caption">Upload File</span>
+                                                </button>
+                                                <label class="info ml-4 mb-0">DSC0001291.jpg</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="divider horizontal w-100 mt-5 mb-5"></div>
+                                <section class="row cta">
+                                    <div class="col-12 col-lg-4">
+                                        <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100">Save Changes</button>
+                                    </div>
+                                </section>
                             </div>
-                            <div class="profile-details d-flex flex-column">
-                                <span class="section-header">Lender</span>
-                                <h2 class="profile-name header-xs">Bimpe Oladimeji</h2>
-                                <div class="lender-rating ">
-                                    <!--<span class="preamble">Lender Rating:</span>-->
-                                    <span class="rating stars-3">
-                                        <svg class="icon">
-                                            <use  xlink:href="#star"></use>
-                                        </svg>
-                                        <svg class="icon">
-                                            <use  xlink:href="#star"></use>
-                                        </svg>
-                                        <svg class="icon">
-                                            <use  xlink:href="#star"></use>
-                                        </svg>
-                                        <svg class="icon">
-                                            <use  xlink:href="#star"></use>
-                                        </svg>
-                                        <svg class="icon">
-                                            <use  xlink:href="#star"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
+                    </div>
+                    <!-- bank details -->
+                    <input class="tab-input hidden" type="radio" name="manage-account-tabs" id="bank-tab" hidden>
+                    <label class="tab-button btn btn-tab btn-chrome" for="bank-tab">Bank&nbsp;<span class="d-none d-sm-inline">Details</span></label>
+                    <div class="tab-panel">
+                        
+                    </div>
+                    <!-- settings -->
+                    <input class="tab-input hidden" type="radio" name="manage-account-tabs" id="settings-tab" hidden>
+                    <label class="tab-button btn btn-tab btn-chrome" for="settings-tab">Settings</label>
+                    <div class="tab-panel">
+                        
                     </div>
                 </div>
             </div>
         </section>
-        <!-- chat section -->
-        <section class="chat page-section flexed-no-shrink flexer">
-            <div class="thread flexed-no-shrink">
-                <div class="lgp-prompt pos-center">
-                    <svg class="icon"><use xlink:href="#chat"/></svg>
-                    <p class="caption">Start a conversation with Bimpe</p>
-                </div>
-                <div class="messages lgp-container"></div>
-            </div>
-            <div class="message-bar">
-                <div class="lgp-container lgp-form d-flex align-items-center flexer">
-                    <button class="attach btn btn-icon btn-lg btn-trans-alt">
-                        <svg class="icon"><use xlink:href="#attach"/></svg>
-                    </button>
-                    <div class="form-group flexed">
-                        <textarea class="message form-control form-control-lg" name="message" placeholder="Type your message..." rows="1"></textarea>
-                    </div>
-                    <div class="message-actions">
-                        <!-- <button class="emoji btn btn-icon btn-lg btn-trans-alt">
-                            <svg class="icon"><use xlink:href="#smiley"/></svg>
-                        </button> -->
-                        <button class="send btn btn-icon btn-lg btn-trans-alt">
-                            <svg class="icon"><use xlink:href="#send"/></svg>
-                        </button>
-                    </div>
-                </div>
+
+        <!-- profile-form section -->
+        <section class=" page-section">
+            <div class="content lgp-container">
+                
             </div>
         </section>
-        <!-- cta alert section -->
-        <!-- <section class="cta-footer page-section alert alert-fuchsia collapse show">
-            <div class="content lgp-container d-flex justify-content-end align-items-center">
-                <p class="message text-small text-bold">Have you received the loan?</p>
-                <div class="ctas">
-                    <button class="cta btn btn-green btn-sm btn-caps btn-chrome btn-shadow" data-toggle="collapse" data-target=".cta-footer.prompt">Yes</button>
-                </div>
-            </div>
-        </section> -->
-        
     </main>
 
     <!-- SVG sprites -->
@@ -240,23 +345,8 @@
             <symbol id="avatar" viewBox="0 0 40 40">
                 <path d="M6,29.2559932 C6,28.0670912 6.39210914,26.9658054 7.17578658,25.95173 C7.95946403,24.9376546 9.02762341,24.1365351 10.3802647,23.5483714 C11.7323652,22.9606133 13.2007464,22.6661258 14.785949,22.6661258 L25.1214051,22.6661258 C26.7066077,22.6661258 28.1749888,22.9606133 29.5270893,23.5483714 C30.8791898,24.1365351 31.9473492,24.9376546 32.7315675,25.95173 C33.5147041,26.9658054 33.9073541,28.0670912 33.9073541,29.2559932 L33.9073541,40 L6,40 L6,29.2559932 Z M16.4557255,19.0134264 C15.3897294,18.3871334 14.5431793,17.5405833 13.9164808,16.4749929 C13.2897822,15.4085912 12.9770413,14.2432158 12.9770413,12.9764329 C12.9770413,11.7104612 13.2897822,10.5442745 13.9164808,9.47868414 C14.5431793,8.41268811 15.3897294,7.56654363 16.4557255,6.93943942 C17.5213159,6.31314647 18.6875025,6 19.9534742,6 C21.2198515,6 22.3856326,6.31314647 23.4516286,6.93943942 C24.5176246,7.56654363 25.3637691,8.41268811 25.9904677,9.47868414 C26.6171663,10.5442745 26.9303127,11.7104612 26.9303127,12.9764329 C26.9303127,14.2432158 26.6171663,15.4085912 25.9904677,16.4749929 C25.3637691,17.5405833 24.5176246,18.3871334 23.4516286,19.0134264 C22.3856326,19.6405306 21.2198515,19.953677 19.9534742,19.953677 C18.6875025,19.953677 17.5213159,19.6405306 16.4557255,19.0134264 Z"></path>
             </symbol>
-            <symbol id="close" viewBox="0 0 16 16">
-                <path d="M6.54545455,8 L1.33226763e-15,1.45454545 L1.45454545,7.10542736e-15 L8,6.54545455 L14.5454545,7.10542736e-15 L16,1.45454545 L9.45454545,8 L16,14.5454545 L14.5454545,16 L8,9.45454545 L1.45454545,16 L1.42108547e-14,14.5454545 L6.54545455,8 Z"></path>
-            </symbol>
             <symbol id="notification" viewBox="0 0 26 30">
                 <path d="M12.7457627,30 C14.4067797,30 15.7627119,28.6440678 15.7627119,26.9830508 L9.72881356,26.9830508 C9.72881356,28.6440678 11.0847458,30 12.7457627,30 Z M22.4745763,20.9830508 L22.4745763,12.7457627 C22.4745763,8.13559322 19.2881356,4.27118644 14.9830508,3.25423729 L14.9830508,2.23728814 C14.9830508,0.983050847 13.9661017,0 12.7457627,0 C11.5254237,0 10.5084746,1.01694915 10.5084746,2.23728814 L10.5084746,3.25423729 C6.20338983,4.27118644 3.01694915,8.13559322 3.01694915,12.7457627 L3.01694915,20.9830508 L0,24 L0,25.4915254 L25.4915254,25.4915254 L25.4915254,24 L22.4745763,20.9830508 Z"></path>
-            </symbol>
-            <symbol id="chat" viewBox="0 0 30 30">
-                <path d="M29.8472199,28.9870268 C28.6972893,27.4761323 27.6972531,25.8568268 26.8612748,24.1520446 C31.5668302,18.0549614 30.8871573,9.38431516 25.2890405,4.0949142 C19.6909237,-1.19448675 10.9956954,-1.3817498 5.17504652,3.66173318 C-0.645602382,8.70521617 -1.69793922,17.3385613 2.74075772,23.6325778 C7.17945465,29.9265944 15.665067,31.8335406 22.3698637,28.043768 C24.4647277,29.3511321 26.8908217,30.0297446 29.3599736,29.9989998 C29.5989068,29.9979022 29.8162831,29.8606068 29.9199371,29.6453253 C30.0235912,29.4300438 29.9953626,29.1744942 29.8472199,28.9870268 Z M8.7457084,13.1327828 C7.71071347,13.1327828 6.8716843,13.971812 6.8716843,15.0068069 C6.8716843,16.0418018 7.71071347,16.880831 8.7457084,16.880831 C9.78070334,16.880831 10.6197325,16.0418018 10.6197325,15.0068069 C10.6197325,13.971812 9.78070334,13.1327828 8.7457084,13.1327828 L8.7457084,13.1327828 Z M14.9924554,13.1327828 C13.9574605,13.1327828 13.1184313,13.971812 13.1184313,15.0068069 C13.1184313,16.0418018 13.9574605,16.880831 14.9924554,16.880831 C16.0274504,16.880831 16.8664795,16.0418018 16.8664795,15.0068069 C16.8664795,13.971812 16.0274504,13.1327828 14.9924554,13.1327828 Z M21.2392025,13.1327828 C20.2042075,13.1327828 19.3651783,13.971812 19.3651783,15.0068069 C19.3651783,16.0418018 20.2042075,16.880831 21.2392025,16.880831 C22.2741974,16.880831 23.1132266,16.0418018 23.1132266,15.0068069 C23.1132266,13.971812 22.2741974,13.1327828 21.2392025,13.1327828 Z" fill-rule="evenodd"></path>
-            </symbol>
-            <symbol id="smiley" viewBox="0 0 30 30">
-                <path d="M15,0 C6.75,0 0,6.75 0,15 C0,23.25 6.75,30 15,30 C23.25,30 30,23.25 30,15 C30,6.75 23.25,0 15,0 Z M15,27 C8.4,27 3,21.6 3,15 C3,8.4 8.4,3 15,3 C21.6,3 27,8.4 27,15 C27,21.6 21.6,27 15,27 Z M18.6,19.8 C16.5,21.45 13.5,21.45 11.4,19.8 C10.8,19.35 9.75,19.5 9.3,20.1 C8.85,20.7 9,21.75 9.6,22.2 C11.25,23.4 13.05,24 15,24 C16.95,24 18.75,23.4 20.4,22.2 C21,21.75 21.15,20.7 20.7,20.1 C20.25,19.5 19.2,19.35 18.6,19.8 Z M9.75,13.5 C10.9926407,13.5 12,12.4926407 12,11.25 C12,10.0073593 10.9926407,9 9.75,9 C8.50735931,9 7.5,10.0073593 7.5,11.25 C7.5,12.4926407 8.50735931,13.5 9.75,13.5 Z M20.25,13.5 C21.4926407,13.5 22.5,12.4926407 22.5,11.25 C22.5,10.0073593 21.4926407,9 20.25,9 C19.0073593,9 18,10.0073593 18,11.25 C18,12.4926407 19.0073593,13.5 20.25,13.5 Z"></path>
-            </symbol>
-            <symbol id="send" viewBox="0 0 31 31">
-                <path d="M0.848032085,15.1935706 C-0.323288879,15.8080839 -0.274694751,16.7080876 0.953319362,17.1940289 L4.59180471,18.6336299 C5.8208312,19.121596 7.68056898,18.8553407 8.7223056,18.0424014 L24.5224839,5.58205703 C25.5611834,4.76506825 25.6725449,4.88554119 24.7705164,5.85134949 L12.2798007,19.220809 C11.3747351,20.1835802 11.6420028,21.3660373 12.8750788,21.8428672 L13.3012898,22.0088971 C14.5343658,22.485727 16.5439355,23.2865177 17.7689125,23.7846075 L21.8042499,25.4276965 C23.0302392,25.9257863 24.3402559,25.3386073 24.6885138,24.0630114 L30.8387082,1.45661802 C31.1859537,0.181022157 30.5117102,-0.360599896 29.3403892,0.252900972 L0.848032085,15.1935706 Z M10.833113,29.9935198 C10.7612342,30.2091562 13.3215374,26.2861928 13.3215374,26.2861928 C14.0453874,25.1806763 13.6343621,23.8615482 12.4114098,23.3614337 L9.61927222,22.2184593 C8.39631999,21.7183447 7.81015332,22.3055238 8.31634216,23.5274636 C8.31634216,23.5274636 10.9070166,29.7718091 10.833113,29.9935198 Z"></path>
-            </symbol>
-            <symbol id="attach" viewBox="0 0 15 30">
-                <path d="M12.244898,6.44468314 L12.244898,22.9108485 C12.244898,25.7465091 9.95703545,28.0665951 7.08915145,28.0665951 C4.22126745,28.0665951 1.93340494,25.7787325 1.93340494,22.9108485 L1.93340494,5.15574651 C1.93340494,3.38345865 3.38345865,1.93340494 5.15574651,1.93340494 C6.92803437,1.93340494 8.37808808,3.38345865 8.37808808,5.15574651 L8.37808808,20.3651987 C8.37808808,21.0741139 7.7980666,21.6541353 7.08915145,21.6541353 C6.38023631,21.6541353 5.80021482,21.0741139 5.80021482,20.3651987 L5.80021482,6.44468314 L3.86680988,6.44468314 L3.86680988,20.3651987 C3.86680988,22.1374866 5.31686359,23.5875403 7.08915145,23.5875403 C8.86143931,23.5875403 10.311493,22.1374866 10.311493,20.3651987 L10.311493,5.15574651 C10.311493,2.32008593 8.0236305,0 5.15574651,0 C2.28786251,0 0,2.28786251 0,5.15574651 L0,22.9108485 C0,26.8421053 3.15789474,30 7.08915145,30 C11.0204082,30 14.1783029,26.8421053 14.1783029,22.9108485 L14.1783029,6.44468314 L12.244898,6.44468314 Z"></path>
             </symbol>
         </defs>
     </svg>

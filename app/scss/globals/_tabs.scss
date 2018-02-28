@@ -6,6 +6,13 @@
 
   .tab-button {
     order: 1;
+    
+    &:not(:first-of-type) {
+      margin-left: 1px;
+    }
+  }
+  .tab-input:not(:checked) + .tab-button + .tab-panel {
+    display: none;
   }
   .tab-panel {
     order: 3;

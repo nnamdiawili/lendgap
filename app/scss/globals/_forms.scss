@@ -1,4 +1,4 @@
-.lgp-form {
+.lgp-form, .lgp-form-alt {
 
   .form-group {
     font-size: 1rem;
@@ -17,12 +17,19 @@
     border-radius: $component-border-radius;
     background-color: $color-white;
     color: $color-brand-blue;
-    opacity: .5;
+    opacity: 1;
     transition: $component-hover-fx-duration;
   
     &:focus {
       opacity: 1;
       box-shadow: none;
+    }
+    &[readonly] {
+      padding: 0 !important;
+      opacity: 1;
+      border: none;
+      background-color: transparent;
+      height: $button-size-sm !important;
     }
   }
 
@@ -37,13 +44,70 @@
       letter-spacing: 0.075rem;
       text-transform: uppercase;
     }
-  
     .extra {
       display: inline-block;
       color: $color-brand-grey-dark;
       margin-left: 10px;
     }
   }
+  .custom-control {
+    padding-left: 0;
+  }
+  .custom-control-label {
+    color: $color-brand-grey-dark;
+    font-family: $font-family-input;
+    margin-bottom: 0;
+    padding-left: 35px;
+    line-height: 1;
+
+    &::before, &::after {
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $component-hover-fx-duration;
+    }
+    &::before {
+      width: 20px;
+      height: 20px;
+      border: 2px solid $color-brand-grey-light; 
+      background-color: transparent;
+    }
+    &:hover::before {
+      border-color: $color-brand-fuchsia;
+    }
+    &::after {
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background-color: transparent;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      border-color: $color-brand-fuchsia;
+      background-color: transparent;
+    }
+    &::after {
+      background-image: none; 
+      background-color: $color-brand-fuchsia;
+    }
+  }
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+  }
+  .custom-radio {
+    .custom-control-label::before, .custom-control-label::after  {
+      border-radius: 50%;
+    }
+  }
+  .custom-checkbox {
+    .custom-control-label::before  {
+      border-radius: $component-border-radius;
+    }
+    .custom-control-label::after {
+      border-radius: 0;
+    }
+  }
+
 
   .select-wrapper {
     position: relative;
@@ -68,8 +132,9 @@
   }
 
   .form-header {
-    font-weight: 300;
-    margin-bottom: 4rem;
+    font-weight: 100;
+    letter-spacing: 0.3px;
+    @include fluid-prop(margin-bottom, 40px, 60px, $grid-breakpoint-md);
   }
   
 
@@ -101,6 +166,51 @@
       font-size: $font-size;
     }
   }
+}
 
+.lgp-form-alt {
+  .form-group {
+    margin-bottom: 3rem;
+  }
+  .form-control {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  label {
+    color: $color-brand-grey-dark;
+    margin-bottom: 12px;
+  }
+  .custom-control-label {
+    color: $color-brand-blue;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
 
+  // sizing:
+  $form-control-size-map: (
+    sm: ($form-control-size-sm, .8rem),
+    md: ($form-control-size-md, 1.2rem),
+    lg: ($form-control-size-lg, 1.2rem),
+    xl: ($form-control-size-xl, 1.2rem)
+  );
+  @each $size-name, $size-values in $form-control-size-map {
+    $form-control-size: nth($size-values, 1);
+    $font-size: nth($size-values, 2);
+    
+    .form-control.form-control-#{$size-name} {
+      height: $form-control-size;
+      padding: 0 ($form-control-size / 3);
+      font-size: $font-size;
+    }
+    select.form-control.form-control-#{$size-name} {
+      height: $form-control-size;
+      padding: 0 $form-control-size 0 ($form-control-size / 3);
+      font-size: $font-size;
+    }
+    textarea.form-control.form-control-#{$size-name} {
+      height: unset;
+      padding: ($form-control-size / 3);
+      font-size: $font-size;
+    }
+  }
 }

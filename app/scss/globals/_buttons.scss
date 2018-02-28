@@ -155,6 +155,11 @@
     $hover: $color-brand-fuchsia null null
   );
 }
+.btn.btn-grey-white {
+  @include btn-color-themes(
+    $normal: $color-white $color-brand-grey-dark null
+  );
+}
 .btn.btn-facebook {
   @include btn-color-themes(
     $normal: $color-white $color-facebook null,

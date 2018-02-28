@@ -908,6 +908,12 @@ a.text-link {
     .btn.btn-grey:hover .icon {
       fill: #FF2D6E; }
 
+.btn.btn-grey-white {
+  color: #FFF;
+  background-color: #A4A4A4; }
+  .btn.btn-grey-white .icon {
+    fill: #FFF; }
+
 .btn.btn-facebook {
   color: #FFF;
   background-color: #335A9E; }
@@ -1023,11 +1029,11 @@ a.text-link {
   width: 15px;
   height: 15px; }
 
-.lgp-form .form-group {
+.lgp-form .form-group, .lgp-form-alt .form-group {
   font-size: 1rem;
   margin-bottom: 2.5rem; }
 
-.lgp-form .form-control {
+.lgp-form .form-control, .lgp-form-alt .form-control {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1041,29 +1047,82 @@ a.text-link {
   border-radius: 5px;
   background-color: #FFF;
   color: #113E52;
-  opacity: .5;
+  opacity: 1;
   transition: 0.3s; }
-  .lgp-form .form-control:focus {
+  .lgp-form .form-control:focus, .lgp-form-alt .form-control:focus {
     opacity: 1;
     box-shadow: none; }
+  .lgp-form .form-control[readonly], .lgp-form-alt .form-control[readonly] {
+    padding: 0 !important;
+    opacity: 1;
+    border: none;
+    background-color: transparent;
+    height: 35px !important; }
 
-.lgp-form label {
+.lgp-form label, .lgp-form-alt label {
   color: #113E52;
   font-family: "Brandon Grotesque", sans-serif;
   margin-bottom: 10px; }
-  .lgp-form label.form-label-caps {
+  .lgp-form label.form-label-caps, .lgp-form-alt label.form-label-caps {
     font-size: .7rem;
     font-weight: 500;
     letter-spacing: 0.075rem;
     text-transform: uppercase; }
-  .lgp-form label .extra {
+  .lgp-form label .extra, .lgp-form-alt label .extra {
     display: inline-block;
     color: #A4A4A4;
     margin-left: 10px; }
 
-.lgp-form .select-wrapper {
+.lgp-form .custom-control, .lgp-form-alt .custom-control {
+  padding-left: 0; }
+
+.lgp-form .custom-control-label, .lgp-form-alt .custom-control-label {
+  color: #A4A4A4;
+  font-family: "Brandon Grotesque", sans-serif;
+  margin-bottom: 0;
+  padding-left: 35px;
+  line-height: 1; }
+  .lgp-form .custom-control-label::before, .lgp-form .custom-control-label::after, .lgp-form-alt .custom-control-label::before, .lgp-form-alt .custom-control-label::after {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    transition: 0.3s; }
+  .lgp-form .custom-control-label::before, .lgp-form-alt .custom-control-label::before {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D8D8D8;
+    background-color: transparent; }
+  .lgp-form .custom-control-label:hover::before, .lgp-form-alt .custom-control-label:hover::before {
+    border-color: #FF2D6E; }
+  .lgp-form .custom-control-label::after, .lgp-form-alt .custom-control-label::after {
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent; }
+
+.lgp-form .custom-control-input:checked ~ .custom-control-label::before, .lgp-form-alt .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #FF2D6E;
+  background-color: transparent; }
+
+.lgp-form .custom-control-input:checked ~ .custom-control-label::after, .lgp-form-alt .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: none;
+  background-color: #FF2D6E; }
+
+.lgp-form .custom-control-input:focus ~ .custom-control-label::before, .lgp-form-alt .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none; }
+
+.lgp-form .custom-radio .custom-control-label::before, .lgp-form .custom-radio .custom-control-label::after, .lgp-form-alt .custom-radio .custom-control-label::before, .lgp-form-alt .custom-radio .custom-control-label::after {
+  border-radius: 50%; }
+
+.lgp-form .custom-checkbox .custom-control-label::before, .lgp-form-alt .custom-checkbox .custom-control-label::before {
+  border-radius: 5px; }
+
+.lgp-form .custom-checkbox .custom-control-label::after, .lgp-form-alt .custom-checkbox .custom-control-label::after {
+  border-radius: 0; }
+
+.lgp-form .select-wrapper, .lgp-form-alt .select-wrapper {
   position: relative; }
-  .lgp-form .select-wrapper::after {
+  .lgp-form .select-wrapper::after, .lgp-form-alt .select-wrapper::after {
     content: '';
     width: 3px;
     height: 3px;
@@ -1079,70 +1138,154 @@ a.text-link {
     position: absolute;
     top: 50%;
     right: 18px; }
-  .lgp-form .select-wrapper select {
+  .lgp-form .select-wrapper select, .lgp-form-alt .select-wrapper select {
     width: 100%;
     padding: 0 40px 0 20px; }
 
-.lgp-form .form-header {
-  font-weight: 300;
-  margin-bottom: 4rem; }
+.lgp-form .form-header, .lgp-form-alt .form-header {
+  font-weight: 100;
+  letter-spacing: 0.3px; }
+  .lgp-form .form-header, .lgp-form-alt .form-header {
+    margin-bottom: 40px; }
+    @media screen and (min-width: 768px) {
+      .lgp-form .form-header, .lgp-form-alt .form-header {
+        margin-bottom: calc(40px + 20 * ((100vw - 768px) / 224)); } }
+    @media screen and (min-width: 992px) {
+      .lgp-form .form-header, .lgp-form-alt .form-header {
+        margin-bottom: 60px; } }
 
-.lgp-form .form-control.form-control-sm {
+.lgp-form .form-control.form-control-sm, .lgp-form-alt .form-control.form-control-sm {
   height: 35px;
   padding: 0 11.66667px;
   font-size: 0.8rem; }
 
-.lgp-form select.form-control.form-control-sm {
+.lgp-form select.form-control.form-control-sm, .lgp-form-alt select.form-control.form-control-sm {
   height: 35px;
   padding: 0 35px 0 11.66667px;
   font-size: 0.8rem; }
 
-.lgp-form textarea.form-control.form-control-sm {
+.lgp-form textarea.form-control.form-control-sm, .lgp-form-alt textarea.form-control.form-control-sm {
   height: unset;
   padding: 11.66667px;
   font-size: 0.8rem; }
 
-.lgp-form .form-control.form-control-md {
+.lgp-form .form-control.form-control-md, .lgp-form-alt .form-control.form-control-md {
   height: 50px;
   padding: 0 16.66667px;
   font-size: 1rem; }
 
-.lgp-form select.form-control.form-control-md {
+.lgp-form select.form-control.form-control-md, .lgp-form-alt select.form-control.form-control-md {
   height: 50px;
   padding: 0 50px 0 16.66667px;
   font-size: 1rem; }
 
-.lgp-form textarea.form-control.form-control-md {
+.lgp-form textarea.form-control.form-control-md, .lgp-form-alt textarea.form-control.form-control-md {
   height: unset;
   padding: 16.66667px;
   font-size: 1rem; }
 
-.lgp-form .form-control.form-control-lg {
+.lgp-form .form-control.form-control-lg, .lgp-form-alt .form-control.form-control-lg {
   height: 60px;
   padding: 0 20px;
   font-size: 1rem; }
 
-.lgp-form select.form-control.form-control-lg {
+.lgp-form select.form-control.form-control-lg, .lgp-form-alt select.form-control.form-control-lg {
   height: 60px;
   padding: 0 60px 0 20px;
   font-size: 1rem; }
 
-.lgp-form textarea.form-control.form-control-lg {
+.lgp-form textarea.form-control.form-control-lg, .lgp-form-alt textarea.form-control.form-control-lg {
   height: unset;
   padding: 20px;
   font-size: 1rem; }
 
-.lgp-form .form-control.form-control-xl {
+.lgp-form .form-control.form-control-xl, .lgp-form-alt .form-control.form-control-xl {
   height: 70px;
   padding: 0 23.33333px;
   font-size: 1.2rem; }
 
-.lgp-form select.form-control.form-control-xl {
+.lgp-form select.form-control.form-control-xl, .lgp-form-alt select.form-control.form-control-xl {
   height: 70px;
   padding: 0 70px 0 23.33333px;
   font-size: 1.2rem; }
 
-.lgp-form textarea.form-control.form-control-xl {
+.lgp-form textarea.form-control.form-control-xl, .lgp-form-alt textarea.form-control.form-control-xl {
+  height: unset;
+  padding: 23.33333px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt .form-group {
+  margin-bottom: 3rem; }
+
+.lgp-form-alt .form-control {
+  font-size: 1.2em;
+  font-weight: 500; }
+
+.lgp-form-alt label {
+  color: #A4A4A4;
+  margin-bottom: 12px; }
+
+.lgp-form-alt .custom-control-label {
+  color: #113E52;
+  font-size: 1.2em;
+  font-weight: 500; }
+
+.lgp-form-alt .form-control.form-control-sm {
+  height: 35px;
+  padding: 0 11.66667px;
+  font-size: 0.8rem; }
+
+.lgp-form-alt select.form-control.form-control-sm {
+  height: 35px;
+  padding: 0 35px 0 11.66667px;
+  font-size: 0.8rem; }
+
+.lgp-form-alt textarea.form-control.form-control-sm {
+  height: unset;
+  padding: 11.66667px;
+  font-size: 0.8rem; }
+
+.lgp-form-alt .form-control.form-control-md {
+  height: 50px;
+  padding: 0 16.66667px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt select.form-control.form-control-md {
+  height: 50px;
+  padding: 0 50px 0 16.66667px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt textarea.form-control.form-control-md {
+  height: unset;
+  padding: 16.66667px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt .form-control.form-control-lg {
+  height: 60px;
+  padding: 0 20px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt select.form-control.form-control-lg {
+  height: 60px;
+  padding: 0 60px 0 20px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt textarea.form-control.form-control-lg {
+  height: unset;
+  padding: 20px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt .form-control.form-control-xl {
+  height: 70px;
+  padding: 0 23.33333px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt select.form-control.form-control-xl {
+  height: 70px;
+  padding: 0 70px 0 23.33333px;
+  font-size: 1.2rem; }
+
+.lgp-form-alt textarea.form-control.form-control-xl {
   height: unset;
   padding: 23.33333px;
   font-size: 1.2rem; }
@@ -1160,6 +1303,10 @@ a.text-link {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
+    .lgp-tabs .tab-button:not(:first-of-type) {
+      margin-left: 1px; }
+  .lgp-tabs .tab-input:not(:checked) + .tab-button + .tab-panel {
+    display: none; }
   .lgp-tabs .tab-panel {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -2024,9 +2171,11 @@ a.text-link {
     .chat .message-bar .icon {
       width: 22px !important;
       height: 22px !important; }
-  .chat .input-field {
+  .chat .message-bar .form-group {
     margin: 0; }
-  .chat .input-field-actions {
+    .chat .message-bar .form-group .message.form-control {
+      padding-right: 64px; }
+  .chat .message-actions {
     position: absolute;
     right: 0; }
   .chat .btn.attach {
