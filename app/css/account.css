@@ -777,6 +777,9 @@ a.text-link {
   font-size: .7rem;
   letter-spacing: 0.075rem; }
 
+.btn.btn-space-text {
+  letter-spacing: 0.075rem; }
+
 .btn.btn-chrome::before {
   position: absolute;
   right: 0;
@@ -799,6 +802,15 @@ a.text-link {
 
 .btn.btn-shadow, .btn.btn-shadow:focus {
   box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.15); }
+
+.btn.icon-align-left .icon {
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 15px; }
 
 .btn.btn-sm {
   height: 35px;
@@ -916,24 +928,35 @@ a.text-link {
 
 .btn.btn-facebook {
   color: #FFF;
-  background-color: #335A9E; }
+  background-color: #3C5A99; }
   .btn.btn-facebook .icon {
     fill: #FFF; }
   .btn.btn-facebook:hover {
     color: #FFF;
-    background-color: #335A9E; }
+    background-color: #3C5A99; }
     .btn.btn-facebook:hover .icon {
       fill: #FFF; }
 
 .btn.btn-google {
   color: #FFF;
-  background-color: #F03B2C; }
+  background-color: #E93F33; }
   .btn.btn-google .icon {
     fill: #FFF; }
   .btn.btn-google:hover {
     color: #FFF;
-    background-color: #F03B2C; }
+    background-color: #E93F33; }
     .btn.btn-google:hover .icon {
+      fill: #FFF; }
+
+.btn.btn-linked-in {
+  color: #FFF;
+  background-color: #006699; }
+  .btn.btn-linked-in .icon {
+    fill: #FFF; }
+  .btn.btn-linked-in:hover {
+    color: #FFF;
+    background-color: #006699; }
+    .btn.btn-linked-in:hover .icon {
       fill: #FFF; }
 
 .btn.btn-icon {
@@ -1043,18 +1066,17 @@ a.text-link {
   font-weight: 300;
   height: 40px;
   padding: 0 13.33333px;
-  border: 1px solid #D8D8D8;
+  border: 1px solid rgba(216, 216, 216, 0.5);
   border-radius: 5px;
-  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.5);
   color: #113E52;
-  opacity: 1;
   transition: 0.3s; }
   .lgp-form .form-control:focus, .lgp-form-alt .form-control:focus {
-    opacity: 1;
+    background-color: #FFF;
+    border-color: rgba(17, 62, 82, 0.3);
     box-shadow: none; }
   .lgp-form .form-control[readonly], .lgp-form-alt .form-control[readonly] {
     padding: 0 !important;
-    opacity: 1;
     border: none;
     background-color: transparent;
     height: 35px !important; }
@@ -1081,7 +1103,8 @@ a.text-link {
   font-family: "Brandon Grotesque", sans-serif;
   margin-bottom: 0;
   padding-left: 35px;
-  line-height: 1; }
+  line-height: 1;
+  cursor: pointer; }
   .lgp-form .custom-control-label::before, .lgp-form .custom-control-label::after, .lgp-form-alt .custom-control-label::before, .lgp-form-alt .custom-control-label::after {
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1115,7 +1138,7 @@ a.text-link {
   border-radius: 50%; }
 
 .lgp-form .custom-checkbox .custom-control-label::before, .lgp-form-alt .custom-checkbox .custom-control-label::before {
-  border-radius: 5px; }
+  border-radius: 0; }
 
 .lgp-form .custom-checkbox .custom-control-label::after, .lgp-form-alt .custom-checkbox .custom-control-label::after {
   border-radius: 0; }
@@ -1153,6 +1176,10 @@ a.text-link {
     @media screen and (min-width: 992px) {
       .lgp-form .form-header, .lgp-form-alt .form-header {
         margin-bottom: 60px; } }
+
+.lgp-form .form-text, .lgp-form-alt .form-text {
+  color: #A4A4A4;
+  font-family: "Brandon Grotesque", sans-serif; }
 
 .lgp-form .form-control.form-control-sm, .lgp-form-alt .form-control.form-control-sm {
   height: 35px;
@@ -1215,10 +1242,10 @@ a.text-link {
   font-size: 1.2rem; }
 
 .lgp-form-alt .form-group {
-  margin-bottom: 3rem; }
+  margin-bottom: 2.2rem; }
 
 .lgp-form-alt .form-control {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 500; }
 
 .lgp-form-alt label {
@@ -2087,35 +2114,35 @@ a.text-link {
     .manage-account .lgp-tabs .tab-panel {
       margin-top: 100px; } }
 
-.profile-form .profile-info .form-group {
+.profile-info .form-group {
   margin-bottom: 1.8rem; }
 
-.profile-form .profile-info .profile-photo {
+.profile-info .profile-photo {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: 260px;
   height: 260px;
   border-radius: 0; }
-  .profile-form .profile-info .profile-photo {
+  .profile-info .profile-photo {
     width: 200px; }
     @media screen and (min-width: 544px) {
-      .profile-form .profile-info .profile-photo {
+      .profile-info .profile-photo {
         width: calc(200px + 60 * ((100vw - 544px) / 448)); } }
     @media screen and (min-width: 992px) {
-      .profile-form .profile-info .profile-photo {
+      .profile-info .profile-photo {
         width: 260px; } }
-  .profile-form .profile-info .profile-photo {
+  .profile-info .profile-photo {
     height: 200px; }
     @media screen and (min-width: 544px) {
-      .profile-form .profile-info .profile-photo {
+      .profile-info .profile-photo {
         height: calc(200px + 60 * ((100vw - 544px) / 448)); } }
     @media screen and (min-width: 992px) {
-      .profile-form .profile-info .profile-photo {
+      .profile-info .profile-photo {
         height: 260px; } }
-  .profile-form .profile-info .profile-photo .photo, .profile-form .profile-info .profile-photo .avatar {
+  .profile-info .profile-photo .photo, .profile-info .profile-photo .avatar {
     border-radius: 0; }
-  .profile-form .profile-info .profile-photo .upload.btn {
+  .profile-info .profile-photo .upload.btn {
     width: 100%;
     border-radius: 0;
     position: absolute;
@@ -2124,9 +2151,13 @@ a.text-link {
     left: 0;
     color: #FFF;
     background-color: rgba(255, 255, 255, 0.3); }
-    .profile-form .profile-info .profile-photo .upload.btn .icon {
+    .profile-info .profile-photo .upload.btn .icon {
       fill: #FFF; }
-    .profile-form .profile-info .profile-photo .upload.btn:hover {
-      color: #FF2D6E; }
-      .profile-form .profile-info .profile-photo .upload.btn:hover .icon {
+    .profile-info .profile-photo .upload.btn:hover {
+      color: #FF2D6E;
+      background-color: rgba(255, 255, 255, 0.8); }
+      .profile-info .profile-photo .upload.btn:hover .icon {
         fill: #FF2D6E; }
+
+.linked-accounts-form .form-group {
+  margin-bottom: 1.8rem; }

@@ -13,20 +13,19 @@
     font-weight: 300;
     height: $form-control-size-normal;
     padding: 0 ($form-control-size-normal / 3);
-    border: 1px solid $color-brand-grey-light;
+    border: 1px solid rgba($color-brand-grey-light, $form-control-blur-opacity);
     border-radius: $component-border-radius;
-    background-color: $color-white;
+    background-color: rgba($color-white, $form-control-blur-opacity);
     color: $color-brand-blue;
-    opacity: 1;
     transition: $component-hover-fx-duration;
   
     &:focus {
-      opacity: 1;
+      background-color: $color-white;
+      border-color: rgba($color-brand-blue, .3);
       box-shadow: none;
     }
     &[readonly] {
       padding: 0 !important;
-      opacity: 1;
       border: none;
       background-color: transparent;
       height: $button-size-sm !important;
@@ -59,6 +58,7 @@
     margin-bottom: 0;
     padding-left: 35px;
     line-height: 1;
+    cursor: pointer;
 
     &::before, &::after {
       top: 50%;
@@ -101,14 +101,12 @@
   }
   .custom-checkbox {
     .custom-control-label::before  {
-      border-radius: $component-border-radius;
+      border-radius: 0; // $component-border-radius;
     }
     .custom-control-label::after {
       border-radius: 0;
     }
   }
-
-
   .select-wrapper {
     position: relative;
   
@@ -135,6 +133,10 @@
     font-weight: 100;
     letter-spacing: 0.3px;
     @include fluid-prop(margin-bottom, 40px, 60px, $grid-breakpoint-md);
+  }
+  .form-text {
+    color: $color-brand-grey-dark;
+    font-family: $font-family-input;
   }
   
 
@@ -170,10 +172,10 @@
 
 .lgp-form-alt {
   .form-group {
-    margin-bottom: 3rem;
+    margin-bottom: 2.2rem;
   }
   .form-control {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
   }
   label {

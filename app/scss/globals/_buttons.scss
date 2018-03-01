@@ -44,6 +44,9 @@
   font-size: .7rem;
   letter-spacing: 0.075rem;
 }
+.btn.btn-space-text {
+  letter-spacing: 0.075rem;
+}
 .btn.btn-chrome {
   &::before {
     @include position(absolute, null 0 0 0);
@@ -67,6 +70,14 @@
 .btn.btn-shadow {
   &, &:focus {
     box-shadow: $button-box-shadow;
+  }
+}
+.btn.icon-align-left {
+  .icon {
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    @include position(absolute, 50% null null 15px);
   }
 }
 
@@ -172,6 +183,12 @@
     $hover: $color-white $color-google null null
   );
 }
+.btn.btn-linked-in {
+  @include btn-color-themes(
+    $normal: $color-white $color-linked-in null,
+    $hover: $color-white $color-linked-in null null
+  );
+}
 
 .btn.btn-icon {
   padding: $button-size-normal / 2;
@@ -247,7 +264,6 @@
     @include btn-color-themes($color-white $color-brand-fuchsia null);
   }
 }
-
 
 .btn.close{
   .icon {
