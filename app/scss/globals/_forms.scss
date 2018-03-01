@@ -137,7 +137,18 @@
   .form-text {
     color: $color-brand-grey-dark;
     font-family: $font-family-input;
+    margin-top: 10px;
   }
+  .input-group-text {
+    font-family: $font-family-input;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    border: 1px solid rgba($color-brand-grey-light, $form-control-blur-opacity);
+    border-radius: $component-border-radius;
+    background-color: #e9ecef;
+    color: $color-brand-blue;
+}
   
 
   // form control sizing

@@ -45,20 +45,3 @@
     font-weight: 500;
     font-style: normal;
 }
-
-
-
-// -------------------------------------------------------------------------
-// Gotham
-// -------------------------------------------------------------------------
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('#{$path-to-fonts}/Gotham-Medium.eot');
-    src: url('#{$path-to-fonts}/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
-        url('#{$path-to-fonts}/Gotham-Medium.woff2') format('woff2'),
-        url('#{$path-to-fonts}/Gotham-Medium.woff') format('woff'),
-        url('#{$path-to-fonts}/Gotham-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
