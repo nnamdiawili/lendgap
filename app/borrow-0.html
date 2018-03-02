@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
-    <link rel="stylesheet" type="text/css" href="css/borrow2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dashboard-prompt.css"/>
 </head>
 <body class="sidebar-container fixed-md">
     <!-- header navbar -->
@@ -68,13 +68,13 @@
                 </a>
             </li>
             <li class="nav-item active">
-                <a class="btn btn-sidebar" href="borrow1.html">
+                <a class="btn btn-sidebar" href="borrow-0.html">
                     <svg class="icon"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Borrow</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-sidebar" href="lend1.html">
+                <a class="btn btn-sidebar" href="lend-0.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Lend</span>
                 </a>
@@ -95,96 +95,15 @@
     </aside>
 
     <!-- page content -->
-    <main class="borrow2 page sidebar-pusher d-flex flex-column flexer">
-        <!-- borrow-form section -->
-        <section class="borrow-form page-section">
-            <div class="content lgp-container">
-                <form class="lgp-form form-row">
-                    <div class="offset-sm-2 col-sm-8 offset-md-1 col-md-8 offset-lg-1 col-lg-8">
-                        <h2 class="form-header header-md">New Loan Request</h2>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="amount-input">Amount<span class="extra">(How much do you want to borrow?)</span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">&#8358;</span>
-                                        </div>
-                                        <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="160,000">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="amount-input">Duration/Tenure<span class="extra">(For how long?)</span></label>
-                                    <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="5">
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-5">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="duration-type-select">&nbsp;</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-control form-control-md" id="duration-type-select" name="duration-type">
-                                            <option value="" selected>Month(s)</option>
-                                            <option value="" >Day(s)</option>
-                                            <option value="" >Year(s)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="interest-input">Interest Rate<span class="extra">(%)</span></label>
-                                    <input type="text" class="form-control form-control-md" name="interest" id="interest-input">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="repayment-input">Repayment<span class="extra">(Payback Amount)</span></label>
-                                    <input type="text" class="form-control form-control-md" name="repayment" id="repayment-input">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="repayment-type-input">Repayment Type<span class="extra">(Payback Frequency)</span></label>
-                                    <div class="select-wrapper">
-                                        <select  class="form-control form-control-md" id="repayment-type-select" name="repayment-type">
-                                            <option value="" selected>Monthly Installment</option>
-                                            <option value="">Weekly</option>
-                                            <option value="">Custom</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="purpose-input">Purpose<span class="extra">(Why do you need this loan?)</span></label>
-                                    <textarea  class="form-control form-control-md" name="purpose" id="purpose-input" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12 col-12 mb-4">
-                                <p class="form-text">You will pay back <span class="text-accent text-heavy">N 38,900 every month</span>, for <span class="text-accent text-heavy">5 Months</span>.<span class="help-info inline"/></p>
-                            </div>
-                            <div class="col-12">
-                                <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="marketplace-input" name="marketplace" class="custom-control-input">
-                                    <label class="custom-control-label" for="marketplace-input">Publish to Marketplace.</label>
-                                </div>
-                                <p class="form-text">When you submit a loan request, LendGap uploads it to the Marketplace where potential Lenders can view and assess, and choose to accept the request. The higher your rating, the more likely and quickly your request will be accepted. Ensure you stick to the terms of this request. Funding on LendGap is simple and clear, with no hidden fees.</p>
-                            </div>
-                            <div class="col-12">
-                                <div class="custom-control custom-checkbox mt-3">
-                                    <input type="checkbox" id="accept-tc-input" name="accept-tc" class="custom-control-input">
-                                    <label class="custom-control-label" for="accept-tc-input">I fully understand and accept the terms and conditions of borrowing on Lendgap.</label>
-                                </div>
-                            </div>
-                            <div class="col-12 cta">
-                                <!-- <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-50" href="loan-request-details.html">Submit</button> -->
-                                <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-50" href="borrow3.html">Submit</a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+    <main class="page prompt-page sidebar-pusher d-flex flex-column flexer">
+        <section class="page-section flexed-no-shrink">
+            <div class="lgp-prompt">
+                <svg class="icon with-bg"><use xlink:href="#money"/></svg>
+                <p class="caption">You have <span class="text-accent">3 Unused Loan Requests</span> remaining.</p>
+                <div class="cta d-flex flex-column align-items-stretch flex-sm-row align-items-sm-start">
+                    <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="borrow-2.html">Request for loan</a>
+                    <a class="btn btn-trans-border-green btn-md btn-caps btn-chrome btn-shadow" href="borrow-1.html">Manage Requests</a>
+                </div>
             </div>
         </section>
     </main>

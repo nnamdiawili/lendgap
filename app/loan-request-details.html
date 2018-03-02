@@ -68,13 +68,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-sidebar" href="borrow1.html">
+                <a class="btn btn-sidebar" href="borrow-0.html">
                     <svg class="icon"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Borrow</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-sidebar" href="lend1.html">
+                <a class="btn btn-sidebar" href="lend-0.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Lend</span>
                 </a>
@@ -125,23 +125,124 @@
                     <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-md-6 col-lg-6 col-xl-3 mt-5 mt-sm-0">
                         <div class="actions d-flex flex-column ">
                             <a class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome" href="">Publish to Marketplace</a>
-                            <a class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome" href="">+ Invite a Lender</a>
+                            <a class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome" href="">Close Request</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- list section -->
-        <section class="interested page-section flexed-no-shrink">
-            <div class="content lgp-container">
-                <div class="empty-placeholder lgp-prompt">
-                    <!-- <svg class="icon with-bg"><use xlink:href="#money"/></svg> -->
-                    <p class="caption">No interested lenders yet but you can <span class="text-heavy">Publish it to the public Marketplace</span> to attract lenders OR privately <span class="text-heavy">Invite a Lender</span> to this request.</p>
-                    <div class="cta d-flex flex-column align-items-stretch flex-xl-row">
-                        <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="livemarket.html">Publish to Marketplace</a>
-                        <a class="btn btn-fuchsia btn-md btn-caps btn-chrome btn-shadow" href="">+ Invite a Lender</a>
+        <!-- tables section -->
+        <section class="page-section">
+            <div class="content lgp-container pt-5">
+                <div class="header-bar row align-items-center">
+                    <div class="headers col-12 col-sm-12 col-md-12 col-lg-5 col-xl-7 order-1 order-sm-0 mt-5 mt-sm-0 mt-lg-0">
+                        <h2 class="header-md-alt">Responses</h2>
+                    </div>
+                    <div class="lgp-form col-12 col-sm-6 col-md-7 col-lg-3 col-xl-2 order-2 order-sm-1 mt-4 mt-sm-5 mt-lg-0">
+                        <div class="select-wrapper w-100">
+                            <select class="form-control form-control-md" id="list-filter-select" name="list-filter">
+                                <option value="" selected>All</option>
+                                <option value="Active">Unread</option>
+                                <option value="Closed">Read</option>
+                                <option value="=">Recent</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cta col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 order-0 order-sm-2 mt-0 mt-sm-5 mt-lg-0">
+                        <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow w-100" href="borrow-2.html"><span class="d-none d-sm-inline">+&nbsp;&nbsp;</span>Invite a Lender</a>
                     </div>
                 </div>
+                <ul class="lgp-table mt-3 mt-lg-5">
+                    <li class="table-item table-header">
+                        <div class="loan-list-card">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">SN</div>
+                                <div class="table-cell detail col-8 col-sm-4 col-md-4 col-lg-3">Lender</div>
+                                <div class="table-cell detail d-none d-lg-flex col-lg-2">Rating</span></div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">Date</div>
+                                <div class="table-cell detail col-3 col-sm-3 col-md-4 col-lg-3">Message</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="table-item">
+                        <a class="loan-list-card has-profile-photos" href="loan-details-borrower.html">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">1.</div>
+                                <div class="table-cell detail col-8 col-sm-4 col-md-4 col-lg-3 text-accent-sec clear-overflow">
+                                    <div class="profile-photo flex-none shadow mr-4">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-2.jpg')"></div>
+                                    </div>
+                                    <span class="name">Subomi Shuaib</span>
+                                </div>
+                                <div class="table-cell detail d-none d-lg-flex col-lg-2">
+                                    <div class="lender-rating">
+                                        <span class="rating stars-4">
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">07-01-2018</div>
+                                <div class="table-cell detail col-3 col-sm-3 col-md-4 col-lg-3 text-accent">Hello Jumoke. I'm interested in funding this loan.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-item">
+                        <a class="loan-list-card has-profile-photos" href="loan-details-borrower.html">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">2.</div>
+                                <div class="table-cell detail col-8 col-sm-4 col-md-4 col-lg-3 text-accent-sec clear-overflow">
+                                    <div class="profile-photo flex-none shadow mr-4">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-3.jpg')"></div>
+                                    </div>
+                                    <span class="name">Bimpe Oladimeji</span>
+                                </div>
+                                <div class="table-cell detail d-none d-lg-flex col-lg-2">
+                                    <div class="lender-rating">
+                                        <span class="rating stars-3">
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                            <svg class="icon">
+                                                <use  xlink:href="#star"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">05-01-2018</div>
+                                <div class="table-cell detail col-3 col-sm-3 col-md-4 col-lg-3">Hi, let's talk.</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

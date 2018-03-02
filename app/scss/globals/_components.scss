@@ -62,6 +62,7 @@
   border: 1px solid $color-white;
   border-radius: 50%;
   overflow: hidden;
+  flex: 0 0 auto;
 
   &.shadow {
     box-shadow: $image-box-shadow;
@@ -298,6 +299,12 @@
       width: 80px;
       height: 80px;
       padding: 10px;
+    }
+    &.icon-green-mint {
+      fill: $color-brand-green-mint;
+    }
+    &.icon-blue-turquoise {
+      fill: $color-brand-blue-turquoise;
     }
   } 
   .caption, .cta {

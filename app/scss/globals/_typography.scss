@@ -1,6 +1,7 @@
 .header-xl,
 .header-lg,
 .header-md,
+.header-md-alt,
 .header-sm {
   font-family: $font-family-header;
   line-height: 0.95;
@@ -23,6 +24,13 @@
   @include fluid-prop(font-size, 22px, 36px);
   @include fluid-prop(letter-spacing, -0.5px, -1px);
   font-weight: 500;
+}
+
+.header-md-alt {
+  @include fluid-prop(font-size, 22px, 36px);
+  @include fluid-prop(letter-spacing, -0.5px, -1px);
+  font-weight: 100;
+  letter-spacing: 0.3px;
 }
 
 .header-sm {

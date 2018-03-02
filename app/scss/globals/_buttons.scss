@@ -160,6 +160,13 @@
     $hover: $color-brand-fuchsia null null
   );
 }
+.btn.btn-trans-border-green {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-brand-green transparent $color-brand-green,
+    $hover: $color-brand-green null null
+  );
+}
 .btn.btn-grey {
   @include btn-color-themes(
     $normal: $color-brand-blue $color-brand-grey-light null,

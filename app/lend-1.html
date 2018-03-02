@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
-    <link rel="stylesheet" type="text/css" href="css/lend3.css"/>
+    <link rel="stylesheet" type="text/css" href="css/lend-1.css"/>
 </head>
 <body class="sidebar-container fixed-md">
     <!-- header navbar -->
@@ -68,13 +68,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-sidebar" href="borrow1.html">
+                <a class="btn btn-sidebar" href="borrow-0.html">
                     <svg class="icon"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Borrow</span>
                 </a>
             </li>
             <li class="nav-item active">
-                <a class="btn btn-sidebar" href="lend1.html">
+                <a class="btn btn-sidebar" href="lend-0.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Lend</span>
                 </a>
@@ -95,16 +95,136 @@
     </aside>
 
     <!-- page content -->
-    <main class="lend3 page sidebar-pusher d-flex flex-column flexer">
-        <!-- lend-end section -->
-        <section class="lend-end page-section flexed-no-shrink">
-            <div class="lgp-prompt pos-center">
-                <svg class="icon icon-lg"><use xlink:href="#badge"/></svg>
-                <p class="caption text-center">Your loan offer was submitted successfully.<br>You now have <span class="text-accent">2 Unused Loan Offers</span> remaining.</p>
-                <div class="cta">
-                    <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="loan-offer-details.html">View Details</a>
+    <main class="lend-1 page sidebar-pusher">
+        <!-- tables section -->
+        <section class="page-section">
+            <div class="content lgp-container">
+                <div class="header-bar row align-items-center mb-5">
+                    <div class="headers col-12 col-sm-12 col-md-12 col-lg-5 col-xl-7 order-1 order-sm-0 mt-5 mt-sm-0 mt-lg-0">
+                        <h2 class="header-md-alt">My Loan Offers</h2>
+                    </div>
+                    <div class="lgp-form col-12 col-sm-6 col-md-7 col-lg-3 col-xl-2 order-2 order-sm-1 mt-4 mt-sm-5 mt-lg-0">
+                        <div class="select-wrapper w-100">
+                            <select class="form-control form-control-md" id="list-filter-select" name="list-filter">
+                                <option value="">Show All</option>
+                                <option value="Active" selected>Active</option>
+                                <option value="Closed">Responses</option>
+                                <option value="Closed">Closed</option>
+                                <option value="=">Recent</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cta col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 order-0 order-sm-2 mt-0 mt-sm-5 mt-lg-0">
+                        <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow w-100" href="lend-2.html"><span class="d-none d-sm-inline">+&nbsp;&nbsp;</span>Offer a Loan</a>
+                    </div>
                 </div>
-                <p class="caption">Or <a class="text-underlined" href="lend2.html">Offer another loan</a></p>
+                <ul class="lgp-table mt-5">
+                    <li class="table-item table-header">
+                        <div class="loan-list-card">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">SN</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 col-xl-3"><span class="d-none d-sm-inline">Loan&nbsp;</span>Amount</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2">Date<span class="d-none d-sm-inline">&nbsp;Created</span></div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">Visibility</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2"><span class="d-none d-sm-inline">Borrower&nbsp;</span>Responses</div>
+                                <div class="table-cell detail d-none d-lg-flex col-lg-3 col-xl-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="table-item">
+                        <a class="loan-list-card has-profile-photos" href="loan-offer-details.html">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">1.</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 col-xl-3 text-accent-sec text-heavy">N 125,000</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2">07-01-2018</div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">Marketplace</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 text-accent">4 responses</div>
+                                <div class="table-cell detail clear-overflow d-none d-lg-flex col-lg-3 col-xl-2">
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-2.jpg')"></div>
+                                    </div>
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style=""></div>
+                                    </div>
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-3.jpg')"></div>
+                                    </div>
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-1.jpg')"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-item">
+                        <a class="loan-list-card has-profile-photos" href="loan-offer-details-0.html">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">2.</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 col-xl-3 text-accent-sec text-heavy">N 34,850</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2">23-04-2017</div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">Private</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2">None</div>
+                                <div class="table-cell detail clear-overflow d-none d-lg-flex col-lg-3 col-xl-2"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-item">
+                        <a class="loan-list-card has-profile-photos" href="loan-offer-details.html">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">3.</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 col-xl-3 text-accent-sec text-heavy">N 20,000</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2">18-01-2017</div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">Private</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 text-accent">1 response</div>
+                                <div class="table-cell detail clear-overflow d-none d-lg-flex col-lg-3 col-xl-2">
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-3.jpg')"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="table-item">
+                        <a class="loan-list-card has-profile-photos" href="loan-offer-details.html">
+                            <div class="row d-flex align-items-center">
+                                <div class="table-cell detail d-none d-lg-flex col-lg-1">1.</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 col-xl-3 text-accent-sec text-heavy">N 6,700</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2">05-01-2018</div>
+                                <div class="table-cell detail d-none d-sm-flex col-sm-3 col-md-3 col-lg-2">Marketplace</div>
+                                <div class="table-cell detail col-4 col-sm-3 col-md-3 col-lg-2 text-accent">2 responses</div>
+                                <div class="table-cell detail clear-overflow d-none d-lg-flex col-lg-3 col-xl-2">
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-1.jpg')"></div>
+                                    </div>
+                                    <div class="profile-photo shadow">
+                                        <svg class="avatar icon">
+                                            <use  xlink:href="#avatar"></use>
+                                        </svg>
+                                        <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-2.jpg')"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -148,12 +268,8 @@
             <symbol id="money" viewBox="0 0 58 50">
                 <path d="M43.6063963,21.0175957 L43.6063963,20.9865964 C43.598904,20.9353143 43.5882168,20.8845501 43.5743971,20.8346001 L43.5743971,20.8346001 C43.5607968,20.7873494 43.5444357,20.7409374 43.5253982,20.6956034 L43.5083987,20.6566043 C43.493399,20.6236051 43.4763994,20.5906059 43.4583999,20.5566067 C43.4504,20.5426071 43.4434002,20.5286074 43.4344004,20.5146077 L43.4214007,20.4916083 C43.4024012,20.461609 43.3814017,20.4336097 43.3604022,20.4066103 L43.3424026,20.3916107 C43.3114653,20.3512595 43.2780694,20.3128542 43.242405,20.2766135 L43.2214055,20.2566139 C43.1894063,20.2266147 43.1564071,20.1986153 43.1214079,20.172616 L43.0954086,20.1526164 C43.0497574,20.1192287 43.001992,20.0888325 42.952412,20.0616186 L23.9428686,9.48287274 L34.8896057,2.73503483 L53.2421648,12.9467895 L45.5093506,17.7106751 C45.2219281,17.885679 45.0173603,18.1693399 44.9420507,18.4973133 C44.8667411,18.8252866 44.9270727,19.169774 45.1093602,19.4526333 C45.4961055,20.0464943 46.2856812,20.223927 46.8893174,19.8526236 L56.442088,13.9597652 C56.8248127,13.7279207 57.0544102,13.309176 57.0440882,12.8618242 C57.0337663,12.4144725 56.7850998,12.006763 56.3920892,11.7928173 L35.4925912,0.165096562 C35.078048,-0.0649865498 34.5717026,-0.0539042727 34.167623,0.194095865 L20.7499453,8.46389722 L20.7419455,8.4688971 L14.0421065,12.6007978 L14.0331067,12.6067977 L0.603429278,20.8815989 C0.220704508,21.1134435 -0.00889289966,21.5321881 0.00142901455,21.9795399 C0.0117509288,22.4268917 0.260417422,22.8346012 0.653428077,23.0485469 L21.552926,34.6762676 C21.9674168,34.9065628 22.4738764,34.895478 22.8778942,34.6472683 L32.4306648,28.7594097 C32.7183051,28.5845975 32.9230579,28.3009261 32.9983869,27.9728685 C33.0737158,27.6448108 33.0132222,27.3002333 32.8306551,27.0174515 C32.4439098,26.4235905 31.6543341,26.2461578 31.0506979,26.6174611 L22.1509117,32.1033294 L3.80335241,21.8955746 L14.7500895,15.1477367 L34.3236193,26.0384751 L34.3236193,40.4621286 C34.3255103,40.9254291 34.5817109,41.3502535 34.9906033,41.568102 C35.4032099,41.7907084 35.9031664,41.776609 36.3025717,41.5311029 L43.0144105,37.3932023 C43.3863774,37.1651573 43.6134812,36.7605341 43.6143961,36.324228 L43.6143961,21.1655921 L43.6143961,21.1435926 C43.6143961,21.1005937 43.6113962,21.0595947 43.6063963,21.0175957 Z M36.9065572,38.1731836 L36.9065572,25.3004928 C36.9052607,24.8423329 36.6551697,24.4210464 36.2535729,24.2005192 L17.2280299,13.6207733 L21.4629282,11.010836 L39.8144874,21.2215908 L38.207526,22.211567 C37.9198857,22.3863792 37.7151329,22.6700506 37.6398039,22.9981082 C37.5644749,23.3261658 37.6249685,23.6707434 37.8075356,23.9535251 C38.1946059,24.5469183 38.983763,24.724257 39.5874928,24.3535155 L41.0404579,23.4535371 L41.0404579,35.6272447 L36.9065572,38.1731836 Z M55.066121,16.8736952 L45.5133505,22.7615538 C45.2257102,22.936366 45.0209574,23.2200373 44.9456284,23.548095 C44.8702994,23.8761526 44.930793,24.2207302 45.1133601,24.5035119 C45.5003789,25.0963077 46.2888008,25.2735808 46.8923174,24.9035023 L56.442088,19.0126438 C56.7295105,18.8376399 56.9340782,18.553979 57.0093878,18.2260057 C57.0846975,17.8980323 57.0243658,17.5535449 56.8420784,17.2706857 C56.4544215,16.6783607 55.6654255,16.5027326 55.0631211,16.8746952 L55.066121,16.8736952 Z M31.0566978,31.6733397 L22.1569115,37.1592079 L1.92939743,25.9004784 C1.31124853,25.5552987 0.530628659,25.7655338 0.169439703,26.374467 C-0.000406136422,26.6663772 -0.0447964844,27.0146275 0.0463904568,27.3398107 C0.137577398,27.6649939 0.356567859,27.9393877 0.653428077,28.1004255 L21.552926,39.7281462 C21.9674693,39.9582293 22.4738147,39.947147 22.8778942,39.6991469 L32.4306648,33.8112883 C32.7180873,33.6362844 32.922655,33.3526235 32.9979646,33.0246502 C33.0732742,32.6966768 33.0129426,32.3521894 32.8306551,32.0693302 C32.4428329,31.4792647 31.6564583,31.3039244 31.0546978,31.6733397 L31.0566978,31.6733397 Z M55.066121,21.9275738 L45.5133505,27.8154324 C45.2257102,27.9902446 45.0209574,28.2739159 44.9456284,28.6019736 C44.8702994,28.9300312 44.930793,29.2746088 45.1133601,29.5573905 C45.5003789,30.1501863 46.2888008,30.3274594 46.8923174,29.9573809 L56.442088,24.0655224 C56.7295105,23.8905185 56.9340782,23.6068576 57.0093878,23.2788843 C57.0846975,22.9509109 57.0243658,22.6064235 56.8420784,22.3235643 C56.4540978,21.7317075 55.66552,21.5561725 55.0631211,21.9275738 L55.066121,21.9275738 Z M31.0566978,36.7272183 L22.1569115,42.2130865 L1.92939743,30.9583569 C1.31124853,30.6131772 0.530628659,30.8234123 0.169439703,31.4323455 C0.00089582993,31.723903 -0.042765873,32.0711685 0.0483580958,32.395374 C0.139482065,32.7195795 0.357668677,32.9932477 0.653428077,33.1543041 L21.552926,44.7820248 C21.9674693,45.0121079 22.4738147,45.0010256 22.8778942,44.7530255 L32.4306648,38.8651669 C32.7180873,38.690163 32.922655,38.4065021 32.9979646,38.0785288 C33.0732742,37.7505554 33.0129426,37.406068 32.8306551,37.1232088 C32.4431533,36.5327919 31.6567139,36.3569944 31.0546978,36.7262183 L31.0566978,36.7272183 Z M55.066121,26.9814524 L45.5133505,32.869311 C45.2257102,33.0441232 45.0209574,33.3277945 44.9456284,33.6558522 C44.8702994,33.9839098 44.930793,34.3284874 45.1133601,34.6112691 C45.5003789,35.2040649 46.2888008,35.381338 46.8923174,35.0112595 L56.442088,29.1184011 C56.7295105,28.9433972 56.9340782,28.6597363 57.0093878,28.3317629 C57.0846975,28.0037895 57.0243658,27.6593021 56.8420784,27.3764429 C56.4540978,26.7845861 55.66552,26.6090511 55.0631211,26.9804524 L55.066121,26.9814524 Z M31.0566978,41.7810969 L22.1569115,47.2669651 L1.92939743,36.0112355 C1.31124853,35.6660558 0.530628659,35.8762909 0.169439703,36.4852241 C0.00089582993,36.7767816 -0.042765873,37.1240471 0.0483580958,37.4482526 C0.139482065,37.7724581 0.357668677,38.0461263 0.653428077,38.2071827 L21.552926,49.8349034 C21.9674693,50.0649865 22.4738147,50.0539043 22.8778942,49.8059041 L32.4306648,43.9180456 C32.7180873,43.7430417 32.922655,43.4593808 32.9979646,43.1314074 C33.0732742,42.803434 33.0129426,42.4589466 32.8306551,42.1760874 C32.4431533,41.5856706 31.6567139,41.409873 31.0546978,41.7790969 L31.0566978,41.7810969 Z" fill-rule="evenodd"></path>
             </symbol>
-            <symbol id="badge" viewBox="0 -1 50 52">
-                <path d="M48.479933,27.9161926 L47.5373904,26.6292237 C46.7602213,25.5638346 46.7479343,24.1217797 47.5068364,23.0433025 L48.4327133,21.7470748 C48.9418859,21.0267879 49.1168766,20.1223853 48.913127,19.2641568 C48.7093775,18.4059282 48.1465487,17.6766892 47.3679549,17.2621272 L45.9652514,16.5056857 C44.801317,15.8837585 44.1630436,14.5893369 44.3782984,13.2873377 L44.6449509,11.7133469 C44.7908869,10.8432065 44.5554269,9.95233853 43.998619,9.26793613 C43.441811,8.58353373 42.6174783,8.17175385 41.7358457,8.13761038 L40.1377822,8.06631786 C38.8168054,8.01173384 37.6785973,7.11883891 37.3110801,5.8488427 L36.8657333,4.31373881 C36.6197215,3.46496121 36.0202109,2.76317643 35.2202875,2.38758645 C34.4203641,2.01199646 33.4974639,1.9989599 32.6872509,2.35180567 L31.2225136,2.98510547 C30.0063692,3.50847297 28.5918004,3.19565714 27.7097367,2.20829476 L26.6449783,1.02317233 C26.0546106,0.366632351 25.2114282,-0.00577243667 24.3285099,6.76719053e-05 C23.4455917,0.00590778048 22.6074094,0.389434043 22.0257785,1.05372627 L20.9813893,2.25736623 C20.1131407,3.25023132 18.7104789,3.58267556 17.4889817,3.08510017 L16.0159115,2.48513195 C15.1986107,2.14852419 14.2761482,2.17888267 13.4827476,2.56849903 C12.689347,2.9581154 12.1013236,3.6695134 11.8679831,4.52206111 L11.4467091,6.05068386 C11.1151029,7.33197244 9.99078689,8.25016383 8.6690784,8.31908225 L7.07101488,8.41166994 C6.19113838,8.45928567 5.37436289,8.88343999 4.82930348,9.57579839 C4.28424406,10.2681568 4.06367899,11.161678 4.22394344,12.0281451 L4.51096527,13.5910253 C4.75007358,14.8892649 4.13125573,16.1947879 2.97493551,16.8315944 L1.58612017,17.6084051 C0.814490769,18.0334148 0.263068513,18.7699224 0.072548812,19.6300081 C-0.117970889,20.4900938 0.0708385919,21.390572 0.590802509,22.1016857 L1.53334519,23.3886546 C2.31023095,24.4541373 2.32251646,25.8960097 1.56389912,26.9745758 L0.638022231,28.2708034 C0.128519232,28.9911478 -0.0466646475,29.8957863 0.157099973,30.7542555 C0.360864593,31.6127247 0.923904323,32.3421398 1.70278066,32.756677 L3.11011353,33.5168219 C4.27440612,34.1384719 4.91308269,35.4329557 4.69799241,36.73517 L4.42022934,38.2980502 C4.27430857,39.1680368 4.50964941,40.0587561 5.0662534,40.7431256 C5.6228574,41.4274951 6.44694048,41.8393849 7.32840866,41.8737867 L8.92739805,41.9423016 C10.2506867,41.9963516 11.3906927,42.8916443 11.7568778,44.1644062 L12.1975952,45.6967324 C12.443607,46.54551 13.0431177,47.2472948 13.843041,47.6228848 C14.6429644,47.9984748 15.5658647,48.0115113 16.3760777,47.6586655 L17.8408149,47.0253658 C19.05523,46.5037271 20.4669317,46.811816 21.3535918,47.7919918 L22.4183503,48.9771142 C23.0087179,49.6336542 23.8519004,50.006059 24.7348186,50.0002189 C25.6177368,49.9943788 26.4559191,49.6108525 27.0375501,48.9465603 L28.0819392,47.7429203 C28.950035,46.7498017 30.3528724,46.4173159 31.5743469,46.9151864 L33.0492687,47.5179323 C33.8665696,47.85454 34.789032,47.8241815 35.5824326,47.4345652 C36.3758332,47.0449488 36.9638567,46.3335508 37.1971972,45.4810031 L37.6166195,43.9486768 C37.9714047,42.6764616 39.0943776,41.7695309 40.4127677,41.6904631 L42.0108312,41.5978754 C42.8909023,41.5502981 43.7078559,41.1260156 44.252948,40.4334383 C44.7980402,39.740861 45.0184658,38.8470817 44.8579026,37.9804744 L44.5708808,36.4175942 C44.3317725,35.1193545 44.9505903,33.8138316 46.1069106,33.1770251 L47.4957259,32.4002144 C48.2631625,31.9734409 48.8105068,31.2377982 48.9987656,30.3800959 C49.1870245,29.5223936 48.9980873,28.625143 48.479933,27.9161926 Z M24.533979,41.1469734 C15.6287186,41.1255087 8.42501072,33.8926722 8.43948226,24.9873978 C8.45395379,16.0821233 15.6811311,8.87273783 24.5864141,8.8802162 C33.4916972,8.88769457 40.7067558,16.1092082 40.7062706,25.0144944 C40.6950279,33.9351071 33.4545923,41.1577183 24.533979,41.1469734 L24.533979,41.1469734 Z M22.4664959,25.4431754 L21.0323125,24.0025109 C20.1767787,23.1467309 18.7908328,23.1421813 17.9296991,23.9923263 L17.9296991,23.9923263 C17.5176449,24.4014783 17.2850652,24.9576014 17.283155,25.5382824 C17.2812449,26.1189634 17.510161,26.6766046 17.9195144,27.0884586 L19.3490684,28.5291231 L20.9471319,30.1225572 C21.7791576,30.9582587 23.1306269,30.9628147 23.9682682,30.1327418 L25.5663317,28.5485665 L31.1382588,23.0210814 C31.550313,22.6119294 31.7828927,22.0558063 31.7848029,21.4751253 C31.786713,20.8944443 31.557797,20.3368032 31.1484435,19.9249491 L31.1484435,19.9249491 C30.2932016,19.0742093 28.9126258,19.0700808 28.0523111,19.9156903 L22.4664959,25.4431754 Z" fill-rule="evenodd"></path>
-            </symbol>
         </defs>
     </svg>
-
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

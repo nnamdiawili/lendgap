@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
-    <link rel="stylesheet" type="text/css" href="css/borrow3.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dashboard-prompt.css"/>
 </head>
 <body class="sidebar-container fixed-md">
     <!-- header navbar -->
@@ -67,14 +67,14 @@
                     <span class="caption">Marketplace</span>
                 </a>
             </li>
-            <li class="nav-item active">
-                <a class="btn btn-sidebar" href="borrow1.html">
+            <li class="nav-item">
+                <a class="btn btn-sidebar" href="borrow-0.html">
                     <svg class="icon"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Borrow</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="btn btn-sidebar" href="lend1.html">
+            <li class="nav-item active">
+                <a class="btn btn-sidebar" href="lend-0.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Lend</span>
                 </a>
@@ -95,16 +95,15 @@
     </aside>
 
     <!-- page content -->
-    <main class="borrow3 page sidebar-pusher d-flex flex-column flexer">
-        <!-- borrow-end section -->
-        <section class="borrow-end page-section flexed-no-shrink">
-           <div class="lgp-prompt pos-center">
-                <svg class="icon icon-lg"><use xlink:href="#badge"/></svg>
-                <p class="caption text-center">Your loan request was submitted successfully.<br>You now have <span class="text-accent">2 Unused Loan Requests</span> remaining.</p>
+    <main class="page prompt-page sidebar-pusher d-flex flex-column flexer">
+        <section class="page-section flexed-no-shrink">
+            <div class="lgp-prompt">
+                <svg class="icon icon-lg icon-blue-turquoise"><use xlink:href="#badge"/></svg>
+                <p class="caption text-center">Your loan offer was submitted successfully.<br>You now have <span class="text-accent">2 Unused Loan Offers</span> remaining.</p>
                 <div class="cta">
-                    <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="loan-request-details.html">View Details</a>
+                    <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="loan-offer-details-0.html">View Details</a>
                 </div>
-                <p class="caption">Or <a class="text-underlined" href="borrow2.html">Request for another loan</a></p>
+                <p class="caption">Or <a class="text-underlined" href="lend-2.html">Offer another loan</a></p>
             </div>
         </section>
     </main>

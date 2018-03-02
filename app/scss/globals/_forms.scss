@@ -128,12 +128,6 @@
       padding: 0 $form-control-size-normal 0 ($form-control-size-normal / 2);
     }
   }
-
-  .form-header {
-    font-weight: 100;
-    letter-spacing: 0.3px;
-    @include fluid-prop(margin-bottom, 40px, 60px, $grid-breakpoint-md);
-  }
   .form-text {
     color: $color-brand-grey-dark;
     font-family: $font-family-input;

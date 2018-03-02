@@ -7,6 +7,16 @@
   padding-top: $nav-header-height;
 }
 
+.prompt-page {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+
+  .page-section {
+    @include fluid-prop(padding-top, 0px, 70px, $grid-breakpoint-sm);
+    @include fluid-prop(padding-bottom, 0px, 70px, $grid-breakpoint-sm);
+  }
+}
 
 // -------------------------------------------------------------------------
 // Navbar Elements

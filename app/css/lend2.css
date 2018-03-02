@@ -140,6 +140,7 @@ label {
 .header-xl,
 .header-lg,
 .header-md,
+.header-md-alt,
 .header-sm {
   font-family: "Brandon Grotesque", sans-serif;
   line-height: 0.95;
@@ -200,6 +201,26 @@ label {
         letter-spacing: calc(-0.5px + -0.5 * ((100vw - 300px) / 692)); } }
     @media screen and (min-width: 992px) {
       .header-md {
+        letter-spacing: -1px; } }
+
+.header-md-alt {
+  font-weight: 100;
+  letter-spacing: 0.3px; }
+  .header-md-alt {
+    font-size: 22px; }
+    @media screen and (min-width: 300px) {
+      .header-md-alt {
+        font-size: calc(22px + 14 * ((100vw - 300px) / 692)); } }
+    @media screen and (min-width: 992px) {
+      .header-md-alt {
+        font-size: 36px; } }
+  .header-md-alt {
+    letter-spacing: -0.5px; }
+    @media screen and (min-width: 300px) {
+      .header-md-alt {
+        letter-spacing: calc(-0.5px + -0.5 * ((100vw - 300px) / 692)); } }
+    @media screen and (min-width: 992px) {
+      .header-md-alt {
         letter-spacing: -1px; } }
 
 .header-sm {
@@ -1158,18 +1179,6 @@ a.text-link {
     width: 100%;
     padding: 0 40px 0 20px; }
 
-.lgp-form .form-header, .lgp-form-alt .form-header {
-  font-weight: 100;
-  letter-spacing: 0.3px; }
-  .lgp-form .form-header, .lgp-form-alt .form-header {
-    margin-bottom: 40px; }
-    @media screen and (min-width: 768px) {
-      .lgp-form .form-header, .lgp-form-alt .form-header {
-        margin-bottom: calc(40px + 20 * ((100vw - 768px) / 224)); } }
-    @media screen and (min-width: 992px) {
-      .lgp-form .form-header, .lgp-form-alt .form-header {
-        margin-bottom: 60px; } }
-
 .lgp-form .form-text, .lgp-form-alt .form-text {
   color: #A4A4A4;
   font-family: "Brandon Grotesque", sans-serif;
@@ -1510,30 +1519,26 @@ a.text-link {
   .loan-list-card :focus {
     outline: none; }
   .loan-list-card .detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     white-space: nowrap;
     overflow: hidden; }
+    .loan-list-card .detail.clear-overflow {
+      overflow: visible; }
+  .loan-list-card.has-profile-photos .detail {
+    min-height: 35px; }
   .loan-list-card .profile-photo {
-    width: 40px;
-    height: 40px; }
-    .loan-list-card .profile-photo {
-      width: 30px; }
-      @media screen and (min-width: 300px) {
-        .loan-list-card .profile-photo {
-          width: calc(30px + 10 * ((100vw - 300px) / 692)); } }
-      @media screen and (min-width: 992px) {
-        .loan-list-card .profile-photo {
-          width: 40px; } }
-    .loan-list-card .profile-photo {
-      height: 30px; }
-      @media screen and (min-width: 300px) {
-        .loan-list-card .profile-photo {
-          height: calc(30px + 10 * ((100vw - 300px) / 692)); } }
-      @media screen and (min-width: 992px) {
-        .loan-list-card .profile-photo {
-          height: 40px; } }
+    width: 35px;
+    height: 35px; }
     .loan-list-card .profile-photo .avatar {
       fill: #FFF;
-      background-color: transparent; }
+      background-color: #F6EBE8; }
+  .loan-list-card .profile-photo + .profile-photo {
+    margin-left: -15px; }
   .loan-list-card .rating {
     display: -webkit-box;
     display: -ms-flexbox;

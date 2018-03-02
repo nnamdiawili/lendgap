@@ -9,7 +9,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
-    <link rel="stylesheet" type="text/css" href="css/lend2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loan_details.css"/>
 </head>
 <body class="sidebar-container fixed-md">
     <!-- header navbar -->
@@ -68,13 +68,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-sidebar" href="borrow1.html">
+                <a class="btn btn-sidebar" href="borrow-0.html">
                     <svg class="icon"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Borrow</span>
                 </a>
             </li>
-            <li class="nav-item active">
-                <a class="btn btn-sidebar" href="lend1.html">
+            <li class="nav-item">
+                <a class="btn btn-sidebar" href="lend-0.html">
                     <svg class="icon flipped-h"><use xlink:href="#arrow-right"></use></svg>
                     <span class="caption">Lend</span>
                 </a>
@@ -95,102 +95,53 @@
     </aside>
 
     <!-- page content -->
-    <main class="lend2 page sidebar-pusher d-flex flex-column flexer">
-        <!-- lend-form section -->
-        <section class="lend-form page-section">
+    <main class="loan-details page sidebar-pusher d-flex flex-column flexer">
+        <!-- loan-details section -->
+        <section class="loan-details dashboard-details page-section">
             <div class="content lgp-container">
-                <form class="lgp-form form-row">
-                    <div class="offset-sm-2 col-sm-8 offset-md-1 col-md-8 offset-lg-1 col-lg-8">
-                        <h2 class="form-header header-md">New Loan Offer</h2>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="amount-input">Amount<span class="extra">(How much do you want to lend?)</span></label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">&#8358;</span>
-                                        </div>
-                                        <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="600,000">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="amount-input">Duration/Tenure<span class="extra">(For how long?)</span></label>
-                                    <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="8">
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-5">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="duration-type-select">&nbsp;</label>
-                                    <div class="select-wrapper">
-                                        <select class="form-control form-control-md" id="duration-type-select" name="duration-type">
-                                            <option value="" selected>Month(s)</option>
-                                            <option value="" >Day(s)</option>
-                                            <option value="" >Year(s)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="start-date-input">Start Date</label>
-                                    <input class="form-control form-control-md" type="date" name="start-date" id="start-date-input">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="interest-input">Interest Rate<span class="extra">(%)</span></label>
-                                    <input type="text" class="form-control form-control-md" name="interest" id="interest-input">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="repayment-input">Repayment<span class="extra">(Payback Amount)</span></label>
-                                    <input type="text" class="form-control form-control-md" name="repayment" id="repayment-input">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="repayment-type-input">Repayment Type<span class="extra">(Payback Frequency)</span></label>
-                                    <div class="select-wrapper">
-                                        <select class="form-control form-control-md" id="repayment-type-select" name="repayment-type">
-                                            <option value="" selected>Monthly Installment</option>
-                                            <option value="">Weekly</option>
-                                            <option value="">Custom</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label-caps" for="purpose-input">Purpose<span class="extra">(Why do you need this loan?)</span></label>
-                                    <textarea  class="form-control form-control-md" name="purpose" id="purpose-input" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-4">
-                                <p class="form-text">You will be paid <span class="text-accent text-heavy">N90,000 every month</span>, for <span class="text-accent text-heavy">8 Months</span>.<span class="help-info inline"/></p>
-                            </div>
-                            <div class="col-12">
-                                <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="marketplace-input" name="marketplace" class="custom-control-input">
-                                    <label class="custom-control-label" for="marketplace-input">Publish to Marketplace.</label>
-                                </div>
-                                <p class="form-text">When you submit a loan offer, LendGap uploads it to the Marketplace where potential Borrowers can view, assess, and choose to take the offer. Most Borrowers prefer offers from Lenders with high rating. Ensure you stick to the terms of this offer. Funding on LendGap is simple and clear, with no hidden fees. NOTE: Lendgap collects a service fee equivalent to 2 percent of the Repayment on every loan offer.</p>
-                            </div>
-                            <div class="col-12">
-                                <div class="custom-control custom-checkbox mt-3">
-                                    <input type="checkbox" id="accept-tc-input" name="accept-tc" class="custom-control-input">
-                                    <label class="custom-control-label" for="accept-tc-input">I fully understand and accept the terms and conditions of lending on Lendgap.</label>
-                                </div>
-                            </div>
-                            <div class="col-12 cta">
-                                <!-- <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-50" href="lend3.html">Submit</button> -->
-                                <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-50" href="lend3.html">Submit</a>
-                            </div>
+                <div class="row d-flex align-items-center">
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-md-6 col-lg-6 col-xl-4 mt-sm-0">
+                        <div class="d-flex flex-column">
+                            <h2 class="section-header header-xs">Loan Details</h2>
+                            <span class="title loan-amount header-lg text-heavy">
+                                <span class="currency text-unit">N</span><span class="amount">630,000</span>
+                            </span>
+                            <span class="detail mt-2"><span class="preamble">Transaction ID:</span>053139912</span>
                         </div>
                     </div>
-                </form>
+                    <div class="etails-group offset-1 col-10 offset-sm-0 col-sm-6 col-md-6 col-lg-6 col-xl-4 mt-5 mt-sm-0">
+                        <div class="d-flex flex-column">
+                            <span class="detail alt"><span class="preamble">Loan Status:</span><span class="text-accent">Active</span></span>
+                            <span class="detail alt"><span class="preamble">Interest:</span>10%</span>
+                            <span class="detail alt"><span class="preamble">Repayment:</span>N 660,000</span>
+                            <span class="detail alt"><span class="preamble">Loan Tenure:</span>18 Months</span>
+                            <span class="detail alt"><span class="preamble">Installments:</span>3</span>
+                            <span class="detail alt mt-3"><span class="preamble">Published:</span>Marketplace</span>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-1">
+                        <div class="d-none d-lg-block"><span class="divider vertical"></span></div>
+                    </div>
+                    <div class="details-group offset-1 col-10 offset-sm-0 col-sm-6 col-md-6 col-lg-6 col-xl-3 mt-5 mt-sm-0">
+                        <div class="actions d-flex flex-column ">
+                            <a class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome" href="">Remove from Marketplace</a>
+                            <a class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome" href="">+ Invite a Borrower</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- list section -->
+        <section class="interested page-section flexed-no-shrink">
+            <div class="content lgp-container">
+                <div class="empty-placeholder lgp-prompt">
+                    <!-- <svg class="icon with-bg"><use xlink:href="#money"/></svg> -->
+                    <p class="caption">No Borrowers have indicated interested yet but you can <span class="text-heavy">Publish it to the public Marketplace</span> to attract borrowers OR privately <span class="text-heavy">Invite a Borrower</span> to this offer.</p>
+                    <div class="cta d-flex flex-column align-items-stretch flex-xl-row">
+                        <a class="btn btn-green btn-md btn-caps btn-chrome btn-shadow" href="livemarket.html">Publish to Marketplace</a>
+                        <a class="btn btn-fuchsia btn-md btn-caps btn-chrome btn-shadow" href="">+ Invite a LBorrowersender</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -227,6 +178,9 @@
             </symbol>
             <symbol id="avatar" viewBox="0 0 40 40">
                 <path d="M6,29.2559932 C6,28.0670912 6.39210914,26.9658054 7.17578658,25.95173 C7.95946403,24.9376546 9.02762341,24.1365351 10.3802647,23.5483714 C11.7323652,22.9606133 13.2007464,22.6661258 14.785949,22.6661258 L25.1214051,22.6661258 C26.7066077,22.6661258 28.1749888,22.9606133 29.5270893,23.5483714 C30.8791898,24.1365351 31.9473492,24.9376546 32.7315675,25.95173 C33.5147041,26.9658054 33.9073541,28.0670912 33.9073541,29.2559932 L33.9073541,40 L6,40 L6,29.2559932 Z M16.4557255,19.0134264 C15.3897294,18.3871334 14.5431793,17.5405833 13.9164808,16.4749929 C13.2897822,15.4085912 12.9770413,14.2432158 12.9770413,12.9764329 C12.9770413,11.7104612 13.2897822,10.5442745 13.9164808,9.47868414 C14.5431793,8.41268811 15.3897294,7.56654363 16.4557255,6.93943942 C17.5213159,6.31314647 18.6875025,6 19.9534742,6 C21.2198515,6 22.3856326,6.31314647 23.4516286,6.93943942 C24.5176246,7.56654363 25.3637691,8.41268811 25.9904677,9.47868414 C26.6171663,10.5442745 26.9303127,11.7104612 26.9303127,12.9764329 C26.9303127,14.2432158 26.6171663,15.4085912 25.9904677,16.4749929 C25.3637691,17.5405833 24.5176246,18.3871334 23.4516286,19.0134264 C22.3856326,19.6405306 21.2198515,19.953677 19.9534742,19.953677 C18.6875025,19.953677 17.5213159,19.6405306 16.4557255,19.0134264 Z"></path>
+            </symbol>
+            <symbol id="close" viewBox="0 0 16 16">
+                <path d="M6.54545455,8 L1.33226763e-15,1.45454545 L1.45454545,7.10542736e-15 L8,6.54545455 L14.5454545,7.10542736e-15 L16,1.45454545 L9.45454545,8 L16,14.5454545 L14.5454545,16 L8,9.45454545 L1.45454545,16 L1.42108547e-14,14.5454545 L6.54545455,8 Z"></path>
             </symbol>
             <symbol id="notification" viewBox="0 0 26 30">
                 <path d="M12.7457627,30 C14.4067797,30 15.7627119,28.6440678 15.7627119,26.9830508 L9.72881356,26.9830508 C9.72881356,28.6440678 11.0847458,30 12.7457627,30 Z M22.4745763,20.9830508 L22.4745763,12.7457627 C22.4745763,8.13559322 19.2881356,4.27118644 14.9830508,3.25423729 L14.9830508,2.23728814 C14.9830508,0.983050847 13.9661017,0 12.7457627,0 C11.5254237,0 10.5084746,1.01694915 10.5084746,2.23728814 L10.5084746,3.25423729 C6.20338983,4.27118644 3.01694915,8.13559322 3.01694915,12.7457627 L3.01694915,20.9830508 L0,24 L0,25.4915254 L25.4915254,25.4915254 L25.4915254,24 L22.4745763,20.9830508 Z"></path>

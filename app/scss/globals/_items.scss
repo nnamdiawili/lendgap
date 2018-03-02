@@ -158,19 +158,29 @@
     outline: none;
   }
   .detail {
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     overflow: hidden;
+
+    &.clear-overflow {
+      overflow: visible;
+    }
+  }
+  &.has-profile-photos .detail {
+    min-height: $button-size-sm;
   }
   .profile-photo {
-    width: $button-size-normal;
-    height: $button-size-normal;
-    @include fluid-prop(width, 30px, 40px);
-    @include fluid-prop(height,  30px, 40px);
-
+    width: $button-size-sm;
+    height: $button-size-sm;
+    
     .avatar {
       fill: $color-white;
-      background-color: transparent;
+      background-color: $color-brand-peach;
     }
+  }
+  .profile-photo + .profile-photo {
+    margin-left: -15px;
   }
   .rating {
     display: flex;
