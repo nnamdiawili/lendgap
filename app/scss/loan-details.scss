@@ -10,11 +10,12 @@
 @import "globals/tabs";
 @import "globals/items";
 @import "globals/navbar";
+@import "globals/modals";
 @import "globals/sidebar";
 
-@import "views/page_base";
-@import "views/dashboard_base";
-@import "views/dashboard_details";
+@import "views/page-base";
+@import "views/dashboard-base";
+@import "views/dashboard-details";
 @import "views/chat";
 
-@import "views/loan_details";
+@import "views/loan-details";

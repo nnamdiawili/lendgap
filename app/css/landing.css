@@ -1212,14 +1212,11 @@ a.text-link {
   font-family: "Brandon Grotesque", sans-serif;
   margin-bottom: 0;
   padding-left: 35px;
-  line-height: 1;
   cursor: pointer; }
   .lgp-form .custom-control-label::before, .lgp-form .custom-control-label::after, .lgp-form-alt .custom-control-label::before, .lgp-form-alt .custom-control-label::after {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     transition: 0.3s; }
   .lgp-form .custom-control-label::before, .lgp-form-alt .custom-control-label::before {
+    top: 0;
     width: 20px;
     height: 20px;
     border: 2px solid #D8D8D8;
@@ -1227,6 +1224,7 @@ a.text-link {
   .lgp-form .custom-control-label:hover::before, .lgp-form-alt .custom-control-label:hover::before {
     border-color: #FF2D6E; }
   .lgp-form .custom-control-label::after, .lgp-form-alt .custom-control-label::after {
+    top: 5px;
     left: 5px;
     width: 10px;
     height: 10px;

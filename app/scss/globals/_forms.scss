@@ -57,15 +57,14 @@
     font-family: $font-family-input;
     margin-bottom: 0;
     padding-left: 35px;
-    line-height: 1;
+    // line-height: 1;
     cursor: pointer;
 
     &::before, &::after {
-      top: 50%;
-      transform: translateY(-50%);
       transition: $component-hover-fx-duration;
     }
     &::before {
+      top: 0;
       width: 20px;
       height: 20px;
       border: 2px solid $color-brand-grey-light; 
@@ -75,6 +74,7 @@
       border-color: $color-brand-fuchsia;
     }
     &::after {
+      top: 5px;
       left: 5px;
       width: 10px;
       height: 10px;
