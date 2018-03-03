@@ -192,6 +192,9 @@
     font-size: 1.2em;
     font-weight: 500;
   }
+  .form-header {
+    color: $color-brand-grey-dark !important;
+  }
 
   // sizing:
   $form-control-size-map: (

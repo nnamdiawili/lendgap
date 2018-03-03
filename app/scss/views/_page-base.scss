@@ -23,10 +23,15 @@
 .page-section {
   overflow-x: hidden;
 }
-.page-section:not(.image-bg-section) .content {
-  @include fluid-prop(padding-top, 50px, 120px, $grid-breakpoint-xs);
-  @include fluid-prop(padding-bottom, 50px, 120px, $grid-breakpoint-xs);
-}
+.page-section:not(.image-bg-section) {
+  .content {
+    @include fluid-prop(padding-top, 50px, 120px, $grid-breakpoint-xs);
+    @include fluid-prop(padding-bottom, 50px, 120px, $grid-breakpoint-xs);
+  }
+  .header-lg, .header-md-alt {
+    color: $color-brand-blue;
+  }
+} 
 
 
 // -------------------------------------------------------------------------

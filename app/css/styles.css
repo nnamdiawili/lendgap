@@ -1376,6 +1376,9 @@ a.text-link {
   font-size: 1.2em;
   font-weight: 500; }
 
+.lgp-form-alt .form-header {
+  color: #A4A4A4 !important; }
+
 .lgp-form-alt .form-control.form-control-sm {
   height: 35px;
   padding: 0 11.66667px;
@@ -1863,6 +1866,8 @@ a.text-link {
   min-height: 200px;
   border-radius: 5px;
   overflow: hidden; }
+  .lgp-modal .modal-content .header-lg, .lgp-modal .modal-content .header-md-alt {
+    color: #113E52; }
 
 @media (min-width: 768px) {
   .lgp-modal .modal-dialog {
@@ -1998,6 +2003,9 @@ a.text-link {
   @media screen and (min-width: 992px) {
     .page-section:not(.image-bg-section) .content {
       padding-bottom: 120px; } }
+
+.page-section:not(.image-bg-section) .header-lg, .page-section:not(.image-bg-section) .header-md-alt {
+  color: #113E52; }
 
 .image-bg-section {
   position: relative;
@@ -2644,9 +2652,6 @@ a.text-link {
 .auth.page-section .lgp-form .form-group {
   margin-bottom: 1.5rem; }
 
-.page-section:not(.image-bg-section) .content [class*='header-'] {
-  color: #113E52; }
-
 .hero .gradient {
   position: absolute;
   top: 50%;
@@ -2748,25 +2753,25 @@ a.text-link {
   .benefits.page-section .illustrated-item .title {
     color: #FF2D6E; }
 
-.marketplace.page-section .content {
+.livemarket.page .marketplace.page-section .content {
   padding-top: 0; }
 
-.marketplace .lgp-tabs {
+.livemarket.page .marketplace .lgp-tabs {
   margin-top: 15px; }
   @media screen and (min-width: 768px) {
-    .marketplace .lgp-tabs {
+    .livemarket.page .marketplace .lgp-tabs {
       margin-top: calc(15px + 12 * ((100vw - 768px) / 224)); } }
   @media screen and (min-width: 992px) {
-    .marketplace .lgp-tabs {
+    .livemarket.page .marketplace .lgp-tabs {
       margin-top: 27px; } }
 
-.marketplace .lgp-tabs .tab-panel {
+.livemarket.page .marketplace .lgp-tabs .tab-panel {
   margin-top: 10px; }
   @media screen and (min-width: 768px) {
-    .marketplace .lgp-tabs .tab-panel {
+    .livemarket.page .marketplace .lgp-tabs .tab-panel {
       margin-top: calc(10px + 7 * ((100vw - 768px) / 224)); } }
   @media screen and (min-width: 992px) {
-    .marketplace .lgp-tabs .tab-panel {
+    .livemarket.page .marketplace .lgp-tabs .tab-panel {
       margin-top: 17px; } }
 
 .loan-details.page {

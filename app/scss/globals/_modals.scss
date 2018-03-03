@@ -11,6 +11,10 @@
     min-height: 200px;
     border-radius: $component-border-radius;
     overflow: hidden;
+
+    .header-lg, .header-md-alt {
+      color: $color-brand-blue;
+    }
   }
   
   @media (min-width: $grid-breakpoint-md) {

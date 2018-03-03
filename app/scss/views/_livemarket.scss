@@ -3,13 +3,15 @@
 // Marketplace section
 // -------------------------------------------------------------------------
 
-.marketplace.page-section .content {
-  padding-top: 0;
-}
-.marketplace .lgp-tabs {
-  @include fluid-prop(margin-top, 15px, 27px, $grid-breakpoint-md);
-
-  .tab-panel {
-    @include fluid-prop(margin-top, 10px, 17px, $grid-breakpoint-md);
+.livemarket.page {
+  .marketplace.page-section .content {
+    padding-top: 0;
+  }
+  .marketplace .lgp-tabs {
+    @include fluid-prop(margin-top, 15px, 27px, $grid-breakpoint-md);
+  
+    .tab-panel {
+      @include fluid-prop(margin-top, 10px, 17px, $grid-breakpoint-md);
+    }
   }
 }
