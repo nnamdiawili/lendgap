@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('build-styles', function() {
-  gulp.src('app/scss/**/*.scss')
+  gulp.src('app/scss/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('app/css/'));
