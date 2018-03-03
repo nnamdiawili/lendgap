@@ -272,6 +272,13 @@
   }
 }
 
+.btn.btn-input-group {
+  @include btn-color-themes(
+    $normal: $color-brand-blue $color-white rgba($color-brand-grey-light, $form-control-blur-opacity),
+    $hover: $color-brand-fuchsia null $color-brand-grey-light
+  );
+}
+
 .btn.close{
   .icon {
     width: 15px;

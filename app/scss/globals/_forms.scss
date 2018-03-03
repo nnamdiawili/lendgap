@@ -57,7 +57,7 @@
     font-family: $font-family-input;
     margin-bottom: 0;
     padding-left: 35px;
-    // line-height: 1;
+    line-height: 1.3;
     cursor: pointer;
 
     &::before, &::after {
@@ -140,9 +140,9 @@
     line-height: 1.5;
     border: 1px solid rgba($color-brand-grey-light, $form-control-blur-opacity);
     border-radius: $component-border-radius;
-    background-color: #e9ecef;
+    background-color: $color-brand-ash-dark;
     color: $color-brand-blue;
-}
+  }
   
 
   // form control sizing

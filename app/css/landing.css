@@ -1157,6 +1157,18 @@ a.text-link {
     .btn.btn-sidebar.active .icon, .active > .btn.btn-sidebar .icon {
       fill: #FFF; }
 
+.btn.btn-input-group {
+  color: #113E52;
+  background-color: #FFF;
+  border-color: rgba(216, 216, 216, 0.5); }
+  .btn.btn-input-group .icon {
+    fill: #113E52; }
+  .btn.btn-input-group:hover {
+    color: #FF2D6E;
+    border-color: #D8D8D8; }
+    .btn.btn-input-group:hover .icon {
+      fill: #FF2D6E; }
+
 .btn.close .icon {
   width: 15px;
   height: 15px; }
@@ -1212,6 +1224,7 @@ a.text-link {
   font-family: "Brandon Grotesque", sans-serif;
   margin-bottom: 0;
   padding-left: 35px;
+  line-height: 1.3;
   cursor: pointer; }
   .lgp-form .custom-control-label::before, .lgp-form .custom-control-label::after, .lgp-form-alt .custom-control-label::before, .lgp-form-alt .custom-control-label::after {
     transition: 0.3s; }
@@ -1284,7 +1297,7 @@ a.text-link {
   line-height: 1.5;
   border: 1px solid rgba(216, 216, 216, 0.5);
   border-radius: 5px;
-  background-color: #e9ecef;
+  background-color: #E9ECEF;
   color: #113E52; }
 
 .lgp-form .form-control.form-control-sm, .lgp-form-alt .form-control.form-control-sm {
