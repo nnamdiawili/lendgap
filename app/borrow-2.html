@@ -116,7 +116,7 @@
                             </div>
                             <div class="col-12 col-lg-7">
                                 <div class="form-group">
-                                    <label class="form-label-caps" for="amount-input">Duration/Tenure<span class="extra">(For how long?)</span></label>
+                                    <label class="form-label-caps" for="amount-input">Duration<span class="extra">(For how long?)</span></label>
                                     <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="5">
                                 </div>
                             </div>
@@ -125,8 +125,8 @@
                                     <label class="form-label-caps" for="duration-type-select">&nbsp;</label>
                                     <div class="select-wrapper">
                                         <select class="form-control form-control-md" id="duration-type-select" name="duration-type">
-                                            <option value="" selected>Month(s)</option>
-                                            <option value="" >Day(s)</option>
+                                            <option value="" selected>Day(s)</option>
+                                            <option value="" >Month(s)</option>
                                             <option value="" >Year(s)</option>
                                         </select>
                                     </div>
@@ -138,6 +138,23 @@
                                     <input type="text" class="form-control form-control-md" name="interest" id="interest-input">
                                 </div>
                             </div>
+
+                            <!-- Elias' Code -->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label-caps" for="interest-tenure-select">Interest Tenure<span class="extra">(Frequency)</span></label>
+                                    <div class="select-wrapper">
+                                        <select  class="form-control form-control-md" id="interest-tenure-select" name="interest-tenure">
+                                            <option value="" selected>Daily</option>
+                                            <option value="">Weekly</option>
+                                            <option value="">Monthly</option>
+                                            <option value="">Yearly</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Elias' Code -->
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label-caps" for="repayment-input">Repayment<span class="extra">(Payback Amount)</span></label>
@@ -166,11 +183,23 @@
                                 <p class="form-text">You will pay back <span class="text-accent text-heavy">N 38,900 every month</span>, for <span class="text-accent text-heavy">5 Months</span>.<span class="help-info inline"/></p>
                             </div>
                             <div class="col-12">
-                                <div class="custom-control custom-checkbox mb-2">
-                                    <input type="checkbox" id="marketplace-input" name="marketplace" class="custom-control-input">
-                                    <label class="custom-control-label" for="marketplace-input">Publish to Marketplace.</label>
-                                </div>
-                                <p class="form-text">When you submit a loan request, LendGap uploads it to the Marketplace where potential Lenders can view and assess, and choose to accept the request. The higher your rating, the more likely and quickly your request will be accepted. Ensure you stick to the terms of this request. Funding on LendGap is simple and clear, with no hidden fees.</p>
+                               <!-- Elias' Code -->
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="marketplace-publish-1-input" name="marketplace-publish" value="1" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="marketplace-1-publish-input">Publish to Marketplace</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto ml-5">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="marketplace-publish-2-input" name="marketplace-publish" value="0" class="custom-control-input">
+                                                        <label class="custom-control-label" for="marketplace-publish-2-input">Send to Lender</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <!-- Elias' Code -->
+                                <p class="form-text">When you publish a loan request to the Marketplace, potential Lenders can view, assess, and choose to accept the request. The higher your rating, the more likely and quickly your request will be accepted. Ensure you stick to the terms of this request. Funding on LendGap is simple and clear, with no hidden fees.</p>
                             </div>
                             <div class="col-12">
                                 <div class="custom-control custom-checkbox mt-3">
