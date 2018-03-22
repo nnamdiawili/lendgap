@@ -10,7 +10,7 @@
     "forbid": "*.json"
   },
   "scripts": {
-    "start": "ws"
+    "start": "ws -d 'app'"
   },
   "author": "",
   "license": "ISC",

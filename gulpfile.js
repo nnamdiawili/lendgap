@@ -5,13 +5,15 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('build-styles', function() {
-  gulp.src('scss/**/*.scss')
+  gulp.src('app/scss/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('app/css/'));
 });
 
 // Watch task
-gulp.task('default', function() {
-  gulp.watch('scss/**/*.scss', ['build-styles']);
+gulp.task('watch', ['build-styles'],  function() {
+  gulp.watch('app/scss/**/*.scss', ['build-styles']);
 });
+
+gulp.task('default', ['watch']);
