@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 </head>
-<body class="sidebar-container fixed-md">
+<body class="sidebar-container">
     <!-- header navbar -->
-    <header class="lgp-navbar dashboard-navbar">
+    <header class="lgp-navbar dashboard-navbar is-sidebar-responsive">
         <div class="content lgp-container d-flex justify-content-between align-items-center justify-content-md-end">
             <div class="navs d-md-none">
                 <a class="sidebar-toggle nav-burger left">
@@ -99,7 +99,7 @@
         <!-- alert section -->
         <section class="success lgp-alert alert-green collapse show">
             <div class="content lgp-container">
-                <p class="message text-small text-bold">You have indicated interest in funding this loan, and the borrower has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
+                <p class="message text-small">You have indicated interest in funding this loan, and the borrower has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
             </div>
             <button class="close btn btn-icon btn-lg btn-trans-white" type="button" data-toggle="collapse" data-target=".success.lgp-alert">
                 <svg class="icon"><use xlink:href="#close"/></svg>
@@ -175,7 +175,7 @@
                 </div>
                 <div class="messages lgp-container"></div>
             </div>
-            <div class="message-bar">
+            <div class="message-bar is-sidebar-responsive">
                 <div class="lgp-container lgp-form flexer">
                     <div class="input-group flexed">
                         <div class="input-group-prepend">
@@ -288,7 +288,7 @@
 
                     <div class="col-12 col-lg-4 cta">
                         <!-- <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="lend-3.html">Submit</button> -->
-                        <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="lend-details-counter-pay.html">Submit Counter Offer</a>
+                        <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="loan-details-lender-counter-pay.html">Submit Counter Offer</a>
                     </div>
                     
                 </form>
@@ -366,5 +366,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
 </body>
 </html>

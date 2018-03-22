@@ -45,7 +45,7 @@
 }
 
 .text-small {
-  font-size: 1em;
+  font-size: .8em;
 
   @media (min-width: $grid-breakpoint-sm) {
     font-size: .8rem;
@@ -76,6 +76,9 @@
 }
 .text-underlined {
   text-decoration: underline !important;
+}
+.text-italics {
+  font-style : italic !important;
 }
 .text-accent {
   color: $color-accent !important;

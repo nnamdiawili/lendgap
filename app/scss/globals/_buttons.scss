@@ -139,6 +139,13 @@
     $hover: $color-brand-fuchsia null null
   );
 }
+.btn.btn-trans-fuchsia {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-brand-fuchsia transparent null,
+    $hover: $color-brand-blue null null
+  );
+}
 .btn.btn-trans-grey {
   transition: $component-hover-fx-duration;
   @include btn-color-themes(
@@ -165,6 +172,13 @@
   @include btn-color-themes(
     $normal: $color-brand-green transparent $color-brand-green,
     $hover: $color-brand-green null null
+  );
+}
+.btn.btn-trans-border-white {
+  transition: $component-hover-fx-duration;
+  @include btn-color-themes(
+    $normal: $color-white transparent $color-white,
+    $hover: $color-white null null
   );
 }
 .btn.btn-grey {
