@@ -330,7 +330,7 @@ label {
         font-size: 20px; } }
 
 .text-small {
-  font-size: 1em; }
+  font-size: .8em; }
   @media (min-width: 544px) {
     .text-small {
       font-size: .8rem; } }
@@ -357,6 +357,9 @@ label {
 
 .text-underlined {
   text-decoration: underline !important; }
+
+.text-italics {
+  font-style: italic !important; }
 
 .text-accent {
   color: #FF2D6E !important; }
@@ -775,10 +778,19 @@ a.text-link {
     background-color: #03BF94; }
   .lgp-alert.alert-fuchsia {
     background-color: #FF2D6E; }
+  .lgp-alert.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10; }
+  .lgp-alert.fixed.show + * {
+    padding-top: 80px; }
   .lgp-alert .content {
     padding: 21px 60px 21px  0; }
   .lgp-alert .message {
     color: #FFF;
+    font-family: "Brandon Grotesque", sans-serif;
+    font-size: 1rem;
     padding: 0;
     margin: 0; }
   .lgp-alert .close {
@@ -973,6 +985,17 @@ a.text-link {
     .btn.btn-trans-alt:hover .icon {
       fill: #FF2D6E; }
 
+.btn.btn-trans-fuchsia {
+  transition: 0.3s;
+  color: #FF2D6E;
+  background-color: transparent; }
+  .btn.btn-trans-fuchsia .icon {
+    fill: #FF2D6E; }
+  .btn.btn-trans-fuchsia:hover {
+    color: #113E52; }
+    .btn.btn-trans-fuchsia:hover .icon {
+      fill: #113E52; }
+
 .btn.btn-trans-grey {
   transition: 0.3s;
   color: #D8D8D8;
@@ -1018,6 +1041,18 @@ a.text-link {
     color: #03BF94; }
     .btn.btn-trans-border-green:hover .icon {
       fill: #03BF94; }
+
+.btn.btn-trans-border-white {
+  transition: 0.3s;
+  color: #FFF;
+  background-color: transparent;
+  border-color: #FFF; }
+  .btn.btn-trans-border-white .icon {
+    fill: #FFF; }
+  .btn.btn-trans-border-white:hover {
+    color: #FFF; }
+    .btn.btn-trans-border-white:hover .icon {
+      fill: #FFF; }
 
 .btn.btn-grey {
   color: #113E52;
@@ -1695,6 +1730,69 @@ a.text-link {
       .table-header .loan-list-card, .loan-list-card.table-header {
         font-size: .95em; } }
 
+.chat-message-card {
+  display: block;
+  position: relative;
+  outline: none;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 1rem;
+  color: #113E52;
+  background-color: #FFF;
+  border-radius: 5px;
+  border: 1px solid #E9ECEF;
+  padding: 15px 25px;
+  margin: 30px 0;
+  max-width: 600px;
+  width: 100%;
+  transition: 0.3s; }
+  .chat-message-card.has-footer {
+    padding-bottom: 0; }
+  .chat-message-card .meta {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    left: 0;
+    font-family: "Brandon Grotesque", sans-serif;
+    color: #A4A4A4; }
+  .chat-message-card .badge {
+    position: absolute;
+    top: 25px;
+    right: 25px; }
+    .chat-message-card .badge .icon {
+      width: 40px;
+      height: 40px; }
+    .chat-message-card .badge .icon-green-mint {
+      fill: #1AE4B6; }
+    .chat-message-card .badge .icon-blue-turquoise {
+      fill: #1ACFE4; }
+  .chat-message-card .body .header {
+    font-size: 1em;
+    color: #A4A4A4; }
+  .chat-message-card .body .title {
+    color: #113E52;
+    font-weight: 500; }
+  .chat-message-card .body .detail {
+    display: block;
+    font-family: "Brandon Grotesque", sans-serif;
+    margin-bottom: 3px; }
+    .chat-message-card .body .detail .value {
+      color: #113E52; }
+  .chat-message-card .footer {
+    min-height: 40px; }
+    .chat-message-card .footer .cta {
+      padding-left: 0;
+      padding-right: 0; }
+    .chat-message-card .footer .cta-info {
+      font-style: italic;
+      color: #A4A4A4; }
+  .chat-message-card.own {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    background-color: #F8EDEF;
+    border-color: rgba(255, 92, 78, 0.1); }
+    .chat-message-card.own .meta {
+      text-align: right; }
+
 .hero-navbar {
   position: absolute;
   top: 0;
@@ -1939,7 +2037,7 @@ a.text-link {
       .sidebar-container > .sidebar {
         -webkit-transform: translateX(0);
                 transform: translateX(0); }
-      .sidebar-container .lgp-navbar {
+      .sidebar-container .is-sidebar-responsive {
         margin-left: 215px; } }
   @media screen and (max-width: 768px) {
     .sidebar-container.sidebar-opened {
@@ -2067,26 +2165,26 @@ a.text-link {
     top: 0;
     right: 0; }
 
-.footer {
+.page-footer {
   background-color: #152C35; }
-  .footer .content {
+  .page-footer .content {
     padding-top: 60px; }
     @media screen and (min-width: 300px) {
-      .footer .content {
+      .page-footer .content {
         padding-top: calc(60px + 20 * ((100vw - 300px) / 692)); } }
     @media screen and (min-width: 992px) {
-      .footer .content {
+      .page-footer .content {
         padding-top: 80px; } }
-  .footer .content {
+  .page-footer .content {
     padding-bottom: 60px; }
     @media screen and (min-width: 300px) {
-      .footer .content {
+      .page-footer .content {
         padding-bottom: calc(60px + 20 * ((100vw - 300px) / 692)); } }
     @media screen and (min-width: 992px) {
-      .footer .content {
+      .page-footer .content {
         padding-bottom: 80px; } }
   @media (min-width: 544px) and (max-width: 768px) {
-    .footer .content {
+    .page-footer .content {
       -webkit-box-orient: horizontal !important;
       -webkit-box-direction: normal !important;
           -ms-flex-direction: row !important;
@@ -2096,36 +2194,36 @@ a.text-link {
       -webkit-box-pack: justify !important;
           -ms-flex-pack: justify !important;
               justify-content: space-between !important; } }
-  .footer .brand {
+  .page-footer .brand {
     position: relative;
     -webkit-transform: translateY(3px);
             transform: translateY(3px);
     margin-bottom: 30px; }
     @media (min-width: 544px) and (max-width: 768px) {
-      .footer .brand {
+      .page-footer .brand {
         width: 100% !important;
         margin-bottom: 40px;
         -webkit-box-pack: center !important;
             -ms-flex-pack: center !important;
                 justify-content: center !important; } }
     @media (min-width: 768px) {
-      .footer .brand {
+      .page-footer .brand {
         margin-bottom: 0; } }
-    .footer .brand .logo {
+    .page-footer .brand .logo {
       width: 100px;
       height: 25px; }
       @media (min-width: 768px) {
-        .footer .brand .logo {
+        .page-footer .brand .logo {
           width: 125px;
           height: 31px; } }
-  .footer .divider {
+  .page-footer .divider {
     height: 70px; }
   @media (min-width: 544px) and (max-width: 768px) {
-    .footer .footer-nav {
+    .page-footer .footer-nav {
       -webkit-box-align: start !important;
           -ms-flex-align: start !important;
               align-items: flex-start !important; } }
-  .footer .footer-link {
+  .page-footer .footer-link {
     font-weight: 300;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2400,107 +2498,107 @@ a.text-link {
         -ms-grid-row-align: center;
         align-self: center; }
 
-#loan-modal {
+.loan-modal {
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em; }
-  #loan-modal .bookmark-toggle .icon-wrapper {
+  .loan-modal .bookmark-toggle .icon-wrapper {
     position: relative;
     width: 22px;
     height: 22px; }
-  #loan-modal .details {
+  .loan-modal .details {
     background-color: #FFF; }
-  #loan-modal .actions {
+  .loan-modal .actions {
     background-color: #F4F4F4; }
-  #loan-modal .content-section {
+  .loan-modal .content-section {
     height: 100%; }
-    #loan-modal .content-section {
+    .loan-modal .content-section {
       padding: 30px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .content-section {
+        .loan-modal .content-section {
           padding: calc(30px + 40 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .content-section {
+        .loan-modal .content-section {
           padding: 70px; } }
-  #loan-modal .details {
+  .loan-modal .details {
     position: relative;
     width: 100%; }
-  #loan-modal .section-header {
+  .loan-modal .section-header {
     margin-bottom: 1.8rem; }
-  #loan-modal .title {
+  .loan-modal .title {
     color: #113E52;
     margin-bottom: .2rem; }
-  #loan-modal .detail {
+  .loan-modal .detail {
     margin-top: .1rem; }
-    #loan-modal .detail.separate {
+    .loan-modal .detail.separate {
       margin-top: 20px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .detail.separate {
+        .loan-modal .detail.separate {
           margin-top: calc(20px + 15 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .detail.separate {
+        .loan-modal .detail.separate {
           margin-top: 35px; } }
-    #loan-modal .detail.separate-more {
+    .loan-modal .detail.separate-more {
       margin-top: 35px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .detail.separate-more {
+        .loan-modal .detail.separate-more {
           margin-top: calc(35px + 35 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .detail.separate-more {
+        .loan-modal .detail.separate-more {
           margin-top: 70px; } }
-  #loan-modal .profile-name {
+  .loan-modal .profile-name {
     margin-left: 15px;
     color: #113E52; }
-  #loan-modal .profile-photo {
+  .loan-modal .profile-photo {
     width: 40px;
     height: 40px; }
-    #loan-modal .profile-photo {
+    .loan-modal .profile-photo {
       width: 30px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           width: calc(30px + 10 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           width: 40px; } }
-    #loan-modal .profile-photo {
+    .loan-modal .profile-photo {
       height: 30px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           height: calc(30px + 10 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           height: 40px; } }
-    #loan-modal .profile-photo .avatar {
+    .loan-modal .profile-photo .avatar {
       fill: #FFF;
       background-color: transparent; }
-  #loan-modal .rating {
+  .loan-modal .rating {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    #loan-modal .rating .icon {
+    .loan-modal .rating .icon {
       fill: #D8D8D8;
       width: 12px;
       height: 12px; }
-      #loan-modal .rating .icon:not(:first-child) {
+      .loan-modal .rating .icon:not(:first-child) {
         margin-left: 2px; }
         @media screen and (min-width: 768px) {
-          #loan-modal .rating .icon:not(:first-child) {
+          .loan-modal .rating .icon:not(:first-child) {
             margin-left: calc(2px + 3 * ((100vw - 768px) / 224)); } }
         @media screen and (min-width: 992px) {
-          #loan-modal .rating .icon:not(:first-child) {
+          .loan-modal .rating .icon:not(:first-child) {
             margin-left: 5px; } }
-    #loan-modal .rating.stars-1 .icon:nth-child(-n + 1) {
+    .loan-modal .rating.stars-1 .icon:nth-child(-n + 1) {
       fill: #113E52; }
-    #loan-modal .rating.stars-2 .icon:nth-child(-n + 2) {
+    .loan-modal .rating.stars-2 .icon:nth-child(-n + 2) {
       fill: #113E52; }
-    #loan-modal .rating.stars-3 .icon:nth-child(-n + 3) {
+    .loan-modal .rating.stars-3 .icon:nth-child(-n + 3) {
       fill: #113E52; }
-    #loan-modal .rating.stars-4 .icon:nth-child(-n + 4) {
+    .loan-modal .rating.stars-4 .icon:nth-child(-n + 4) {
       fill: #113E52; }
-    #loan-modal .rating.stars-5 .icon:nth-child(-n + 5) {
+    .loan-modal .rating.stars-5 .icon:nth-child(-n + 5) {
       fill: #113E52; }
-  #loan-modal .ctas {
+  .loan-modal .ctas {
     margin-top: 30px; }
-    #loan-modal .ctas .btn {
+    .loan-modal .ctas .btn {
       margin-top: 10px; }
 
 .chat {
@@ -2519,10 +2617,13 @@ a.text-link {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
   .chat .message-bar {
-    position: absolute;
+    position: fixed;
     right: 0;
-    bottom: 30px;
-    left: 0; }
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding: 30px 0;
+    background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0), #f4f4f4 20%); }
     .chat .message-bar .btn .icon {
       width: 22px !important;
       height: 22px !important; }

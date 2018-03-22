@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 </head>
-<body class="sidebar-container fixed-md">
+<body class="sidebar-container">
     <!-- header navbar -->
-    <header class="lgp-navbar dashboard-navbar">
+    <header class="lgp-navbar dashboard-navbar is-sidebar-responsive">
         <div class="content lgp-container d-flex justify-content-between align-items-center justify-content-md-end">
             <div class="navs d-md-none">
                 <a class="sidebar-toggle nav-burger left">
@@ -97,13 +97,11 @@
     <!-- page content -->
     <main class="loan-details page dashboard-page sidebar-pusher d-flex flex-column flexer">
         <!-- alert section -->
-        <section class="success lgp-alert alert-green collapse show">
-            <div class="content lgp-container">
-                <p class="message text-small text-bold">You have successfully applied for this loan, and the lender has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
+        <section class="success lgp-alert alert-green is-sidebar-responsive fixed collapse show">
+            <div class="content lgp-container text-center text-sm-right pr-0">
+                <span class="message text-small d-block  d-sm-inline-block mb-2 mb-md-0">You have accepted to fund this loan.</span>
+                <a class="btn btn-sm btn-trans-border-white btn-caps btn-chrome btn-shadow ml-sm-4" href="payment-processing.html">Proceed to Pay</a>
             </div>
-            <button class="close btn btn-icon btn-lg btn-trans-white" type="button" data-toggle="collapse" data-target=".success.lgp-alert">
-                <svg class="icon"><use xlink:href="#close"/></svg>
-            </button>
         </section>
         <!-- loan-details section -->
         <section class="loan-details dashboard-details page-section">
@@ -139,10 +137,9 @@
                                 <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-3.jpg')"></div>
                             </div>
                             <div class="profile-details d-flex flex-column">
-                                <span class="section-header">Lender</span>
-                                <h2 class="profile-name header-xs">Bimpe Oladimeji</h2>
+                                <span class="section-header">Borrower</span>
+                                <h2 class="profile-name header-xs">Bimpe Adegbite</h2>
                                 <div class="lender-rating ">
-                                    <!--<span class="preamble">Lender Rating:</span>-->
                                     <span class="rating stars-3">
                                         <svg class="icon">
                                             <use  xlink:href="#star"></use>
@@ -167,17 +164,113 @@
                 </div>
             </div>
         </section>
-
         <!-- chat section -->
-        <section class="chat page-section flexed-no-shrink flexer">
+        <section class="chat page-section flexed-no-shrink flexed">
             <div class="thread flexed-no-shrink">
-                <div class="lgp-prompt">
-                    <svg class="icon"><use xlink:href="#chat"/></svg>
-                    <p class="caption">Start a conversation with Bimpe</p>
+                <div class="messages lgp-container d-flex flex-column">
+
+                    <div class="chat-message-card">
+                        <div class="meta text-small">Tue. 3:15 PM</div>
+                        <div class="body d-flex flex-column">
+                            <span class="">Hello Jumoke. Good afternoon. I'm interested in taking this loan. Can we change the interest tenure to Monthly. That would work well with my monthly salary. Thanks.</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-message-card has-footer own">
+                        <div class="meta text-small">Tue. 9:36 AM</div>
+                        <div class="body d-flex flex-column">
+                            <span class="header mb-2 mb-md-2">New Counter Offer</span>
+                            <span class="title loan-amount header-sm"><span class="currency text-unit">N</span><span class="amount">600,000</span></span>
+                            <span class="detail mt-1 mt-sm-3"><span class="preamble">Interest Rate:</span><span class="value">50%</span></span>
+                            <div class="collapse" id="counter-offer-1-details-collapse">
+                                <span class="detail"><span class="preamble">Interest Tenure:</span><span class="value">Monthly</span></span>
+                                <span class="detail"><span class="preamble">Repayment Type:</span><span class="value">One Off</span></span>
+                                <span class="detail"><span class="preamble">Repayment Date:</span><span class="value">March 13, 2018</span></span>
+                                <span class="detail"><span class="preamble">Payment schedule:</span><span class="value">N600,000 on March 13, 2018</span></span>
+                            </div>
+                        </div>
+                        <div class="divider horizontal w-100 mt-3 mb-1"></div>
+                        <div class="footer d-flex flex-row justify-content-between align-items-center mb-2">
+                            <button class="cta btn btn-trans-fuchsia" data-toggle="collapse" data-target="#counter-offer-1-details-collapse">View More</button>
+                            <div class="cta-group">
+                                <a class="cta btn btn-trans-fuchsia" href="">Accept</a>
+                                <a class="cta btn btn-trans-fuchsia ml-4" href="">Decline</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-message-card own">
+                        <div class="meta text-small">Tue. 10:15 PM</div>
+                        <div class="body d-flex flex-column">
+                            <span class="">I just sent you a counteroffer. Pls, look into it and let me know if it’s something you can work with. Thanks.</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-message-card has-footer">
+                        <div class="meta text-small">Tue. 10:20 AM</div>
+                        <div class="body d-flex flex-column">
+                            <span class="header mb-2 mb-md-2">New Counter Offer</span>
+                            <span class="title loan-amount header-sm"><span class="currency text-unit">N</span><span class="amount">600,000</span></span>
+                            <span class="detail mt-1 mt-sm-3"><span class="preamble">Interest Rate:</span><span class="value">50%</span></span>
+                            <div class="collapse" id="counter-offer-2-details-collapse">
+                                <span class="detail"><span class="preamble">Interest Tenure:</span><span class="value">Monthly</span></span>
+                                <span class="detail"><span class="preamble">Repayment Type:</span><span class="value">One Off</span></span>
+                                <span class="detail"><span class="preamble">Repayment Date:</span><span class="value">March 13, 2018</span></span>
+                                <span class="detail"><span class="preamble">Payment schedule:</span><span class="value">N600,000 on March 13, 2018</span></span>
+                            </div>
+                        </div>
+                        <div class="divider horizontal w-100 mt-3 mb-1"></div>
+                        <div class="footer d-flex flex-row justify-content-between align-items-center mb-2">
+                            <button class="cta btn btn-trans-fuchsia" data-toggle="collapse" data-target="#counter-offer-2-details-collapse">View More</button>
+                            <div class="cta-group">
+                                <a class="cta btn btn-trans-fuchsia" href="">Accept</a>
+                                <a class="cta btn btn-trans-fuchsia ml-4" href="">Decline</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-message-card">
+                        <div class="meta text-small">Tue. 3:15 PM</div>
+                        <div class="body d-flex flex-column">
+                            <span class="">I just sent you a counteroffer. Pls, look into it and let me know if it’s something you can work with. Thanks.</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-message-card own">
+                        <div class="meta text-small">Tue. 3:40 PM</div>
+                        <div class="body d-flex flex-column">
+                            <span class="">I guess I am OK with the final offer. I'll go ahead and make payment. Pleasure doing business with you.</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-message-card has-footer">
+                        <div class="meta text-small">Tue. 10:20 AM</div>
+                        <span class="badge accepted">
+                            <svg class="icon icon-lg icon-green-mint"><use xlink:href="#badge"/></svg>
+                        </span>
+                        <div class="body d-flex flex-column">
+                            <span class="header mb-2 mb-md-2">New Counter Offer</span>
+                            <span class="title loan-amount header-sm"><span class="currency text-unit">N</span><span class="amount">600,000</span></span>
+                            <span class="detail mt-1 mt-sm-3"><span class="preamble">Interest Rate:</span><span class="value">50%</span></span>
+                            <div class="collapse" id="counter-offer-3-details-collapse">
+                                <span class="detail"><span class="preamble">Interest Tenure:</span><span class="value">Monthly</span></span>
+                                <span class="detail"><span class="preamble">Repayment Type:</span><span class="value">Recurring</span></span>
+                                <span class="detail"><span class="preamble">No. of Installments:</span><span class="value">8</span></span>
+                                <span class="detail"><span class="preamble">Repayment Tenure:</span><span class="value">Monthly</span></span>
+                                <span class="detail"><span class="preamble">Repayment Start Date:</span><span class="value">March 13, 2018</span></span>
+                                <span class="detail"><span class="preamble">Payment schedule:</span><span class="value">N90,000 every Month from March 13, 2018</span></span>
+                            </div>
+                        </div>
+                        <div class="divider horizontal w-100 mt-3 mb-1"></div>
+                        <div class="footer d-flex flex-row justify-content-between align-items-center mb-2">
+                            <button class="cta btn btn-trans-fuchsia" data-toggle="collapse" data-target="#counter-offer-3-details-collapse">View More</button>
+                            <span class="cta-info text-italics">Bimpe accepted this offer.</span>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="messages lgp-container"></div>
             </div>
-            <div class="message-bar">
+            <div class="message-bar is-sidebar-responsive">
                 <div class="lgp-container lgp-form flexer">
                     <div class="input-group flexed">
                         <div class="input-group-prepend">
@@ -206,9 +299,10 @@
             <div class="modal-content p-5">
                 <h2 class="header-md-alt mb-5">Propose a Counter Offer</h2>
                 <form class="lgp-form row">
+
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="form-label-caps" for="amount-input">Amount<span class="extra">(How much do you want to lend?)</span></label>
+                            <label class="form-label-caps" for="amount-input">Amount</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">&#8358;</span>
@@ -217,72 +311,81 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-7">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="amount-input">Duration/Tenure<span class="extra">(For how long?)</span></label>
-                            <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="8">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-5">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="duration-type-select">&nbsp;</label>
-                            <div class="select-wrapper">
-                                <select class="form-control form-control-md" id="duration-type-select" name="duration-type">
-                                    <option value="" selected>Month(s)</option>
-                                    <option value="" >Day(s)</option>
-                                    <option value="" >Year(s)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="start-date-input">Start Date</label>
-                            <input class="form-control form-control-md" type="date" name="start-date" value="07/06/2018" id="start-date-input">
-                        </div>
-                    </div>
                     <div class="col-12">
                         <div class="form-group">
                             <label class="form-label-caps" for="interest-input">Interest Rate<span class="extra">(%)</span></label>
-                            <input type="text" class="form-control form-control-md" name="interest" id="interest-input">
+                            <input type="text" class="form-control form-control-md" name="interest" id="interest-input" value="3">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="form-label-caps" for="repayment-input">Repayment<span class="extra">(Payback Amount)</span></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">&#8358;</span>
-                                </div>
-                                <input type="text" class="form-control form-control-md" name="repayment" id="repayment-input" value="660,000">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="repayment-type-input">Repayment Type<span class="extra">(Payback Frequency)</span></label>
+                            <label class="form-label-caps" for="interest-tenure-select">Interest Tenure</label>
                             <div class="select-wrapper">
-                                <select class="form-control form-control-md" id="repayment-type-select" name="repayment-type">
-                                    <option value="" selected>Monthly Installment</option>
-                                    <option value="">Weekly</option>
-                                    <option value="">Custom</option>
+                                <select class="form-control form-control-md" id="interest-tenure-select" name="interest-tenure">
+                                    <option value="" >Daily</option>
+                                    <option value="" >Weekly</option>
+                                    <option value="" selected>Monthly</option>
+                                    <option value="" >Yearly</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="form-label-caps" for="purpose-input">Message<span class="extra">(Optional)</span></label>
-                            <textarea  class="form-control form-control-md" name="purpose" id="purpose-input" rows="3"></textarea>
+                            <label class="form-label-caps">Repayment Type</label>
+                            <div class="form-row">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="repayment-type-1-input" name="repayment-type" value="1" class="custom-control-input" data-toggle="collapse" data-target="#repayment-type-1-collapse">
+                                        <label class="custom-control-label text-accent-sec" for="repayment-type-1-input">One Off</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto ml-5">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="repayment-type-2-input" name="repayment-type" value="0" class="custom-control-input" data-toggle="collapse" data-target="#repayment-type-2-collapse" checked>
+                                        <label class="custom-control-label text-accent-sec" for="repayment-type-2-input">Recurring</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 mb-4">
-                        <p class="form-text">You will be paid <span class="text-accent text-heavy">N90,000 every month</span>, for <span class="text-accent text-heavy">8 Months</span>.<span class="help-info inline"/></p>
+                    <div class="col-12" id="repayment-type-accordion">
+                        <div class="collapse" id="repayment-type-1-collapse" data-parent="#repayment-type-accordion">
+                            <div class="form-group">
+                                <label class="form-label-caps" for="repayment-date-input">Repayment Date</label>
+                                <input class="form-control form-control-md" type="date" name="repayment-date" id="repayment-date-input" value="03/13/2018">
+                            </div>
+                            <p class="form-text">You will be paid <span class="text-accent text-heavy">N600,000</span> on <span class="text-accent text-heavy">March 13, 2018</span>.<span class="help-info inline"/></p>
+                        </div>
+                        <div class="collapse show" id="repayment-type-2-collapse" data-parent="#repayment-type-accordion">
+                            <div class="form-group">
+                                <label class="form-label-caps" for="installments-input">Number of Installments</label>
+                                <input type="text" class="form-control form-control-md" name="installments" id="installments-input" value="5">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label-caps" for="repayment-tenure-select">Repayment Tenure</label>
+                                <div class="select-wrapper">
+                                    <select class="form-control form-control-md" id="repayment-tenure-select" name="repayment-tenure">
+                                        <option value="" >Daily</option>
+                                        <option value="" >Weekly</option>
+                                        <option value="" selected>Monthly</option>
+                                        <option value="" >Yearly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label-caps" for="repayment-start-date-input">Repayment Start Date</label>
+                                <input class="form-control form-control-md" type="date" name="repayment-start-date" id="repayment-start-date-input" value="2018-03-13">
+                            </div>
+                            <p class="form-text">You will be paid <span class="text-accent text-heavy">N90,000 every month</span>, for <span class="text-accent text-heavy">5 Months</span> starting from <span class="text-accent text-heavy">March 13, 2018</span></p>
+                        </div>
                     </div>
+
                     <div class="col-12 col-lg-4 cta">
-                        <!-- <button class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="">Submit</button> -->
-                        <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="">Submit Counter Offer</a>
+                        <!-- <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="lend-3.html">Submit</button> -->
+                        <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="loan-details-lender-counter-pay.html">Submit Counter Offer</a>
                     </div>
+                    
                 </form>
             </div>
             <div class="modal-options d-flex flex-column">
@@ -350,6 +453,9 @@
             <symbol id="proposal" viewBox="0 0 25 30">
                 <path d="M0.895845761,2.77267415e-06 C0.407898806,0.0511459346 -0.00261148934,0.509389759 1.25104152e-05,1.00000268 L1.25104152e-05,24.3333339 C6.48437437e-05,24.8569181 0.476428133,25.3332814 1.00001242,25.3333338 L9.39584498,25.3333338 C10.6626552,28.0853892 13.4470873,30 16.6666776,30 C19.8523007,30 22.6126371,28.1353835 23.8958436,25.4270838 C24.1460726,24.9526965 23.9274303,24.2907909 23.4438657,24.0587919 C22.9603014,23.8267926 22.3071934,24.0704585 22.0937605,24.5625005 C21.1326596,26.5910003 19.0708801,28.0000002 16.6666776,28.0000002 C13.3411246,28.0000002 10.6666782,25.3255671 10.6666782,22.0000007 C10.6666782,18.6744344 13.3411246,16.0000013 16.6666776,16.0000013 C19.9922307,16.0000013 22.6666771,18.6744344 22.6666771,22.0000007 C22.6592071,22.5283134 23.1383117,23.0142426 23.666677,23.0142426 C24.1950423,23.0142426 24.6741486,22.5283134 24.6666769,22.0000007 C24.6666769,18.2855414 22.1079641,15.1538617 18.6666775,14.2604181 L18.6666775,6.33333552 C18.6673108,6.07129821 18.5599708,5.81061957 18.3750108,5.62500225 L13.041678,0.291669412 C12.8560607,0.106709396 12.595382,-0.000628927267 12.3333447,2.77267415e-06 C8.52391239,1.97267422e-06 4.69756641,2.77267415e-06 0.895845761,2.77267415e-06 Z M2.00001233,2.00000259 L11.3333448,2.00000259 L11.3333448,6.33333552 C11.3333971,6.85691981 11.8097604,7.33328309 12.3333447,7.33333543 L16.6666776,7.33333543 L16.6666776,14.0000015 C15.8708524,14.0000015 15.1013884,14.1257388 14.3750112,14.3437514 C10.7185079,14.3229328 7.03432786,14.3329961 3.89584548,14.3333348 C3.3721842,14.3605174 2.92048191,14.8617704 2.94775557,15.385427 C2.97502924,15.9090836 3.47636019,16.3606993 4.00001214,16.3333346 L11.0312615,16.3333346 C10.7185119,16.6438499 10.4355872,16.9751705 10.1770949,17.3333345 C8.08723876,17.3333318 5.97766129,17.3333345 3.89584548,17.3333345 C3.3721842,17.3605178 2.92048191,17.8617701 2.94775557,18.3854267 C2.97502924,18.9090834 3.47636019,19.360699 4.00001214,19.3333343 L9.12501167,19.3333343 C9.00958201,19.6576383 8.90644102,19.9915196 8.83334503,20.3333342 C7.19180318,20.3333299 5.52918733,20.3333342 3.89584548,20.3333342 C3.3721842,20.3605176 2.92048191,20.8617698 2.94775557,21.3854265 C2.97502924,21.9090831 3.47636019,22.3606987 4.00001214,22.333334 L8.67709504,22.333334 C8.69094171,22.6729653 8.72604337,23.00571 8.7812617,23.3333339 L2.00001233,23.3333339 L2.00001233,2.00000259 Z M13.3333446,3.40625246 L15.2604278,5.33333561 L13.3333446,5.33333561 L13.3333446,3.40625246 Z M3.89584548,11.3333351 C3.3721842,11.3605184 2.92048191,11.8617707 2.94775557,12.3854273 C2.97502924,12.9090839 3.47636019,13.3606995 4.00001214,13.3333349 L14.6666778,13.3333349 C15.1949904,13.3408082 15.6809197,12.8617003 15.6809197,12.333335 C15.6809197,11.8049697 15.1949904,11.3258634 14.6666778,11.3333351 C11.0795375,11.3333341 7.47524649,11.3333351 3.89584548,11.3333351 Z M16.656261,25.9766106 C16.129142,25.9711812 15.6557214,25.4828103 15.6666777,24.9557773 L15.6666777,21.3724443 L15.3750111,21.664111 C15.1654688,21.8822433 14.8529998,21.9969469 14.5520945,21.9661943 C14.1777039,21.9260566 13.8376496,21.655789 13.7140339,21.3001227 C13.5904179,20.9444564 13.6895506,20.5215447 13.9583446,20.2578611 L15.9583444,18.2578613 C16.3287853,17.8862063 17.0045699,17.8862063 17.3750109,18.2578613 L19.3750107,20.2578611 C19.782843,20.6193147 19.8029953,21.3321787 19.4162347,21.7160956 C19.0294741,22.1000123 18.3167782,22.0745996 17.9583442,21.664111 L17.6666775,21.3724443 L17.6666775,24.9557773 C17.6777809,25.4897539 17.1903236,25.9822356 16.656261,25.9766106 Z" fill-rule="evenodd"></path>
             </symbol>
+            <symbol id="badge" viewBox="0 -1 50 52">
+                <path d="M48.479933,27.9161926 L47.5373904,26.6292237 C46.7602213,25.5638346 46.7479343,24.1217797 47.5068364,23.0433025 L48.4327133,21.7470748 C48.9418859,21.0267879 49.1168766,20.1223853 48.913127,19.2641568 C48.7093775,18.4059282 48.1465487,17.6766892 47.3679549,17.2621272 L45.9652514,16.5056857 C44.801317,15.8837585 44.1630436,14.5893369 44.3782984,13.2873377 L44.6449509,11.7133469 C44.7908869,10.8432065 44.5554269,9.95233853 43.998619,9.26793613 C43.441811,8.58353373 42.6174783,8.17175385 41.7358457,8.13761038 L40.1377822,8.06631786 C38.8168054,8.01173384 37.6785973,7.11883891 37.3110801,5.8488427 L36.8657333,4.31373881 C36.6197215,3.46496121 36.0202109,2.76317643 35.2202875,2.38758645 C34.4203641,2.01199646 33.4974639,1.9989599 32.6872509,2.35180567 L31.2225136,2.98510547 C30.0063692,3.50847297 28.5918004,3.19565714 27.7097367,2.20829476 L26.6449783,1.02317233 C26.0546106,0.366632351 25.2114282,-0.00577243667 24.3285099,6.76719053e-05 C23.4455917,0.00590778048 22.6074094,0.389434043 22.0257785,1.05372627 L20.9813893,2.25736623 C20.1131407,3.25023132 18.7104789,3.58267556 17.4889817,3.08510017 L16.0159115,2.48513195 C15.1986107,2.14852419 14.2761482,2.17888267 13.4827476,2.56849903 C12.689347,2.9581154 12.1013236,3.6695134 11.8679831,4.52206111 L11.4467091,6.05068386 C11.1151029,7.33197244 9.99078689,8.25016383 8.6690784,8.31908225 L7.07101488,8.41166994 C6.19113838,8.45928567 5.37436289,8.88343999 4.82930348,9.57579839 C4.28424406,10.2681568 4.06367899,11.161678 4.22394344,12.0281451 L4.51096527,13.5910253 C4.75007358,14.8892649 4.13125573,16.1947879 2.97493551,16.8315944 L1.58612017,17.6084051 C0.814490769,18.0334148 0.263068513,18.7699224 0.072548812,19.6300081 C-0.117970889,20.4900938 0.0708385919,21.390572 0.590802509,22.1016857 L1.53334519,23.3886546 C2.31023095,24.4541373 2.32251646,25.8960097 1.56389912,26.9745758 L0.638022231,28.2708034 C0.128519232,28.9911478 -0.0466646475,29.8957863 0.157099973,30.7542555 C0.360864593,31.6127247 0.923904323,32.3421398 1.70278066,32.756677 L3.11011353,33.5168219 C4.27440612,34.1384719 4.91308269,35.4329557 4.69799241,36.73517 L4.42022934,38.2980502 C4.27430857,39.1680368 4.50964941,40.0587561 5.0662534,40.7431256 C5.6228574,41.4274951 6.44694048,41.8393849 7.32840866,41.8737867 L8.92739805,41.9423016 C10.2506867,41.9963516 11.3906927,42.8916443 11.7568778,44.1644062 L12.1975952,45.6967324 C12.443607,46.54551 13.0431177,47.2472948 13.843041,47.6228848 C14.6429644,47.9984748 15.5658647,48.0115113 16.3760777,47.6586655 L17.8408149,47.0253658 C19.05523,46.5037271 20.4669317,46.811816 21.3535918,47.7919918 L22.4183503,48.9771142 C23.0087179,49.6336542 23.8519004,50.006059 24.7348186,50.0002189 C25.6177368,49.9943788 26.4559191,49.6108525 27.0375501,48.9465603 L28.0819392,47.7429203 C28.950035,46.7498017 30.3528724,46.4173159 31.5743469,46.9151864 L33.0492687,47.5179323 C33.8665696,47.85454 34.789032,47.8241815 35.5824326,47.4345652 C36.3758332,47.0449488 36.9638567,46.3335508 37.1971972,45.4810031 L37.6166195,43.9486768 C37.9714047,42.6764616 39.0943776,41.7695309 40.4127677,41.6904631 L42.0108312,41.5978754 C42.8909023,41.5502981 43.7078559,41.1260156 44.252948,40.4334383 C44.7980402,39.740861 45.0184658,38.8470817 44.8579026,37.9804744 L44.5708808,36.4175942 C44.3317725,35.1193545 44.9505903,33.8138316 46.1069106,33.1770251 L47.4957259,32.4002144 C48.2631625,31.9734409 48.8105068,31.2377982 48.9987656,30.3800959 C49.1870245,29.5223936 48.9980873,28.625143 48.479933,27.9161926 Z M24.533979,41.1469734 C15.6287186,41.1255087 8.42501072,33.8926722 8.43948226,24.9873978 C8.45395379,16.0821233 15.6811311,8.87273783 24.5864141,8.8802162 C33.4916972,8.88769457 40.7067558,16.1092082 40.7062706,25.0144944 C40.6950279,33.9351071 33.4545923,41.1577183 24.533979,41.1469734 L24.533979,41.1469734 Z M22.4664959,25.4431754 L21.0323125,24.0025109 C20.1767787,23.1467309 18.7908328,23.1421813 17.9296991,23.9923263 L17.9296991,23.9923263 C17.5176449,24.4014783 17.2850652,24.9576014 17.283155,25.5382824 C17.2812449,26.1189634 17.510161,26.6766046 17.9195144,27.0884586 L19.3490684,28.5291231 L20.9471319,30.1225572 C21.7791576,30.9582587 23.1306269,30.9628147 23.9682682,30.1327418 L25.5663317,28.5485665 L31.1382588,23.0210814 C31.550313,22.6119294 31.7828927,22.0558063 31.7848029,21.4751253 C31.786713,20.8944443 31.557797,20.3368032 31.1484435,19.9249491 L31.1484435,19.9249491 C30.2932016,19.0742093 28.9126258,19.0700808 28.0523111,19.9156903 L22.4664959,25.4431754 Z" fill-rule="evenodd"></path>
+            </symbol>
         </defs>
     </svg>
 
@@ -358,5 +464,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
 </body>
 </html>

@@ -225,3 +225,89 @@
     }
   }
 }
+
+
+// -------------------------------------------------------------------------
+// Chat Message-Card component
+// -------------------------------------------------------------------------
+
+.chat-message-card {
+  display: block;
+  position: relative;
+  outline: none;
+  font-family: $font-family-card;
+  font-size: 1rem;
+  color: $color-brand-blue;
+  background-color: $color-white;
+  border-radius: $component-border-radius;
+  border: 1px solid $color-brand-ash-dark;
+  padding: 15px 25px;
+  margin: 30px 0;
+  max-width: 600px;
+  width: 100%;
+  transition: $component-hover-fx-duration;
+
+  &.has-footer {
+    padding-bottom: 0;
+  }
+  .meta {
+    @include position(absolute, -25px 0 null 0);
+    font-family: $font-family-header;
+    color: $color-brand-grey-dark;
+  }
+  .badge {
+    @include position(absolute, 25px 25px null null);
+
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+    .icon-green-mint {
+      fill: $color-brand-green-mint;
+    }
+    .icon-blue-turquoise {
+      fill: $color-brand-blue-turquoise;
+    }
+  }
+  .body {
+    .header {
+      font-size: 1em;
+      color: $color-brand-grey-dark;
+    }
+    .title {
+      color: $color-brand-blue;
+      font-weight: 500;
+    }
+    .detail {
+      display: block;
+      font-family: $font-family-header;
+      margin-bottom: 3px;
+
+      .value {
+        color: $color-brand-blue;
+      }
+    }
+  }
+  .footer {
+    min-height: 40px;
+
+    .cta {
+      padding-left: 0;
+      padding-right: 0; 
+    }
+    .cta-info {
+      font-style: italic;
+      color: $color-brand-grey-dark;
+    }
+  }
+
+  &.own {
+    align-self: flex-end;
+    background-color: $color-brand-nude;
+    border-color: rgba(mix($color-brand-fuchsia, $color-brand-orange, 50%), .1);
+
+    .meta {
+      text-align: right;
+    }
+  }
+}

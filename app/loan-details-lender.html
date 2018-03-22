@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700">
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 </head>
-<body class="sidebar-container fixed-md">
+<body class="sidebar-container">
     <!-- header navbar -->
-    <header class="lgp-navbar dashboard-navbar">
+    <header class="lgp-navbar dashboard-navbar is-sidebar-responsive">
         <div class="content lgp-container d-flex justify-content-between align-items-center justify-content-md-end">
             <div class="navs d-md-none">
                 <a class="sidebar-toggle nav-burger left">
@@ -99,7 +99,7 @@
         <!-- alert section -->
         <section class="success lgp-alert alert-green collapse show">
             <div class="content lgp-container">
-                <p class="message text-small text-bold">You have successfully applied for this loan, and the lender has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
+                <p class="message text-small">You have indicated interest in funding this loan, and the borrower has been notified. <a class="text-underlined" href="#">Start a conversation?</a></p>
             </div>
             <button class="close btn btn-icon btn-lg btn-trans-white" type="button" data-toggle="collapse" data-target=".success.lgp-alert">
                 <svg class="icon"><use xlink:href="#close"/></svg>
@@ -175,7 +175,7 @@
                 </div>
                 <div class="messages lgp-container"></div>
             </div>
-            <div class="message-bar">
+            <div class="message-bar is-sidebar-responsive">
                 <div class="lgp-container lgp-form flexer">
                     <div class="input-group flexed">
                         <div class="input-group-prepend">
@@ -204,9 +204,10 @@
             <div class="modal-content p-5">
                 <h2 class="header-md-alt mb-5">Propose a Counter Offer</h2>
                 <form class="lgp-form row">
+
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="form-label-caps" for="amount-input">Amount<span class="extra">(How much do you want to lend?)</span></label>
+                            <label class="form-label-caps" for="amount-input">Amount</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">&#8358;</span>
@@ -215,72 +216,81 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-7">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="amount-input">Duration/Tenure<span class="extra">(For how long?)</span></label>
-                            <input type="text" class="form-control form-control-md" name="amount" id="amount-input" value="8">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-5">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="duration-type-select">&nbsp;</label>
-                            <div class="select-wrapper">
-                                <select class="form-control form-control-md" id="duration-type-select" name="duration-type">
-                                    <option value="" selected>Month(s)</option>
-                                    <option value="" >Day(s)</option>
-                                    <option value="" >Year(s)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="start-date-input">Start Date</label>
-                            <input class="form-control form-control-md" type="date" name="start-date" value="07/06/2018" id="start-date-input">
-                        </div>
-                    </div>
                     <div class="col-12">
                         <div class="form-group">
                             <label class="form-label-caps" for="interest-input">Interest Rate<span class="extra">(%)</span></label>
-                            <input type="text" class="form-control form-control-md" name="interest" id="interest-input">
+                            <input type="text" class="form-control form-control-md" name="interest" id="interest-input" value="3">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="form-label-caps" for="repayment-input">Repayment<span class="extra">(Payback Amount)</span></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">&#8358;</span>
-                                </div>
-                                <input type="text" class="form-control form-control-md" name="repayment" id="repayment-input" value="660,000">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="form-label-caps" for="repayment-type-input">Repayment Type<span class="extra">(Payback Frequency)</span></label>
+                            <label class="form-label-caps" for="interest-tenure-select">Interest Tenure</label>
                             <div class="select-wrapper">
-                                <select class="form-control form-control-md" id="repayment-type-select" name="repayment-type">
-                                    <option value="" selected>Monthly Installment</option>
-                                    <option value="">Weekly</option>
-                                    <option value="">Custom</option>
+                                <select class="form-control form-control-md" id="interest-tenure-select" name="interest-tenure">
+                                    <option value="" >Daily</option>
+                                    <option value="" >Weekly</option>
+                                    <option value="" selected>Monthly</option>
+                                    <option value="" >Yearly</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="form-label-caps" for="purpose-input">Message<span class="extra">(Optional)</span></label>
-                            <textarea  class="form-control form-control-md" name="purpose" id="purpose-input" rows="3"></textarea>
+                            <label class="form-label-caps">Repayment Type</label>
+                            <div class="form-row">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="repayment-type-1-input" name="repayment-type" value="1" class="custom-control-input" data-toggle="collapse" data-target="#repayment-type-1-collapse">
+                                        <label class="custom-control-label text-accent-sec" for="repayment-type-1-input">One Off</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto ml-5">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="repayment-type-2-input" name="repayment-type" value="0" class="custom-control-input" data-toggle="collapse" data-target="#repayment-type-2-collapse" checked>
+                                        <label class="custom-control-label text-accent-sec" for="repayment-type-2-input">Recurring</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 mb-4">
-                        <p class="form-text">You will be paid <span class="text-accent text-heavy">N90,000 every month</span>, for <span class="text-accent text-heavy">8 Months</span>.<span class="help-info inline"/></p>
+                    <div class="col-12" id="repayment-type-accordion">
+                        <div class="collapse" id="repayment-type-1-collapse" data-parent="#repayment-type-accordion">
+                            <div class="form-group">
+                                <label class="form-label-caps" for="repayment-date-input">Repayment Date</label>
+                                <input class="form-control form-control-md" type="date" name="repayment-date" id="repayment-date-input" value="03/13/2018">
+                            </div>
+                            <p class="form-text">You will be paid <span class="text-accent text-heavy">N600,000</span> on <span class="text-accent text-heavy">March 13, 2018</span>.<span class="help-info inline"/></p>
+                        </div>
+                        <div class="collapse show" id="repayment-type-2-collapse" data-parent="#repayment-type-accordion">
+                            <div class="form-group">
+                                <label class="form-label-caps" for="installments-input">Number of Installments</label>
+                                <input type="text" class="form-control form-control-md" name="installments" id="installments-input" value="5">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label-caps" for="repayment-tenure-select">Repayment Tenure</label>
+                                <div class="select-wrapper">
+                                    <select class="form-control form-control-md" id="repayment-tenure-select" name="repayment-tenure">
+                                        <option value="" >Daily</option>
+                                        <option value="" >Weekly</option>
+                                        <option value="" selected>Monthly</option>
+                                        <option value="" >Yearly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label-caps" for="repayment-start-date-input">Repayment Start Date</label>
+                                <input class="form-control form-control-md" type="date" name="repayment-start-date" id="repayment-start-date-input" value="2018-03-13">
+                            </div>
+                            <p class="form-text">You will be paid <span class="text-accent text-heavy">N90,000 every month</span>, for <span class="text-accent text-heavy">5 Months</span> starting from <span class="text-accent text-heavy">March 13, 2018</span></p>
+                        </div>
                     </div>
+
                     <div class="col-12 col-lg-4 cta">
                         <!-- <button type="submit" class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="lend-3.html">Submit</button> -->
-                        <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="lend-3.html">Submit Counter Offer</a>
+                        <a class="btn btn-md btn-green btn-caps btn-chrome btn-shadow w-100 mt-5" href="loan-details-lender-counter-pay.html">Submit Counter Offer</a>
                     </div>
+                    
                 </form>
             </div>
             <div class="modal-options d-flex flex-column">
@@ -356,5 +366,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
 </body>
 </html>
