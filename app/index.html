@@ -122,17 +122,31 @@
             <div class="lgp-tabs">
                 <!-- non tab/panel content -->
                 <form class="options-bar lgp-form">
-                    <div class="form-group form-row">
-                        <label for="loan-amount-range-select" class="form-label-caps mr-3 col-auto col-form-label d-none d-sm-inline">Sort by Amount:</label>
-                        <div class="col-auto">
-                            <div class="select-wrapper">
-                                <select class="form-control form-control-sm" id="loan-amount-range-select" name="loan-amount-range">
-                                    <option value="" selected>Show All</option>
-                                    <option value="N5,000 - N100,000">N5,000 - N100,000</option>
-                                    <option value="N100,000 - N300,000">N100,000 - N300,000</option>
-                                    <option value="N300,000 - N500,000">N300,000 - N500,000</option>
-                                    <option value="N500,000 - N1,000,000">N500,000 - N1,000,000</option>
-                                </select>
+                    <div class="d-flex">
+                        <div class="form-group form-row mr-3">
+                            <!-- <label for="loan-amount-range-select" class="form-label-caps mr-1 col-auto col-form-label d-none d-sm-inline">Amount Range:</label> -->
+                            <div class="col-auto">
+                                <div class="select-wrapper">
+                                    <select class="form-control form-control-sm" id="loan-amount-range-select" name="loan-amount-range">
+                                        <option value="" selected>Amount Range</option>
+                                        <option value="N5,000 - N100,000">N5,000 - N100,000</option>
+                                        <option value="N100,000 - N300,000">N100,000 - N500,000</option>
+                                        <option value="N300,000 - N500,000">N500,000 - N1,000,000</option>
+                                        <option value="N500,000 - N1,000,000">N1,000,000 - Above</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-row">
+                            <!-- <label for="loan-amount-range-select" class="form-label-caps mr-1 col-auto col-form-label d-none d-sm-inline">Sort by:</label> -->
+                            <div class="col-auto">
+                                <div class="select-wrapper">
+                                    <select class="form-control form-control-sm" id="loan-amount-range-select" name="loan-amount-range">
+                                        <option value="" selected>Sort by</option>
+                                        <option value="Top Rated">Top Rated</option>
+                                        <option value="Most Recent">Most Recent</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,12 +162,12 @@
                     </div>
                 </form>
                 <!-- marketplace requests tab -->
-                <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-requests-tab" hidden>
+                <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-requests-tab" hidden checked>
                 <label class="tab-button btn btn-tab btn-chrome" for="marketplace-requests-tab"><span class="d-none d-sm-inline">Loan&nbsp;</span>Requests</label>
                 <div class="tab-panel">
                     <ul class="lgp-grid with-gutter sm-columns-2 lg-columns-3">
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -205,7 +219,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -258,7 +272,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -311,7 +325,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -364,7 +378,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -417,7 +431,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -470,7 +484,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-request-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -525,13 +539,12 @@
                     </ul>
                 </div>
                 <!-- marketplace offers tab -->
-                <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-offers-tab" hidden checked>
-                <label class="tab-button btn btn-tab btn-chrome" for="marketplace-offers-tab"><span
-                        class="d-none d-sm-inline">Loan&nbsp;</span> Offers</label>
+                <input class="tab-input hidden" type="radio" name="marketplace-tabs" id="marketplace-offers-tab" hidden>
+                <label class="tab-button btn btn-tab btn-chrome" for="marketplace-offers-tab"><span class="d-none d-sm-inline">Loan&nbsp;</span> Offers</label>
                 <div class="tab-panel">
                     <ul class="lgp-grid with-gutter sm-columns-2 lg-columns-3">
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -584,7 +597,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -637,7 +650,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -690,7 +703,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -743,7 +756,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -796,7 +809,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -849,7 +862,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -902,7 +915,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card bookmark" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -955,7 +968,7 @@
                             </a>
                         </li>
                         <li class="grid-item">
-                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-modal" href="">
+                            <a class="loan-grid-card" data-toggle="modal" data-target="#loan-offer-modal" href="">
                                 <div class="card-section body d-flex">
                                     <div class="details d-flex flex-column">
                                         <div class="bookmark-toggle" title="Add/Remove Boomark">
@@ -1111,7 +1124,7 @@
 </main>
 
 <!-- Modals -->
-<div class="modal fade lgp-modal loan-modal" id="loan-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade lgp-modal loan-modal" id="loan-offer-modal" tabindex="-1" role="dialog" aria-labelledby="LoanOfferModdal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="row align-items-stretch">
@@ -1166,8 +1179,81 @@
                             <p>See LendGap&nbsp;<a class="text-link" href="">Terms and Conditions</a></p>
                         </div>
                         <div class="ctas d-flex flex-column">
-                            <a href="" class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome">Counter Offer</a>
+                            <a href="sign-up.html" class="btn btn-sm btn-caps btn-trans-border-fuchsia btn-chrome">Counter Offer</a>
                             <a href="sign-up.html" class="btn btn-sm btn-caps btn-fuchsia btn-chrome">Apply</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-options d-flex flex-column">
+            <button class="close btn btn-icon btn-lg btn-trans-blue" title="Close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon"><use xlink:href="#close"/></svg>
+            </button>
+            <div class="bookmark-toggle" title="Add/Remove Boomark">
+                <div class="icon-wrapper">
+                    <svg class="icon filler"><use  xlink:href="#flag-filler"></use></svg>
+                    <svg class="icon outline"><use  xlink:href="#flag-outline"></use></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade lgp-modal loan-modal" id="loan-request-modal" tabindex="-1" role="dialog" aria-labelledby="loanRequestModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="row align-items-stretch">
+                <div class="col-md-6 details">
+                    <div class="content-section d-flex flex-column">
+                        <h2 class="section-header header-xs">Loan Request</h2>
+                        <span class="title loan-amount header-lg text-heavy">
+                            <span class="currency text-unit">N</span><span class="amount">630,000</span>
+                        </span>
+                        <span class="detail"><span class="preamble">Transaction ID:</span>053139912</span>
+                        <span class="detail separate"><span class="preamble">Interest:</span>25%</span>
+                        <span class="detail"><span class="preamble">Loan Tenure:</span>3 Weeks</span>
+                        <span class="detail"><span class="preamble">Installments:</span>NO</span>
+
+                        <div class="detail separate-more d-flex flex-row justify-content-between align-items-center">
+                            <div class="lender-profile d-flex align-items-center">
+                                <div class="profile-photo shadow">
+                                    <svg class="avatar icon">
+                                        <use  xlink:href="#avatar"></use>
+                                    </svg>
+                                    <div class="photo bg-cover bg-center" style="background-image: url('./img/profile-1.jpg')"></div>
+                                </div>
+                                <span class="profile-name">Susan</span>
+                            </div>
+                            <div class="lender-rating ">
+                                <span class="rating stars-2">
+                                    <svg class="icon">
+                                        <use  xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="icon">
+                                        <use  xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="icon">
+                                        <use  xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="icon">
+                                        <use  xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="icon">
+                                        <use  xlink:href="#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 actions">
+                    <div class="content-section d-flex flex-column justify-content-end">
+                        <div class="info text-small">
+                            <p>Financing is carried out as quickly as possible. Once you apply for this loan, the lender will be notified. Funding on LendGap is simple and clear, with no hidden fees.</p>
+                            <p>See LendGap&nbsp;<a class="text-link" href="">Terms and Conditions</a></p>
+                        </div>
+                        <div class="ctas d-flex flex-column">
+                            <a href="sign-up.html" class="btn btn-sm btn-caps btn-fuchsia btn-chrome">Accept</a>
                         </div>
                     </div>
                 </div>

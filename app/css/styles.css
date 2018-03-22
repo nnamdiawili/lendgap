@@ -2400,107 +2400,107 @@ a.text-link {
         -ms-grid-row-align: center;
         align-self: center; }
 
-#loan-modal {
+.loan-modal {
   font-family: "Brandon Grotesque", sans-serif;
   font-size: 1em; }
-  #loan-modal .bookmark-toggle .icon-wrapper {
+  .loan-modal .bookmark-toggle .icon-wrapper {
     position: relative;
     width: 22px;
     height: 22px; }
-  #loan-modal .details {
+  .loan-modal .details {
     background-color: #FFF; }
-  #loan-modal .actions {
+  .loan-modal .actions {
     background-color: #F4F4F4; }
-  #loan-modal .content-section {
+  .loan-modal .content-section {
     height: 100%; }
-    #loan-modal .content-section {
+    .loan-modal .content-section {
       padding: 30px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .content-section {
+        .loan-modal .content-section {
           padding: calc(30px + 40 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .content-section {
+        .loan-modal .content-section {
           padding: 70px; } }
-  #loan-modal .details {
+  .loan-modal .details {
     position: relative;
     width: 100%; }
-  #loan-modal .section-header {
+  .loan-modal .section-header {
     margin-bottom: 1.8rem; }
-  #loan-modal .title {
+  .loan-modal .title {
     color: #113E52;
     margin-bottom: .2rem; }
-  #loan-modal .detail {
+  .loan-modal .detail {
     margin-top: .1rem; }
-    #loan-modal .detail.separate {
+    .loan-modal .detail.separate {
       margin-top: 20px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .detail.separate {
+        .loan-modal .detail.separate {
           margin-top: calc(20px + 15 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .detail.separate {
+        .loan-modal .detail.separate {
           margin-top: 35px; } }
-    #loan-modal .detail.separate-more {
+    .loan-modal .detail.separate-more {
       margin-top: 35px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .detail.separate-more {
+        .loan-modal .detail.separate-more {
           margin-top: calc(35px + 35 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .detail.separate-more {
+        .loan-modal .detail.separate-more {
           margin-top: 70px; } }
-  #loan-modal .profile-name {
+  .loan-modal .profile-name {
     margin-left: 15px;
     color: #113E52; }
-  #loan-modal .profile-photo {
+  .loan-modal .profile-photo {
     width: 40px;
     height: 40px; }
-    #loan-modal .profile-photo {
+    .loan-modal .profile-photo {
       width: 30px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           width: calc(30px + 10 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           width: 40px; } }
-    #loan-modal .profile-photo {
+    .loan-modal .profile-photo {
       height: 30px; }
       @media screen and (min-width: 300px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           height: calc(30px + 10 * ((100vw - 300px) / 692)); } }
       @media screen and (min-width: 992px) {
-        #loan-modal .profile-photo {
+        .loan-modal .profile-photo {
           height: 40px; } }
-    #loan-modal .profile-photo .avatar {
+    .loan-modal .profile-photo .avatar {
       fill: #FFF;
       background-color: transparent; }
-  #loan-modal .rating {
+  .loan-modal .rating {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    #loan-modal .rating .icon {
+    .loan-modal .rating .icon {
       fill: #D8D8D8;
       width: 12px;
       height: 12px; }
-      #loan-modal .rating .icon:not(:first-child) {
+      .loan-modal .rating .icon:not(:first-child) {
         margin-left: 2px; }
         @media screen and (min-width: 768px) {
-          #loan-modal .rating .icon:not(:first-child) {
+          .loan-modal .rating .icon:not(:first-child) {
             margin-left: calc(2px + 3 * ((100vw - 768px) / 224)); } }
         @media screen and (min-width: 992px) {
-          #loan-modal .rating .icon:not(:first-child) {
+          .loan-modal .rating .icon:not(:first-child) {
             margin-left: 5px; } }
-    #loan-modal .rating.stars-1 .icon:nth-child(-n + 1) {
+    .loan-modal .rating.stars-1 .icon:nth-child(-n + 1) {
       fill: #113E52; }
-    #loan-modal .rating.stars-2 .icon:nth-child(-n + 2) {
+    .loan-modal .rating.stars-2 .icon:nth-child(-n + 2) {
       fill: #113E52; }
-    #loan-modal .rating.stars-3 .icon:nth-child(-n + 3) {
+    .loan-modal .rating.stars-3 .icon:nth-child(-n + 3) {
       fill: #113E52; }
-    #loan-modal .rating.stars-4 .icon:nth-child(-n + 4) {
+    .loan-modal .rating.stars-4 .icon:nth-child(-n + 4) {
       fill: #113E52; }
-    #loan-modal .rating.stars-5 .icon:nth-child(-n + 5) {
+    .loan-modal .rating.stars-5 .icon:nth-child(-n + 5) {
       fill: #113E52; }
-  #loan-modal .ctas {
+  .loan-modal .ctas {
     margin-top: 30px; }
-    #loan-modal .ctas .btn {
+    .loan-modal .ctas .btn {
       margin-top: 10px; }
 
 .chat {
